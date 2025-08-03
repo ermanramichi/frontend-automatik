@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 import { HeaderComponent } from "./header-component/header-component";
@@ -11,10 +11,11 @@ import { PLATFORM_ID, Inject } from '@angular/core';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
+export class App implements AfterViewInit {
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+    
 
-  ngOnInit(){
+  ngAfterViewInit(): void{
      if (isPlatformBrowser(this.platformId)) {
     import('aos').then(AOS => {
       AOS.init({
