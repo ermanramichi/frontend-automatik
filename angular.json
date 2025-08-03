@@ -16,13 +16,15 @@
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
+              "src/assets/"
             ],
             "styles": [
-              "src/styles.css"
+              
+              "src/styles.css",
+              "node_modules/aos/dist/aos.css"
+            ],
+            "scripts": [
+              "node_modules/aos/dist/aos.js"
             ],
             "server": "src/main.server.ts",
             "outputMode": "server",
