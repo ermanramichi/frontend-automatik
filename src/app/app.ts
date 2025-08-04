@@ -18,7 +18,7 @@ export class App implements AfterViewInit {
   ngAfterViewInit(): void{
      if (isPlatformBrowser(this.platformId)) {
     import('aos').then(AOS => {
-      AOS.init({
+      AOS.default.init({
         duration:800,
         easing: 'ease-out',
         
