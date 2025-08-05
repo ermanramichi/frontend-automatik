@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -9,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HeroComponent {
   constructor(private route: ActivatedRoute) {}
-
+  
   ngAfterViewInit(): void {
     this.route.fragment.subscribe(fragment => {
       if (fragment) {
@@ -22,4 +23,13 @@ export class HeroComponent {
       }
     });
   }
+  rotating=false;
+  quiting=false;
+  toggleRotation(){
+    this.rotating = !this.rotating;
+    if(this.rotating == false){
+      this.quiting = true;
+    }
+  }
+  
 }

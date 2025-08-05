@@ -13,15 +13,14 @@ import { PLATFORM_ID, Inject } from '@angular/core';
 })
 export class App implements AfterViewInit {
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
-    
 
   ngAfterViewInit(): void{
      if (isPlatformBrowser(this.platformId)) {
     import('aos').then(AOS => {
-      AOS.init({
+      AOS.default.init({
         duration:800,
-        easing: 'ease-out',
-        
+        easing: 'ease-in-out',
+        once:true,
       });
     });
   }

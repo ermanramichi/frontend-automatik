@@ -1,5 +1,9 @@
 @import "tailwindcss";/* You can add global styles to this file, and also import other style files */
 
 body{
-    background-color:#8D86C9;
+   
+    background-repeat: repeat;
+    background: linear-gradient(180deg,rgb(0, 32, 12) 0%, rgb(0, 119, 54) 50%, rgb(0, 32, 12) 100%);
+    
+    
 }

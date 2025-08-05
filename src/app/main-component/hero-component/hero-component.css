@@ -1,0 +1,39 @@
+.rotate{
+    animation:spin 2s linear infinite;
+
+}
+.active{
+    display:none;
+}
+@keyframes spin {
+    0%{
+        transform:rotate(0deg);
+        color:white;
+        font-size:150px;
+        
+    }
+    25%{
+        transform:rotate(90deg);
+        transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        color:lightgreen;
+        font-size:160px;
+    }
+    50%{
+        transform:rotate(180deg);
+        transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        color:limegreen;  
+        font-size: 170px;
+    }
+    75%{
+        transform:rotate(270deg);
+        transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        color:cyan; 
+        font-size:160px;
+    }
+    100%{
+        transform:rotate(360deg);
+        transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        color:white;
+        font-size:150px; 
+    }
+}

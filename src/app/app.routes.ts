@@ -13,7 +13,7 @@ export const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'experience', component: ExperienceComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: '**', redirectTo: '/home' }
+  { path: '**', redirectTo: `/home` }
 ];
 
 const config: ExtraOptions = {

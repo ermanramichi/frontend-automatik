@@ -1,14 +1,11 @@
-<div class="header bg-[#242038] w-full h-36 md:h-40 lg:h-48 flex flex-col justify-around items-center shadow-md-black sticky top-0 z-50" data-aos="fade-up" id="home">
-   <div class="flex justify-center items-center">
-        <div class="name text-[#9067C6] uppercase p-4 font-black text-[28px] md:text-[30px] lg:text-[50px]" data-aos="zoom-in">Erman</div>
-        <div class="surname text-[#9067C6] uppercase p-4 font-black text-[28px] md:text-[30px] lg:text-[50px]" data-aos="zoom-in">Ramichi</div>
+<div [class]="getClasses" data-aos="fade-up">
+    <div class="wrapperheader w-full h-full flex flex-col justify-center items-center md:flex-row md:w-[1200px]">
+        <div class="top w-full h-1/2 flex justify-center items-center text-[40px] font-black text-white md:w-1/4 md:h-full md:justify-start" data-aos="fade-up">ER</div>
+        <div class="bottom w-full h-1/2 flex justify-center items-center md:h-full md:w-3/4 md:justify-end">
+        <a [routerLink]="['/home']" fragment="home" class="p-3  text-white text-[18px] lg:text-[25px] md:text-[22px]" data-aos="fade-up"href="">Home</a>
+        <a [routerLink]="['/about']" fragment="about" class="p-3  text-white text-[18px]  lg:text-[25px] md:text-[22px]" data-aos="fade-up"href="">About</a>
+        <a [routerLink]="['/experience']" fragment="experience"class="p-3  text-white text-[18px]  lg:text-[25px] md:text-[22px]" data-aos="fade-up"href="">Experience</a>
+        <a [routerLink]="['/contact']" fragment="contact"class="p-3  text-white text-[18px] lg:text-[25px] md:text-[22px]" data-aos="fade-up"href="">Contact Me</a>
+        </div>
     </div>
-    <div class="links flex justify-around items-center lg:w-[50%]">
-        <a [routerLink]="['/home']" fragment="home" class="p-3 font-bold text-[#9067C6] text-[20px] hover:text-[32px] lg:text-[30px] md:text-[25px]" data-aos="fade-up"href="">Home</a>
-        <a [routerLink]="['/about']" fragment="about" class="p-3 font-bold text-[#9067C6] text-[20px] hover:text-[32px] lg:text-[30px] md:text-[25px]" data-aos="fade-up"href="">About</a>
-        <a [routerLink]="['/experience']" fragment="experience"class="p-3 font-bold text-[#9067C6] text-[20px] hover:text-[32px] lg:text-[30px] md:text-[25px]" data-aos="fade-up"href="">Experience</a>
-        <a [routerLink]="['/contact']" fragment="contact"class="p-3 font-bold text-[#9067C6] text-[20px] hover:text-[32px] lg:text-[30px] md:text-[25px]" data-aos="fade-up"href="">Contact Me</a>
-    </div>
-
-    
 </div>
