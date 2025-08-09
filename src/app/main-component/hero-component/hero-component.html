@@ -7,13 +7,25 @@
                 <h1 class="text-white text-[90px] text-center font-black">Erman Ramichi</h1>
             </div>
         </div>
-        <div class="right flex flex-col justify-center items-center w-full h-1/2 md:w-1/2 md:h-full gap-10" [class.active]="quiting" data-aos="slide-left">
-        <div class="animation w-full flex justify-center items-center">
-            <div class="figura text-white text-[150px] font-black" [class.rotate]="rotating">&lt;&gt;</div>
-        </div>
-        <div class="kontenjer">
-        <button class="text-black bg-white rounded-3xl p-5"(click)="toggleRotation()">{{rotating ? 'Quit' : 'Play with me'}}</button>
-        </div>
+        <div class="right flex flex-col justify-center items-center w-full h-1/2 md:w-1/2 md:h-full gap-10" data-aos="slide-left">
+            <div class="quotes flex flex-col justify-center items-center w-[95%] h-full gap-5">
+                <h1 class="text-white text-[30px] font-bold">Daily Quote:</h1>
+                <div *ngIf="loading" class="loading text-white">Getting new quote...</div>
+                <div *ngIf="currentQuote && !loading" class="quote-content">
+                <blockquote class="text-white italic text-center text-[22px]">
+                        "{{ currentQuote.quote }}"
+                </blockquote>
+                <div class="text-white italic text-center text-[22px]">— {{ currentQuote.author }}</div>
+    </div>
+    
+            <button 
+            (click)="getNewQuote()" 
+            [disabled]="loading"
+            class="new-quote-btn text-green-800 bg-white p-4 rounded-3xl font-bold hover:bg-green-900/50 transition-colors duration-500 hover:text-white hover:border-white hover:border-2">
+            {{ loading ? 'Loading...' : 'New Quote' }}
+            </button>
+
+            </div>
     </div>
     </div>
 </div>

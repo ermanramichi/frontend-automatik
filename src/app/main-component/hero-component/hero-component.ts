@@ -1,16 +1,40 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+import { HeroComponentService, Quote } from './hero-component-service';
+
 
 @Component({
   selector: 'app-hero-component',
-  imports: [],
+  standalone:true,
+  imports: [CommonModule],
   templateUrl: './hero-component.html',
-  styleUrl: './hero-component.css'
+  styleUrl: './hero-component.css',
 })
-export class HeroComponent {
-  constructor(private route: ActivatedRoute) {}
-  
+export class HeroComponent implements OnInit{
+  currentQuote: Quote | null = null;
+  loading = false;
+  constructor(private route: ActivatedRoute, private heroService:HeroComponentService) {}
+    ngOnInit() {
+    this.getNewQuote();
+    setTimeout(() => {
+      this.heroService.prefetchQuotes(5);
+    }, 100);
+  }
+
+getNewQuote() {
+    this.loading = true;
+    
+    this.heroService.getRandomQuote().subscribe({
+      next: (quotes) => {
+        this.currentQuote = quotes[0];
+        this.loading = false;
+      },
+      error: () => {
+        this.loading = false;
+      }
+    });
+  }
   ngAfterViewInit(): void {
     this.route.fragment.subscribe(fragment => {
       if (fragment) {
@@ -23,13 +47,6 @@ export class HeroComponent {
       }
     });
   }
-  rotating=false;
-  quiting=false;
-  toggleRotation(){
-    this.rotating = !this.rotating;
-    if(this.rotating == false){
-      this.quiting = true;
-    }
-  }
+  
   
 }

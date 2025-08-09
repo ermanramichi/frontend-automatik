@@ -1,15 +1,16 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-experience-component',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './experience-component.html',
   styleUrl: './experience-component.css'
 })
 export class ExperienceComponent {
   constructor(private route: ActivatedRoute) {}
-
+  activeDiv:string='technologies';
   ngAfterViewInit(): void {
     this.route.fragment.subscribe(fragment => {
       if (fragment) {
@@ -22,4 +23,8 @@ export class ExperienceComponent {
       }
     });
   }
+  showDiv(showDiv:string){
+    this.activeDiv=showDiv;
+  }
+  
 }

@@ -1,7 +1,12 @@
-<div class="experience flex flex-col justify-center items-center w-full min-h-[800px] mt-5" data-aos="fade-up" id="experience">
-    <div class="experiencewrapper flex justify-center items-center min-h-[700px] w-full md:w-[80%] bg-black/20 md:p-6 p-4 rounded-3xl gap-10 flex-col md:flex-row">
-        <div class="technologies flex flex-col justify-center items-center w-full md:w-1/3 bg-black/40 rounded-3xl h-full" data-aos="fade-right">
-            <h1 class="text-white font-bold text-[22px] p-4">Technologies</h1>
+<div class="experience flex flex-col justify-center items-center w-full min-h-[600px] mt-5" data-aos="fade-up" id="experience">
+    <div class="experiencewrapper flex justify-center items-center min-h-[550px] w-full md:w-[80%] bg-black/20 p-4  md:p-6 gap-10 rounded-3xl flex-col">
+        <div class="buttons flex justify-center items-center md:w-1/3 rounded-3xl bg-black/60">
+            <button class="p-4 text-white rounded-3xl m-2 cursor-pointer text-[14px]" [class.active]="activeDiv==='technologies'" (click)="showDiv('technologies')">Technologies</button>
+            <button class="p-4 text-white rounded-3xl m-2 cursor-pointer text-[14px] " [class.active]="activeDiv==='projects'" (click)="showDiv('projects')">Projects</button>
+            <button class="p-4 text-white rounded-3xl m-2 cursor-pointer text-[14px]" [class.active]="activeDiv==='jobexperience'" (click)="showDiv('jobexperience')">Job Experience</button>
+        </div>
+        <div *ngIf="activeDiv==='technologies'" class="flex flex-col justify-start items-center w-full md:w-1/3 bg-black/40 rounded-3xl h-fit" data-aos="fade-right">
+            
             <div class="technology flex justify-center items-center md:p-6 p-4 w-full gap-3">
                 <i class="fa-brands fa-html5 fa-5x p-4 w-1/4" style="color:white"></i>
                 <p class="description text-white p-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, nulla!</p>
@@ -29,7 +34,8 @@
             
 
         </div>
-        <div class="projects flex flex-col justify-center items-center w-full md:w-1/3 bg-black/40 rounded-3xl h-full" data-aos="fade-left">
+        
+        <div *ngIf="activeDiv==='projects'" class="flex flex-col justify-center items-center w-full md:w-1/3 bg-black/40 rounded-3xl h-full" data-aos="fade-left">
             <div class="project flex flex-col justify-center items-center">
             <div class="title p-4 text-white font-black text-[30px]">Automatik</div>
             <div class="shortdesc p-4 text-white font-light text-[18px] text-center md:text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed perferendis labore tempore suscipit vitae laudantium minima culpa maxime aspernatur repellendus.</div>

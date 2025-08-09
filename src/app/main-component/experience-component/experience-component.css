@@ -1,3 +1,20 @@
 .projects{
     height:100%!important;
 }
+::-webkit-scrollbar{
+    background:transparent;
+    
+    overflow:hidden;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(0, 36, 0);
+    margin: 5px 0px;
+    width: 3px;
+    border-radius: 10px;
+    overflow:hidden;
+}
+.active{
+    transition: all 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    background:linear-gradient(180deg, limegreen,darkgreen)
+}
