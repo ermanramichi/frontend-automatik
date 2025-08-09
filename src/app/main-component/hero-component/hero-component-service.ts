@@ -12,7 +12,7 @@ export interface Quote {
 export class HeroComponentService {
 private http = inject(HttpClient);
 private apiUrl = 'https://api.api-ninjas.com/v1/quotes';
-
+private apiKey = environment.apiNinjasKey;
 private cachedQuotes: Quote[] = [];
 private currentIndex = 0;
 
