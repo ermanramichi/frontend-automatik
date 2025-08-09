@@ -12,7 +12,7 @@ export interface Quote {
 export class HeroComponentService {
 private http = inject(HttpClient);
 private apiUrl = 'https://api.api-ninjas.com/v1/quotes';
-private apiKey = environment.apiNinjasKey;
+
 private cachedQuotes: Quote[] = [];
 private currentIndex = 0;
 
@@ -29,7 +29,7 @@ private currentIndex = 0;
   }
 
   private fetchQuotesFromAPI(): Observable<Quote[]> {
-    const headers = new HttpHeaders({ 'X-Api-Key': this.apiKey });
+    const headers = new HttpHeaders({ 'X-Api-Key': environment.apiNinjasKey });
     
     return this.http.get<Quote[]>(this.apiUrl, { headers }).pipe(
       tap(quotes => {
