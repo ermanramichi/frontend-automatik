@@ -1,7 +1,7 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, NgModule } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms'
+import {EmailValidator, FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators, AbstractControl, ValidationErrors} from '@angular/forms'
 import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-contact-component',
@@ -13,18 +13,30 @@ export class ContactComponent {
   contactForm: FormGroup;
   isSubmitting = false;
   submitted = false;
-  submitError = false; 
+  submitError = false;
+
+  emailValidator(control: AbstractControl): ValidationErrors | null {
+    const email = control.value;
+    if (email && !email.endsWith('.com') && !email.endsWith('.mk')) {
+      return {
+        invalidEmail: true
+      };
+    }
+    return null;
+  }
+
+
 
   private formspreeUrl = 'https://formspree.io/f/xanbdlar'
 constructor(private route: ActivatedRoute,private fb: FormBuilder,private http: HttpClient){
 this.contactForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
+      email: ['', [Validators.required, Validators.email, this.emailValidator]],
       subject: ['', Validators.required],
       message: ['', Validators.required]
 
 });
 }
-  
+
 
   ngAfterViewInit(): void {
     this.route.fragment.subscribe(fragment => {

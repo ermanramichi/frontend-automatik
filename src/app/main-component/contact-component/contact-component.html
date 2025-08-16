@@ -15,10 +15,10 @@
         [class.border-red-500]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched"
         placeholder="your.email@example.com"
       >
-      <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" 
+      <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched"
            class="text-red-500 text-sm mt-1">
         <span *ngIf="contactForm.get('email')?.errors?.['required']">Email is required</span>
-        <span *ngIf="contactForm.get('email')?.errors?.['email']">Please enter a valid email</span>
+        <span *ngIf="contactForm.get('email')?.errors?.['invalidEmail']">Please enter a valid email</span>
       </div>
     </div>
 
@@ -35,7 +35,7 @@
         [class.border-red-500]="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched"
         placeholder="What is this about?"
       >
-      <div *ngIf="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched" 
+      <div *ngIf="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched"
            class="text-red-500 text-sm mt-1">
         Subject is required
       </div>
@@ -54,7 +54,7 @@
         [class.border-red-500]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched"
         placeholder="Your message here..."
       ></textarea>
-      <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" 
+      <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched"
            class="text-red-500 text-sm mt-1">
         Message is required
       </div>
@@ -78,7 +78,7 @@
   </form>
 
   <!-- Success Message -->
-  <div *ngIf="submitted && !submitError" 
+  <div *ngIf="submitted && !submitError"
        class="mt-4 p-4 bg-green-200 border border-green-400 text-green-700 rounded-md">
     <div class="flex items-center">
       <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -89,7 +89,7 @@
   </div>
 
   <!-- Error Message -->
-  <div *ngIf="submitError" 
+  <div *ngIf="submitError"
        class="mt-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded-md">
     <div class="flex items-center">
       <svg class="h-5 w-5 text-red-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
