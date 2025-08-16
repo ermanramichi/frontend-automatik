@@ -5,9 +5,10 @@ import { HeaderComponent } from "./header-component/header-component";
 import { MainComponent } from "./main-component/main-component";
 import { isPlatformBrowser } from '@angular/common';
 import { PLATFORM_ID, Inject } from '@angular/core';
+import { FooterComponent } from "./footer-component/footer-component";
 @Component({
   selector: 'app-root',
-  imports: [ HeaderComponent, MainComponent],
+  imports: [HeaderComponent, MainComponent, FooterComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -24,6 +25,6 @@ export class App implements AfterViewInit {
       });
     });
   }
-  
+
 }
 }

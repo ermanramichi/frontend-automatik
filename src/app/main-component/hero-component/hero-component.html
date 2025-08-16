@@ -2,8 +2,8 @@
     <div class="herobannerwrapper w-full flex flex-col justify-center items-start h-full md:w-[1400px] md:flex-row gap-4">
         <div class="left w-full h-1/2 flex flex-col justify-center items-center md:w-1/2 md:h-full" data-aos="slide-right">
             <div class="tekst h-1/2 w-full flex flex-col justify-center items-center">
-                <p class="welcoming text-white md:text-[70px] text-[50px] text-center">Hello, <br/> my name is</p>
-                <h1 class="text-white md:text-[90px] text-[50px] text-center font-black">Erman Ramichi</h1>
+                <p class="welcoming text-white md:text-[70px] text-[40px] text-center">Hello, <br/> my name is</p>
+                <h1 class="text-white md:text-[90px] text-[40px] text-center font-black">Erman Ramichi</h1>
                 <div class="links flex justify-center items-center gap-3 m-3">
                     <a href="https://github.com/ermanramichi" class="p-2 rounded-2xl bg-white w-[50px] h-[50px] flex justify-center items-center hover:scale-120">
                         <i class="fa-brands fa-github fa-2x" style="color:green"></i>
@@ -25,14 +25,14 @@
                 <h1 class="text-white text-[30px] font-bold">Daily Quote:</h1>
                 <div *ngIf="loading" class="loading text-white">Getting new quote...</div>
                 <div *ngIf="currentQuote && !loading" class="quote-content">
-                <blockquote class="text-white italic text-center text-[22px]">
+                <div class="text-white italic text-center text-[18px] w-full">
                         "{{ currentQuote.quote }}"
-                </blockquote>
+                </div>
                 <div class="text-white italic text-center text-[22px]">— {{ currentQuote.author }}</div>
     </div>
-    
-            <button 
-            (click)="getNewQuote()" 
+
+            <button
+            (click)="getNewQuote()"
             [disabled]="loading"
             class="new-quote-btn text-green-800 bg-white p-4 rounded-3xl font-bold hover:bg-green-900/50 transition-colors duration-500 hover:text-white hover:border-white hover:border-2">
             {{ loading ? 'Loading...' : 'New Quote' }}
