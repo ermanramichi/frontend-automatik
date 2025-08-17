@@ -1,23 +1,32 @@
-import { Component, HostListener } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-header-component',
-  imports: [RouterLink],
+  imports: [],
   templateUrl: './header-component.html',
   styleUrl: './header-component.css'
 })
 export class HeaderComponent {
-  isScrolled=false;
-  @HostListener('window:scroll')
-  onWindowScroll(): void{
-    this.isScrolled = window.pageYOffset > 80;
+  selectedPage='home';
+  clicked=false;
+  onClick(id:string){
+    this.selectedPage=id;
+    this.clicked=!this.clicked;
+
   }
-  get getClasses(): string {
-    const baseClasses = 'w-full h-30 flex justify-center items-center sticky top-0 z-50 md:h-24';
-    const scrolledClasses = 'backdrop-blur bg-black/30';
-    const transparentClasses = 'bg-transparent text-white';
-    
-    return `${baseClasses} ${this.isScrolled ? scrolledClasses : transparentClasses}`;
+
+  dropdownOpen = false;
+
+  languages = [
+    { code: '1', name: 'English', flag: 'assets/languages/english.svg' },
+    { code: '2', name: 'Macedonian', flag: 'assets/languages/mkd.png' },
+    { code: '3', name: 'Albanian', flag: 'assets/languages/albanian.png' }
+  ];
+
+  selected = this.languages[0]; // Default
+
+  selectLanguage(lang: any) {
+    this.selected = lang;
+    this.dropdownOpen = false;
   }
 }

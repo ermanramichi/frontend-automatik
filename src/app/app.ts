@@ -1,14 +1,15 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
-import { HeaderComponent } from "./header-component/header-component";
-import { MainComponent } from "./main-component/main-component";
+
 import { isPlatformBrowser } from '@angular/common';
 import { PLATFORM_ID, Inject } from '@angular/core';
-import { FooterComponent } from "./footer-component/footer-component";
+import { HeaderComponent } from "./header-component/header-component";
+import { MainPageComponent } from "./main-page-component/main-page-component";
+
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent, MainComponent, FooterComponent],
+  imports: [HeaderComponent, MainPageComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
