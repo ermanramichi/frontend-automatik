@@ -1,38 +1,22 @@
-<div class="recommended-products w-full  min-h-[450px] flex justify-center items-center py-8">
-  <div class="recommended-products-wrapper md:w-[1450px] w-full h-full flex flex-col justify-center items-start p-4 text-[1.5rem] font-bold text-automatik">
-    <h1 class="md:px-22 px-4 my-4 text-">Recommended products</h1>
+<div class="recommended-products w-full  min-h-[450px] flex justify-center items-center py-8" data-aos="fade-up">
+  <div class="recommended-products-wrapper md:w-[1450px] w-full h-full flex flex-col justify-center items-start p-4 text-[1.5rem] font-bold">
+    <h1 class="md:px-22 px-4 my-4 text-automatik">Recommended products</h1>
     <div class="slider-wrapper w-full h-full flex justify-center items-center">
       <div class="left-button mx-2 hidden md:flex">
         <button class="slider-button w-[50px] h-[50px] bg-white rounded-full shadow-lg flex justify-center items-center hover:bg-gray-200 transition-colors duration-300" (click)="scrollLeft(sliderRef)">
-          <i class="fa-solid fa-chevron-left"></i>
+          <i class="fa-solid fa-chevron-left text-automatik"></i>
         </button>
       </div>
       <div  #sliderRef class="slider-products flex justify-between items-center w-[1264px] gap-4 h-full overflow-x-auto scroll-smooth p-4">
         @for(product of products; track product.id) {
-        <div class="product min-w-[200px] w-[200px] h-[350px] md:min-w-[300px] md:w-[300px] md:h-[450px] bg-white rounded-lg border-b-4 border-b-automatik flex flex-col justify-center items-start  shadow-lg flex-shrink-0 cursor-pointer">
-          <div class="image-wrapper relative w-full h-[280px] flex justify-center items-center">
-            <img [src]="product.imageUrl" alt="Product 1" class="w-auto h-[95%] object-cover rounded-t-lg">
-            <div class="absolute top-2 right-2 bg-green-600 p-2 rounded-full text-white text-[14px]">-{{getPercentageDiscount(product.price,product.discountedPrice)}}%</div>
-          </div>
-          <h1 class="text-automatik text-sm md:text-xl px-2 md:px-4">{{product.name}}</h1>
-          <p class="text-gray-400 text-[14px] text-left px-2 md:px-4 w-full">{{product.description}}</p>
-          <div class="bottom flex flex-col gap-2 justify-center items-start w-full h-[100px] px-4">
-            <div class="price-wrapper flex w-full justify-start items-center">
-              <div class="originalprice text-gray-400 text-[14px] md:text-[20px] pr-4"><span class="line-through">{{product.price}}</span>$</div>
-              <div class="discountedprice text-automatik text-[18px] md:text-[24px]">{{product.discountedPrice}}$</div>
-            </div>
-            <div class="buy-button md:flex justify-center items-center w-full h-[30px] text-sm md:text-lg bg-automatik text-white rounded-md shadow-md hover:bg-blue-600 transition-colors duration-300">
-              <button class="w-full h-full">Buy</button>
-              </div>
-          </div>
-        </div>
-      }
+          <app-product-card-component [product]="product"></app-product-card-component>
+        }
 
 
     </div>
     <div class="right-button mx-2 hidden md:flex">
         <button class="slider-button w-[50px] h-[50px] bg-white rounded-full shadow-lg flex justify-center items-center hover:bg-gray-200 transition-colors duration-300" (click)="scrollRight(sliderRef)">
-          <i class="fa-solid fa-chevron-right"></i>
+          <i class="fa-solid fa-chevron-right text-automatik"></i>
         </button>
       </div>
   </div>

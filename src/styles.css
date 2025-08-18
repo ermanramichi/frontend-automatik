@@ -2,5 +2,22 @@
 @import 'aos/dist/aos.css';
 
 @theme{
-  --color-automatik: #1F3FC3;
+--color-automatik-50: #eff5ff;
+--color-automatik-100: #dce8fd;
+--color-automatik-200: #c1d7fc;
+--color-automatik-300: #96befa;
+--color-automatik-400: #649bf6;
+--color-automatik-500: #4077f1;
+--color-automatik-600: #2a58e6;
+--color-automatik-700: #1f3fc3;
+--color-automatik-800: #2239ab;
+--color-automatik-900: #213487;
+--color-automatik-950: #192252;
+
+--color-automatik: #1F3FC3;
+
+
+}
+body{
+  background-color:white;
 }

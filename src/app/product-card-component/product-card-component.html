@@ -1,0 +1,24 @@
+<div class="product block min-w-[200px] w-[200px] md:w-[300px] h-[370px] md:h-[470px] flex-shrink-0 hover:shadow-lg transition-shadow duration-300 rounded-xl overflow-hidden p-2 bg-white shadow-lg md:shadow-[0px]" data-aos="fade-right" >
+  <div class="imagewrapper relative h-[250px] md:h-[300px] w-full">
+    <div class="ec top-2 right-2 absolute bg-green-600 text-white text-[14px] md:text-[18px] p-2 rounded-xl">-{{getPercentageDiscount(product.price,product.discountedPrice)}}%</div>
+    <img [src]="product.imageUrl" alt="{{ product.name }}" class="w-auto h-full object-cover rounded-t-md justify-self-center">
+  </div>
+  <div class="product-info h-[50px] md:h-[80px] w-full overflow-hidden px-2 md:px-4">
+    <h1 class="text-[16px] md:text-[22px] text-automatik overflow-hidden w-full text-nowrap">{{product.name}}</h1>
+    <p class="text-[12px] md:text-[18px] text-automatik-300 font-light text-nowrap overflow-hidden">{{product.description}}</p>
+  </div>
+  <div class="call-for-action h-[50px] md:h-[70px] w-full flex justify-center items-center px-2 md:px-4 bg-white">
+    <div class="prices flex flex-col justify-start items-start gap-1 w-1/2 ">
+      <span class="original-price text-[14px] md:text-[18px] text-gray-400 line-through font-normal">{{product.price}}den</span>
+      <span class="discounted-price text-[18px] md:text-[24px] font-bold text-automatik">{{product.discountedPrice}}den</span>
+    </div>
+    <div class="buttons w-1/2 flex justify-end items-end gap-2 h-full py-1">
+      <button class="add-to-wishlist w-1/2 p-2 h-full bg-white border-1 border-automatik-300 rounded-xl flex justify-center items-center hover:bg-automatik-100 transition-colors duration-300">
+        <i class="fa-regular fa-heart text-automatik fa-md"></i>
+      </button>
+      <button class="see-details w-1/2 h-full p-2 bg-white border-1 border-automatik-300 rounded-xl flex justify-center items-center hover:bg-automatik-100 transition-colors duration-300">
+        <i class="fa-regular fa-eye text-automatik fa-sm"></i>
+      </button>
+    </div>
+  </div>
+</div>

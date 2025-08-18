@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { ProductCardComponent } from "../../product-card-component/product-card-component";
 
 @Component({
   selector: 'app-recommended-products-component',
-  imports: [],
+  imports: [ProductCardComponent],
   templateUrl: './recommended-products-component.html',
   styleUrl: './recommended-products-component.css'
 })
@@ -66,6 +67,8 @@ export class RecommendedProductsComponent {
       discountedPrice: 650
     },
   ]
+
+
   getPercentageDiscount(originalPrice: number, discountedPriceedPrice: number):number{
     const percentage= ((originalPrice - discountedPriceedPrice) / originalPrice) * 100;
     return Math.round(percentage);
