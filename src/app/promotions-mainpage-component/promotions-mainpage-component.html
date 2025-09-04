@@ -1,0 +1,24 @@
+<div class="promotions-module w-full min-h-[400px] flex flex-col justify-start items-center shadow-lg" data-aos="fade-up">
+  <div class="promotions-modulewrapper w-full md:w-[1450px] h-full flex justify-center items-start flex-col p-4 md:rounded-xl">
+    <h1 class="text-white font-bold md:px-22 px-4 my-4 text-[1.5rem]">Promotions</h1>
+    <div class="slider-wrapper w-full h-full flex justify-center items-center">
+      <div class="left-button mx-2 hidden md:flex">
+        <button class="slider-button w-[50px] h-[50px] bg-white rounded-full shadow-lg flex justify-center items-center hover:bg-gray-200 transition-colors duration-300" (click)="scrollLeft(sliderRef)">
+          <i class="fa-solid fa-chevron-left text-automatik"></i>
+        </button>
+      </div>
+      <div  #sliderRef class="slider-promotions flex justify-between items-center w-[1264px] gap-4 h-full overflow-x-auto scroll-smooth p-4">
+        @for(promotion of promotions; track promotion.id) {
+          <app-promotion-horizontal-card [promotion]="promotion"></app-promotion-horizontal-card>
+        }
+
+
+    </div>
+    <div class="right-button mx-2 hidden md:flex">
+        <button class="slider-button w-[50px] h-[50px] bg-white rounded-full shadow-lg flex justify-center items-center hover:bg-gray-200 transition-colors duration-300" (click)="scrollRight(sliderRef)">
+          <i class="fa-solid fa-chevron-right text-automatik"></i>
+        </button>
+      </div>
+  </div>
+  </div>
+</div>
