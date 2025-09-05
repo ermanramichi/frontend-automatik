@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Button } from "../ui-kits/button/button";
 interface Promotion {
   id: number;
   title: string;
@@ -6,7 +7,7 @@ interface Promotion {
 }
 @Component({
   selector: 'app-promotion-horizontal-card',
-  imports: [],
+  imports: [Button],
   templateUrl: './promotion-horizontal-card.html',
   styleUrl: './promotion-horizontal-card.css'
 })

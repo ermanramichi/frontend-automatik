@@ -1,40 +1,19 @@
 <div class="header w-full h-fit md:h-24 flex justify-center items-center text-automatik sticky top-0 z-50 bg-white shadow-md flex-col md:flex-row">
+  <div class="headerwrapper w-full md:w-[1450px] h-full flex justify-center items-center flex-col md:flex-row">
   <div class="header-logo flex justify-center items-center p-4 mx-2  w-[200px] md:w-[320px]">
     <img src="assets/automatik.png" alt="" class="max-w-[100%]">
   </div>
   <div class="links flex justify-center items-center mx-4 w-[90%] md:w-auto sticky top-0 z-50 bg-white">
-    <a class="header-link p-3 text-xm  transition-color duration-400 mx-2" routerLink="/home" [class.active]="selectedPage==='home'" (click)="onClick('home')">Home</a>
+    <a class="header-link p-3 text-xm  h-fit transition-all duration-400 mx-2" routerLink="/home" [class.active]="selectedPage==='home'" (click)="onClick('home')">Home</a>
     <a class="header-link p-3 text-xm  h-fit transition-color duration-400 mx-2" routerLink="/categories" [class.active]="selectedPage==='categories'" (click)="onClick('categories')">Categories</a>
     <a class="header-link p-3 text-xm  h-fit transition-color duration-400 mx-2" routerLink="/brands" [class.active]="selectedPage==='brands'" (click)="onClick('brands')">Brands</a>
-    <a class="header-link p-3 text-xm  h-fit transition-color duration-400 mx-2" routerLink="/about" [class.active]="selectedPage==='about'" (click)="onClick('about')">About</a>
+    <a class="header-link p-3 text-xm  h-fit transition-color duration-400 mx-2" routerLink="/stores" [class.active]="selectedPage==='stores'" (click)="onClick('stores')">Stores</a>
+  </div>
+  <div class="searchbar h-10 w-10 hidden md:flex justify-center items-center text-xm p-1 hover:p-3 mx-4 md:mx-0 md:ml-4 transition-all duration-300 hover:w-72 focus-within:w-72 hover:shadow-lg  hover:border-b-2 border-automatik ">
+    <img src="assets/search.svg" alt="" class="searchicon  h-full object-contain">
+    <input type="text" placeholder="Search for products, brands and more" class="searchinput h-full w-full outline-none border-none px-2 text-sm md:text-md">
+
   </div>
 
-  <div class="search md:w-[200px] hidden md:flex justify-center items-center mx-4" >
-   <input type="text" class="p-2 rounded-md  w-full focus:border-2 focus:border-b-automatik focus:ring-automatik focus:ring-1 focus:outline-none" placeholder="Search for anything...">
-  </div>
-<div class="relative inline-block text-left w-7 h-7 md:w-[150px]">
-  <div
-    class="hidden md:flex items-center gap-2 cursor-pointer border px-4 py-2 rounded-md shadow-sm hover:ring-2 ring-blue-400"
-    (click)="dropdownOpen = !dropdownOpen"
-  >
-    <img [src]="selected.flag" alt="{{ selected.name }}" class="w-5 h-5 rounded-full" />
-    <span class="text-sm  hidden md:flex">{{ selected.name }}</span>
-  </div>
-
- @if(dropdownOpen) {
-  <div
-
-    class="absolute mt-2 w-fit px-1 bg-white border rounded-md shadow z-50"
-  >
-  @for (lang of languages; track lang.code) {
-    <div
-      (click)="selectLanguage(lang)"
-      class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100 cursor-pointer">
-      <img [src]="lang.flag" alt="{{ lang.name }}" class="w-5 h-5 rounded-full overflow-hidden" />
-      <span class="text-sm">{{ lang.name }}</span>
-    </div>
-  }
-  </div>
-}
 </div>
 </div>

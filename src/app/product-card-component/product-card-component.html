@@ -8,12 +8,14 @@
     <p class="text-[12px] md:text-[14px] text-automatik-300 font-light text-nowrap overflow-hidden">{{product.description}}</p>
   </div>
   <div class="call-for-action h-[50px] md:h-[70px] w-full flex flex-col justify-center items-center px-2 md:px-4 bg-white ">
-    <div class="prices flex justify-center items-center gap-1 w-full pt-1">
-      <span class="original-price text-[12px] md:text-[18px] text-gray-400 line-through font-normal w-1/2 text-left">{{product.price}} ден</span>
-      <span class="discounted-price text-[16px] md:text-[24px] font-bold text-automatik w-1/2 text-right">{{product.discountedPrice}} ден</span>
+    <div class="prices flex justify-center items-center gap-1 w-full ">
+      <span class="original-price text-[12px] md:text-[18px] text-gray-400 line-through font-normal w-1/2 text-left text-nowrap">{{product.price}} ден</span>
+      <span class="discounted-price text-[16px] md:text-[24px] font-bold text-automatik w-1/2 text-right text-nowrap">{{product.discountedPrice}} ден</span>
     </div>
-    <div class="button w-full ">
-      <button class="w-full bg-automatik text-[14px] md:text-[18px] text-white md:py-2 py-1 rounded-md font-bold hover:bg-automatik-700 transition-colors duration-200">View more..</button>
+    <div class="buttonwrapper w-full">
+
+    <app-button theme='dark'>View more..</app-button>
+
     </div>
 
   </div>
