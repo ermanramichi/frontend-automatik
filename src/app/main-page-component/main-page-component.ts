@@ -3,10 +3,11 @@ import { HeroSearchComponent } from "./hero-search-component/hero-search-compone
 import { RecommendedProductsComponent } from "./recommended-products-component/recommended-products-component";
 import { PromotionsMainpageComponent } from "../promotions-mainpage-component/promotions-mainpage-component";
 import { DropdownComponent } from "../dropdown-component/dropdown-component";
+import { CategoriesHeroComponent } from "./categories-hero-component/categories-hero-component";
 
 @Component({
   selector: 'app-main-page-component',
-  imports: [HeroSearchComponent, RecommendedProductsComponent, PromotionsMainpageComponent, DropdownComponent],
+  imports: [HeroSearchComponent, RecommendedProductsComponent, PromotionsMainpageComponent, DropdownComponent, CategoriesHeroComponent],
   templateUrl: './main-page-component.html',
   styleUrl: './main-page-component.css'
 })

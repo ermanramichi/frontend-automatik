@@ -11,7 +11,7 @@ import { SliderWithButtons } from "../../ui-kits/slider-with-buttons/slider-with
 export class RecommendedProductsComponent {
 
   type='product'
-  cardSize=350;
+  cardSize=300;
 
 
 }
