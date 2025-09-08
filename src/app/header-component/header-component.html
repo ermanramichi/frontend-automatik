@@ -1,11 +1,11 @@
-<div class="header w-full h-fit md:h-24 flex justify-center items-center text-automatik sticky top-0 z-50 bg-white shadow-md flex-col md:flex-row">
+<div class="header w-full h-fit md:h-24 flex justify-center items-center text-automatik sticky top-0 z-[9999] bg-white shadow-md flex-col md:flex-row">
   <div class="headerwrapper w-full md:w-[1450px] h-full flex justify-center items-center flex-col md:flex-row">
   <div class="header-logo flex justify-center items-center p-4 mx-2  w-[200px] md:w-[320px]">
     <img src="assets/automatik.png" alt="" class="max-w-[100%]">
   </div>
   <div class="links flex justify-center items-center mx-4 w-[90%] md:w-auto sticky top-0 z-50 bg-white">
-    <a class="header-link p-3 text-xm  h-fit transition-all duration-400 mx-2" routerLink="/home" [class.active]="selectedPage==='home'" (click)="onClick('home')">Home</a>
-    <a class="header-link p-3 text-xm  h-fit transition-color duration-400 mx-2" routerLink="/categories" [class.active]="selectedPage==='categories'" (click)="onClick('categories')">Categories</a>
+    <a class="header-link p-3 text-xm  h-fit transition-all duration-400 mx-2" routerLink="/home" [class.active]="selectedPage==='home'" (click)="onClick('home')" (mouseenter)="onHover()" >Home</a>
+    <a class="header-link p-3 text-xm  h-fit transition-color duration-400 mx-2" routerLink="/categories" [class.active]="selectedPage==='categories'" (click)="onClick('categories')" (mouseenter)="onHover()">Categories</a>
     <a class="header-link p-3 text-xm  h-fit transition-color duration-400 mx-2" routerLink="/brands" [class.active]="selectedPage==='brands'" (click)="onClick('brands')">Brands</a>
     <a class="header-link p-3 text-xm  h-fit transition-color duration-400 mx-2" routerLink="/stores" [class.active]="selectedPage==='stores'" (click)="onClick('stores')">Stores</a>
   </div>
@@ -16,4 +16,6 @@
   </div>
 
 </div>
+
 </div>
+

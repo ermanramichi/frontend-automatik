@@ -1,2 +1,2 @@
-<app-header-component></app-header-component>
-<app-main-page-component></app-main-page-component>
+<app-header-component (isActive)="onIsActive($event)"></app-header-component>
+<app-main-page-component [isActive]="isActive" (isNotActive)="onIsNotActive()" ></app-main-page-component>

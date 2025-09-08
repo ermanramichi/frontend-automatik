@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { DropdownComponent } from "../dropdown-component/dropdown-component";
+import {  } from 'stream';
 
 @Component({
   selector: 'app-header-component',
@@ -9,13 +11,38 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   selectedPage='home';
   clicked=false;
-  onClick(id:string){
-    this.selectedPage=id;
-    this.clicked=!this.clicked;
+  dropdownOpen = false;
+  @Output() isActive = new EventEmitter<boolean>();
+  private mouseOutTimeout: any;
+  onClick(id: string) {
+    this.selectedPage = id;
 
+
+    if (id === 'home' || id === 'categories') {
+      this.dropdownOpen = true;
+      this.isActive.emit(this.dropdownOpen);
+    } else {
+      this.dropdownOpen = false;
+      this.isActive.emit(this.dropdownOpen);
+    }
+  }
+  onHover(){
+    if (this.mouseOutTimeout) {
+      clearTimeout(this.mouseOutTimeout);
+      this.mouseOutTimeout = null;
+    }
+
+    this.dropdownOpen = true;
+    this.isActive.emit(this.dropdownOpen);
   }
 
-  dropdownOpen = false;
+  ngOnDestroy() {
+    if (this.mouseOutTimeout) {
+      clearTimeout(this.mouseOutTimeout);
+    }
+  }
+
+
 
   languages = [
     { code: '1', name: 'English', flag: 'assets/languages/english.svg' },
@@ -30,3 +57,5 @@ export class HeaderComponent {
     this.dropdownOpen = false;
   }
 }
+
+

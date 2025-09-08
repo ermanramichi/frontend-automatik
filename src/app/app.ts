@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 
@@ -6,6 +6,7 @@ import { isPlatformBrowser } from '@angular/common';
 import { PLATFORM_ID, Inject } from '@angular/core';
 import { HeaderComponent } from "./header-component/header-component";
 import { MainPageComponent } from "./main-page-component/main-page-component";
+
 
 @Component({
   selector: 'app-root',
@@ -28,4 +29,12 @@ export class App implements AfterViewInit {
   }
 
 }
+ isActive:boolean=false;
+ onIsActive(value:boolean){
+  this.isActive=value;
+
+ }
+ onIsNotActive(){
+  this.isActive=false;
+ }
 }

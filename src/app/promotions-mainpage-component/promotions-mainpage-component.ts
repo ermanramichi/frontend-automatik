@@ -1,48 +1,17 @@
 import { Component } from '@angular/core';
 import { PromotionHorizontalCard } from "../promotion-horizontal-card/promotion-horizontal-card";
+import { SliderWithButtons } from "../ui-kits/slider-with-buttons/slider-with-buttons";
 
 @Component({
   selector: 'app-promotions-mainpage-component',
-  imports: [PromotionHorizontalCard],
+  imports: [SliderWithButtons],
   templateUrl: './promotions-mainpage-component.html',
   styleUrl: './promotions-mainpage-component.css'
 })
 export class PromotionsMainpageComponent {
-  promotions=[
-    {
-      id:1,
-      title:'Back to School Sale',
-      imageUrl:'assets/promotion1.png'
-    },
-    {
-      id:2,
-      title:'Summer Clearance Event',
-      imageUrl:'assets/promotion2.png'
-    },
-     {
-      id:3,
-      title:'Back to School Sale',
-      imageUrl:'assets/promotion1.png'
-    },
-    {
-      id:4,
-      title:'Summer Clearance Event',
-      imageUrl:'assets/promotion2.png'
-    }
-  ]
+
+  type='promotion'
+  cardSize=500;
 
 
-scrollRight(slider: HTMLElement): void {
-    slider.scrollBy({
-      left: 500,
-      behavior: 'smooth'
-    });
-  }
-
-  scrollLeft(slider: HTMLElement): void {
-    slider.scrollBy({
-      left: -500,
-      behavior: 'smooth'
-    });
-  }
 }

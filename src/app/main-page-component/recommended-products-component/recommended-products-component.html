@@ -1,24 +1,6 @@
 <div class="recommended-products w-full  min-h-[450px] flex justify-center items-center py-8" data-aos="fade-up">
   <div class="recommended-products-wrapper md:w-[1450px] w-full h-full flex flex-col justify-center items-start p-4 text-[1.5rem] font-bold">
     <h1 class="md:px-22 px-4 my-4 text-automatik">Recommended products</h1>
-    <div class="slider-wrapper w-full h-full flex justify-center items-center">
-      <div class="left-button mx-2 hidden md:flex">
-        <button class="slider-button w-[50px] h-[50px] bg-white rounded-full shadow-lg flex justify-center items-center hover:bg-gray-200 transition-colors duration-300" (click)="scrollLeft(sliderRef)">
-          <i class="fa-solid fa-chevron-left text-automatik"></i>
-        </button>
-      </div>
-      <div  #sliderRef class="slider-products flex justify-between items-center w-[1264px] gap-4 h-full overflow-x-auto scroll-smooth p-4">
-        @for(product of products; track product.id) {
-          <app-product-card-component [product]="product"></app-product-card-component>
-        }
-
-
-    </div>
-    <div class="right-button mx-2 hidden md:flex">
-        <button class="slider-button w-[50px] h-[50px] bg-white rounded-full shadow-lg flex justify-center items-center hover:bg-gray-200 transition-colors duration-300" (click)="scrollRight(sliderRef)">
-          <i class="fa-solid fa-chevron-right text-automatik"></i>
-        </button>
-      </div>
-  </div>
+    <app-slider-with-buttons [type]="type" [cardSize]="cardSize"class="w-full"></app-slider-with-buttons>
 </div>
 </div>
