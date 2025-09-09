@@ -6,11 +6,12 @@ import { isPlatformBrowser } from '@angular/common';
 import { PLATFORM_ID, Inject } from '@angular/core';
 import { HeaderComponent } from "./header-component/header-component";
 import { MainPageComponent } from "./main-page-component/main-page-component";
+import { FooterComponent } from "./footer-component/footer-component";
 
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent, MainPageComponent],
+  imports: [HeaderComponent, MainPageComponent, FooterComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

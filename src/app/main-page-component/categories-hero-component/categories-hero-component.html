@@ -1,5 +1,5 @@
 @if(isMobile){
-  <div class="category-hero w-full h-[200px] p-5">
+  <div class="category-hero w-full h-[170px] py-3 px-5" data-aos="fade-up">
     <app-slider-with-buttons [type]="type" [cardSize]="cardSize" (categories)="categories">
 
     </app-slider-with-buttons>
@@ -7,11 +7,18 @@
   </div>
 }
 @if(isDesktop){
-  <div class="category-hero w-full h-[350px] p-10">
+  <div class="category-hero w-full h-[350px] p-10" data-aos="fade-up">
     <div class="category-hero-wrapper flex justify-center items-center gap-10">
       @for(category of categories;track category.id){
         <app-category-icon-main [category]="category"></app-category-icon-main>
       }
+    </div>
+  </div>
+}
+@if(isLargeDesktop){
+  <div class="category-hero w-full h-[350px] p-10 flex justify-center items-center" data-aos="fade-up">
+    <div class="category-hero-wrapper w-full h-[350px] flex justify-center items-center gap-10">
+      <app-categories-hero-function-component class="w-full flex gap-4 justify-center items-center"></app-categories-hero-function-component>
     </div>
   </div>
 }

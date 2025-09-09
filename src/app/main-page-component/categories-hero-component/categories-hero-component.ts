@@ -1,10 +1,11 @@
 import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { CategoryIconMain } from "../../ui-kits/category-icon-main/category-icon-main";
 import { SliderWithButtons } from "../../ui-kits/slider-with-buttons/slider-with-buttons";
+import { CategoriesHeroFunctionComponent } from "./categories-hero-function-component/categories-hero-function-component";
 
 @Component({
   selector: 'app-categories-hero-component',
-  imports: [CategoryIconMain, SliderWithButtons],
+  imports: [CategoryIconMain, SliderWithButtons, CategoriesHeroFunctionComponent],
   templateUrl: './categories-hero-component.html',
   styleUrl: './categories-hero-component.css'
 })
@@ -16,6 +17,7 @@ export class CategoriesHeroComponent implements OnInit, OnDestroy {
   isMobile = false;
   isTablet = false;
   isDesktop = false;
+  isLargeDesktop=false;
   deviceType = '';
   type='category'
   cardSize=100;
@@ -36,7 +38,8 @@ export class CategoriesHeroComponent implements OnInit, OnDestroy {
     // Define breakpoints
     this.isMobile = this.screenWidth < 768;
     this.isTablet = this.screenWidth >= 768 && this.screenWidth < 1024;
-    this.isDesktop = this.screenWidth >= 1024;
+    this.isDesktop = this.screenWidth >= 1024 && this.screenWidth<1920;
+    this.isLargeDesktop=this.screenWidth>=1920;
 
     // Set device type for debugging
     if (this.isMobile) this.deviceType = 'Mobile';

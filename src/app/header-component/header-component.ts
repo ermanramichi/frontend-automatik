@@ -18,7 +18,7 @@ export class HeaderComponent {
     this.selectedPage = id;
 
 
-    if (id === 'home' || id === 'categories') {
+    if (id === 'categories') {
       this.dropdownOpen = true;
       this.isActive.emit(this.dropdownOpen);
     } else {
