@@ -1,10 +1,10 @@
-<div class="product block min-w-[200px] w-[200px] md:w-[300px] h-[370px] md:h-[470px] flex-shrink-0 hover:shadow-lg transition-shadow duration-300 rounded-xl overflow-hidden p-2 bg-white shadow-lg md:shadow-[0px] snap-start" data-aos="fade-right" >
-  <div class="imagewrapper relative h-[250px] md:h-[300px] w-full">
+<div class="product block min-w-[200px] w-[200px] lg:w-[300px] h-[370px] lg:h-[470px]  flex-shrink-0 hover:shadow-lg transition-shadow duration-300 rounded-xl overflow-hidden p-2 bg-white shadow-lg md:shadow-[0px] snap-start group" data-aos="fade-right" >
+  <div class="imagewrapper relative h-[250px] lg:h-[300px] w-full">
     <div class="ec top-2 right-2 absolute bg-green-600 text-white text-[14px] md:text-[18px] p-2 rounded-xl z-50">-{{getPercentageDiscount(product.price,product.discountedPrice)}}%</div>
     <img [src]="product.imageUrl" alt="{{ product.name }}" class="productimg w-auto h-full object-cover rounded-t-md justify-self-center">
   </div>
   <div class="product-info h-[50px] md:h-[80px] w-full overflow-hidden px-2 md:px-4">
-    <h1 class="text-[16px] md:text-[18px] text-automatik overflow-hidden w-full text-nowrap">{{product.name}}</h1>
+    <h1 class="text-[16px] md:text-[18px] text-automatik overflow-hidden w-full text-nowrap group-hover:text-automatik-kontrast">{{product.name}}</h1>
     <p class="text-[12px] md:text-[14px] text-automatik-300 font-light text-nowrap overflow-hidden">{{product.description}}</p>
   </div>
   <div class="call-for-action h-[50px] md:h-[70px] w-full flex flex-col justify-center items-center px-2 md:px-4 bg-white ">
@@ -12,7 +12,7 @@
       <span class="original-price text-[12px] md:text-[18px] text-gray-400 line-through font-normal w-1/2 text-left text-nowrap">{{product.price}} ден</span>
       <span class="discounted-price text-[16px] md:text-[24px] font-bold text-automatik w-1/2 text-right text-nowrap">{{product.discountedPrice}} ден</span>
     </div>
-    <div class="buttonwrapper w-full">
+    <div class="buttonwrapper w-full ">
 
     <app-button theme='dark'>View more..</app-button>
 

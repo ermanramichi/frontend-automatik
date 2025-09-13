@@ -1,11 +1,13 @@
 @if(isMobile){
-  <div class="category-hero w-full h-[170px] py-3 px-5" data-aos="fade-up">
+  <div class="category-hero w-full h-[130px] py-2 px-5" data-aos="fade-up">
+
     <app-slider-with-buttons [type]="type" [cardSize]="cardSize" (categories)="categories">
 
     </app-slider-with-buttons>
 
   </div>
 }
+
 @if(isDesktop){
   <div class="category-hero w-full h-[350px] p-10" data-aos="fade-up">
     <div class="category-hero-wrapper flex justify-center items-center gap-10">

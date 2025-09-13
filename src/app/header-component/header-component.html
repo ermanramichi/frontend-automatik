@@ -4,12 +4,12 @@
     <img src="assets/automatik.png" alt="" class="max-w-[100%]">
   </div>
   <div class="links flex justify-center items-center mx-4 w-[90%] md:w-auto sticky top-0 z-50 bg-white">
-    <a class="header-link p-3 text-xm  h-fit transition-all duration-400 mx-2" routerLink="/home" [class.active]="selectedPage==='home'" (click)="onClick('home')" >Home</a>
-    <a class="header-link p-3 text-xm  h-fit transition-color duration-400 mx-2" routerLink="/categories" [class.active]="selectedPage==='categories'" (click)="onClick('categories')" (mouseenter)="onHover()">Categories</a>
-    <a class="header-link p-3 text-xm  h-fit transition-color duration-400 mx-2" routerLink="/brands" [class.active]="selectedPage==='brands'" (click)="onClick('brands')">Brands</a>
-    <a class="header-link p-3 text-xm  h-fit transition-color duration-400 mx-2" routerLink="/stores" [class.active]="selectedPage==='stores'" (click)="onClick('stores')">Stores</a>
+    <a class="header-link p-3 text-xm  h-fit transition-all duration-400 mx-2 hover:text-automatik-kontrast" routerLink="/home" [class.active]="selectedPage==='home'" (click)="onClick('home')" >Home</a>
+    <a class="header-link p-3 text-xm  h-fit transition-all duration-400 mx-2 hover:text-automatik-kontrast" routerLink="/categories" [class.active]="selectedPage==='categories'" (click)="onClick('categories')" (mouseenter)="onHover()">Categories</a>
+    <a class="header-link p-3 text-xm  h-fit transition-all duration-400 mx-2 hover:text-automatik-kontrast" routerLink="/brands" [class.active]="selectedPage==='brands'" (click)="onClick('brands')">Brands</a>
+    <a class="header-link p-3 text-xm  h-fit transition-all duration-400 mx-2 hover:text-automatik-kontrast" routerLink="/stores" [class.active]="selectedPage==='stores'" (click)="onClick('stores')">Stores</a>
   </div>
-  <div class="searchbar h-10 w-10 hidden md:flex justify-center items-center text-xm p-1 hover:p-3 mx-4 md:mx-0 md:ml-4 transition-all duration-300 hover:w-72 focus-within:w-72 hover:shadow-lg  hover:border-b-2 border-automatik ">
+  <div class="searchbar h-10 w-10 hidden md:flex justify-center items-center text-xm p-1 hover:p-3 mx-4 md:mx-0 md:ml-4 transition-all duration-300 hover:w-72 focus-within:w-72 hover:shadow-lg  hover:border-b-2 border-automatik">
     <img src="assets/search.svg" alt="" class="searchicon  h-full object-contain">
     <input type="text" placeholder="Search for products, brands and more" class="searchinput h-full w-full outline-none border-none px-2 text-sm md:text-md">
 

@@ -1,0 +1,6 @@
+ul li:nth-child(6) {
+     border-bottom: none;
+ }
+ul li {
+    border-bottom:2px solid #1f1fc3
+}

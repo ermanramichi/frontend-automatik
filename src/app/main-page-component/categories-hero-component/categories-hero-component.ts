@@ -9,10 +9,8 @@ import { CategoriesHeroFunctionComponent } from "./categories-hero-function-comp
   templateUrl: './categories-hero-component.html',
   styleUrl: './categories-hero-component.css'
 })
-export class CategoriesHeroComponent implements OnInit, OnDestroy {
-  ngOnDestroy(): void {
-    throw new Error('Method not implemented.');
-  }
+export class CategoriesHeroComponent implements OnInit{
+
   screenWidth = 0;
   isMobile = false;
   isTablet = false;

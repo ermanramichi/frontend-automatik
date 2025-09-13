@@ -11,7 +11,7 @@ import { SliderWithButtons } from "../ui-kits/slider-with-buttons/slider-with-bu
 export class PromotionsMainpageComponent {
 
   type='promotion'
-  cardSize=500;
+  cardSize=600;
 
 
 }
