@@ -60,8 +60,14 @@ export class DropdownComponent implements OnInit{
 
       return `${baseClasses} z-[9998] opacity-0 translate-y-4 pointer-events-none`;
 
-
+  
 
 
 }
+  closeDropdown(){
+    this.dropDownActive=false;
+    this.notActive.emit(this.dropDownActive);
+  }
 }
+
+
