@@ -4,13 +4,13 @@
     <img [src]="product.imageUrl" alt="{{ product.name }}" class="productimg w-auto h-full object-cover rounded-t-md justify-self-center">
   </div>
   <div class="product-info h-[50px] md:h-[80px] w-full overflow-hidden px-2 md:px-4">
-    <h1 class="text-[16px] md:text-[18px] text-automatik overflow-hidden w-full text-nowrap group-hover:text-automatik-kontrast">{{product.name}}</h1>
-    <p class="text-[12px] md:text-[14px] text-automatik-300 font-light text-nowrap overflow-hidden">{{product.description}}</p>
+    <h1 class="text-[16px] md:text-[18px] text-darkmatik overflow-hidden w-full text-nowrap group-hover:text-redmatik">{{product.name}}</h1>
+    <p class="text-[12px] md:text-[14px] text-darkmatik-700 font-light text-nowrap overflow-hidden">{{product.description}}</p>
   </div>
   <div class="call-for-action h-[50px] md:h-[70px] w-full flex flex-col justify-center items-center px-2 md:px-4 bg-white ">
     <div class="prices flex justify-center items-center gap-1 w-full ">
-      <span class="original-price text-[12px] md:text-[18px] text-gray-400 line-through font-normal w-1/2 text-left text-nowrap">{{product.price}} ден</span>
-      <span class="discounted-price text-[16px] md:text-[24px] font-bold text-automatik w-1/2 text-right text-nowrap">{{product.discountedPrice}} ден</span>
+      <span class="original-price text-[12px] md:text-[18px] text-darkmatik-700 line-through font-normal w-1/2 text-left text-nowrap">{{product.price}} ден</span>
+      <span class="discounted-price text-[16px] md:text-[24px] font-bold text-redmatik w-1/2 text-right text-nowrap">{{product.discountedPrice}} ден</span>
     </div>
     <div class="buttonwrapper w-full ">
 

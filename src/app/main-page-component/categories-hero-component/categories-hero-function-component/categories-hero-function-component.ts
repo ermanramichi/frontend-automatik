@@ -12,42 +12,42 @@ export class CategoriesHeroFunctionComponent {
     {
       id:1,
       name:'Phones',
-      iconUrl: 'assets/mobile.svg'
+      iconUrl: 'fa-solid fa-mobile-screen'
     },
     {
       id:2,
       name:'Car Accesories',
-      iconUrl: 'assets/car.svg'
+      iconUrl: 'fa-solid fa-car'
     },
     {
       id:3,
       name:'Kitchen Appliances',
-      iconUrl: 'assets/kitchen.svg'
+      iconUrl: 'fa-solid fa-kitchen-set'
     },
     {
       id:4,
       name:'Televisions',
-      iconUrl: 'assets/tv.svg'
+      iconUrl: 'fa-solid fa-tv'
     },
     {
       id:5,
       name:'Notebooks',
-      iconUrl: 'assets/notebooks.svg'
+      iconUrl: 'fa-solid fa-laptop'
     },
     {
       id:6,
       name:'Decorations',
-      iconUrl: 'assets/decoration.svg'
+      iconUrl: 'fa-solid fa-couch'
     },
     {
       id:7,
       name:'Fragrances',
-      iconUrl: 'assets/fragrances.svg'
+      iconUrl: 'fa-solid fa-bottle-water'
     },
     {
       id:8,
       name:'Clothes',
-      iconUrl: 'assets/clothes.svg'
+      iconUrl: 'fa-solid fa-shirt'
     },
   ]
 }

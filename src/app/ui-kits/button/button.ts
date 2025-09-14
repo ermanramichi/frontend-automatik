@@ -15,8 +15,8 @@ export class Button {
     const baseClasses = 'w-full text-[14px] md:text-[18px]  py-1 rounded-md font-bold transition-colors duration-200 cursor-pointer';
 
     const themeClasses = {
-      light: 'bg-white text-automatik hover:bg-gray-300',
-      dark: 'bg-automatik text-white hover:bg-automatik-900 '
+      light: 'bg-white text-darkmatik hover:bg-redmatik-200',
+      dark: 'bg-redmatik text-white hover:bg-redmatik-900 '
     };
     return baseClasses + ' ' + themeClasses[this.theme];
   }
