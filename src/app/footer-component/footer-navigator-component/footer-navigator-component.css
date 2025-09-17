@@ -1,0 +1,11 @@
+.footer-navigator {
+    background:linear-gradient(180deg,
+  #ffffff 0%,
+   rgb(255, 173, 173) 100%
+  );
+}
+@media(width <= 768px){
+    .footer-navigator {
+     background:white;
+    }
+}

@@ -65,8 +65,7 @@ export class DropdownComponent implements OnInit{
 
 }
   closeDropdown(){
-    this.dropDownActive=false;
-    this.notActive.emit(this.dropDownActive);
+    this.notActive.emit(false);
   }
 }
 

@@ -7,11 +7,12 @@ import { PLATFORM_ID, Inject } from '@angular/core';
 import { HeaderComponent } from "./header-component/header-component";
 import { MainPageComponent } from "./main-page-component/main-page-component";
 import { FooterComponent } from "./footer-component/footer-component";
+import { FooterNavigatorComponent } from "./footer-component/footer-navigator-component/footer-navigator-component";
 
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent, MainPageComponent, FooterComponent],
+  imports: [HeaderComponent, MainPageComponent, FooterComponent, FooterNavigatorComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

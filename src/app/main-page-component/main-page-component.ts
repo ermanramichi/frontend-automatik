@@ -13,7 +13,7 @@ import { CategoriesHeroComponent } from "./categories-hero-component/categories-
 })
 export class MainPageComponent {
   @Input() isActive!:boolean;
-  
+
   @Output() isNotActive= new EventEmitter<void>();
   onClick(){
     console.log("test")
@@ -30,9 +30,7 @@ export class MainPageComponent {
     return `${baseClasses}`;
 
   }
-  toggleDropdown(){
-    this.isActive=!this.isActive;
-  }
+  
   
 
 }
