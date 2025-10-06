@@ -7,7 +7,7 @@ import { CategoriesHeroComponent } from "./categories-hero-component/categories-
 
 @Component({
   selector: 'app-main-page-component',
-  imports: [HeroSearchComponent, RecommendedProductsComponent, PromotionsMainpageComponent, DropdownComponent, CategoriesHeroComponent],
+  imports: [HeroSearchComponent, RecommendedProductsComponent, PromotionsMainpageComponent, CategoriesHeroComponent],
   templateUrl: './main-page-component.html',
   styleUrl: './main-page-component.css'
 })
@@ -20,16 +20,7 @@ export class MainPageComponent {
    
     this.isNotActive.emit();
   }
-  get backDropClass():string{
-  const baseClasses = 'w-full flex flex-col transition-all duration-300 ease-in-out';
-
-    if (this.isActive) {
-      return `${baseClasses} blur-[5px]`;
-    }
-
-    return `${baseClasses}`;
-
-  }
+  
   
   
 

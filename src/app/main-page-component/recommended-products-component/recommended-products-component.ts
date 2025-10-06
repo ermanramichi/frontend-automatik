@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { ProductCardComponent } from "../../product-card-component/product-card-component";
+
 import { SliderWithButtons } from "../../ui-kits/slider-with-buttons/slider-with-buttons";
 
 @Component({

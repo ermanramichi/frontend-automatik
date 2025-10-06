@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { RecommendedProductsComponent } from '../main-page-component/recommended-products-component/recommended-products-component';
-import { Button } from "../ui-kits/button/button";
+
+import { Button } from "../../ui-kits/button/button";
 interface Product {
   id: number;
   name: string;

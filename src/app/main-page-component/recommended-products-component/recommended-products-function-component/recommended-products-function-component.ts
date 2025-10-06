@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ProductCardComponent } from "../../../product-card-component/product-card-component";
+import { ProductCardComponent } from "../../product-card-component/product-card-component";
 
 @Component({
   selector: 'app-recommended-products-function-component',

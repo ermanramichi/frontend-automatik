@@ -1,11 +1,9 @@
 <div class="main-container bg-white flex flex-col w-full relative">
-<app-dropdown-component [dropDownActive]="isActive" class="transition-all duration-300 ease-in-out"(notActive)="onClick()"> </app-dropdown-component>
-@if(isActive){}
-<div [class]="backDropClass"(click)="onClick()">
+
 <app-hero-search-component class="flex justify-center items-center"></app-hero-search-component>
 <app-categories-hero-component class="flex justify-center items-center"></app-categories-hero-component>
 <app-recommended-products-component class="flex justify-center items-center "></app-recommended-products-component>
 <app-promotions-mainpage-component class="flex justify-center items-center"></app-promotions-mainpage-component>
 
 </div>
-</div>
+

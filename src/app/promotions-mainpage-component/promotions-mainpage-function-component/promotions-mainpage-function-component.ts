@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PromotionHorizontalCard } from "../../promotion-horizontal-card/promotion-horizontal-card";
+import { PromotionHorizontalCard } from "../../main-page-component/promotion-horizontal-card/promotion-horizontal-card";
 
 @Component({
   selector: 'app-promotions-mainpage-function-component',

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Button } from "../ui-kits/button/button";
+import { Button } from "../../ui-kits/button/button";
 interface Promotion {
   id: number;
   title: string;

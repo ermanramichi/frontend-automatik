@@ -1,19 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, ExtraOptions } from '@angular/router';
+import { MainPageComponent } from './main-page-component/main-page-component';
+import { StoresListingComponent } from './stores-listing-component/stores-listing-component';
 
 
 export const routes: Routes = [
-
+{ path: '', component: MainPageComponent },
+{ path:'home', component: MainPageComponent },
+{ path:'stores', component: StoresListingComponent}
 ];
 
-const config: ExtraOptions = {
-  anchorScrolling: 'enabled',
-  scrollPositionRestoration: 'enabled',
-  scrollOffset: [0, 84], // optional: adjust if you have a fixed navbar
-};
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes, config)],
-  exports: [RouterModule],
-})
-export class AppRoutingModule {}

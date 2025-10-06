@@ -5,14 +5,17 @@ import { RouterOutlet } from '@angular/router';
 import { isPlatformBrowser } from '@angular/common';
 import { PLATFORM_ID, Inject } from '@angular/core';
 import { HeaderComponent } from "./header-component/header-component";
-import { MainPageComponent } from "./main-page-component/main-page-component";
 import { FooterComponent } from "./footer-component/footer-component";
 import { FooterNavigatorComponent } from "./footer-component/footer-navigator-component/footer-navigator-component";
+import { DropdownComponent } from "./dropdown-component/dropdown-component";
+
+
+
 
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent, MainPageComponent, FooterComponent, FooterNavigatorComponent],
+  imports: [HeaderComponent, FooterComponent, FooterNavigatorComponent, RouterOutlet, DropdownComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

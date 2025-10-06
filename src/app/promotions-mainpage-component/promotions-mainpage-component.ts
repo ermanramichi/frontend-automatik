@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PromotionHorizontalCard } from "../promotion-horizontal-card/promotion-horizontal-card";
+
 import { SliderWithButtons } from "../ui-kits/slider-with-buttons/slider-with-buttons";
 
 @Component({

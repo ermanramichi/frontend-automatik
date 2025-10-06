@@ -1,4 +1,11 @@
 <app-header-component (isActive)="onIsActive($event)"></app-header-component>
-<app-main-page-component [isActive]="isActive" (isNotActive)="onIsNotActive()" ></app-main-page-component>
+<app-dropdown-component [dropDownActive]="isActive" class="transition-all duration-300 ease-in-out" (notActive)="onIsNotActive()"> </app-dropdown-component>
+@if(isActive) {
+<div class="fixed inset-0  backdrop-blur-sm z-40 transition-opacity duration-300"(click)="onIsNotActive()"></div>
+}
+
+
+<router-outlet></router-outlet>
+
 <app-footer-navigator-component></app-footer-navigator-component>
 <app-footer-component></app-footer-component>
