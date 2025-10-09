@@ -53,7 +53,7 @@ export class DropdownComponent implements OnInit{
       return `${baseClasses} z-[9998] opacity-0 translate-y-4 pointer-events-none`;
 
     }
-    const baseClasses = 'drop-down w-full h-[500px] bg-white fixed top-24 left-0 flex items-start justify-start shadow-xl transition-all duration-300 ease-in-out';
+    const baseClasses = 'drop-down w-[1400px] h-[500px] bg-white fixed top-24 left-60 flexs items-start justify-start shadow-xl transition-all duration-300 ease-in-out rounded-b-xl';
       if (this.dropDownActive) {
       return `${baseClasses} z-[9998] opacity-100 translate-y-0`;
     }

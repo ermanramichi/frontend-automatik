@@ -11,6 +11,8 @@ import { RouterLink } from '@angular/router';
   styleUrl: './header-component.css'
 })
 export class HeaderComponent {
+  clickedMobile=false;
+  clickedSearch=false;
   selectedPage='home';
   clicked=false;
   dropdownOpen = false;
@@ -57,6 +59,13 @@ export class HeaderComponent {
   selectLanguage(lang: any) {
     this.selected = lang;
     this.dropdownOpen = false;
+  }
+  triggerMobile(){
+    this.clickedMobile=!this.clickedMobile;
+  }
+  onSearchClick(){
+    this.clickedSearch=!this.clickedSearch;
+    this.clickedMobile=false;
   }
 }
 
