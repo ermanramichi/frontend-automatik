@@ -3,9 +3,9 @@
   <div class="header-logo flex justify-center items-center p-4 mx-2  w-[200px] md:w-[320px]">
     <img src="assets/automatik-red.png" alt="" class="max-w-[100%]">
   </div>
-  <div class="secondrowMobile flex justify-center items-center w-full md:w-auto h-fit md:h-full flex-row">
-  <div class="mobileTrigger ml-4 h-10 w-10 flex justify-center items-center md:hidden" (click)="triggerMobile()" [class.unactive]="clickedMobile"><img src="assets/3-lines.svg" alt="" class="scale-125"></div>
-  <div class="links hidden md:flex justify-center items-center mx-4 w-full md:w-auto sticky top-0 z-50 bg-white transition-all duration-400 "[class.aktive]="clickedMobile">
+  <div class="secondrowMobile flex justify-center items-center w-full md:w-auto h-fit md:h-full flex-row transition-all duration-600" [class.mobile-pushed]="clickedMobile">
+  <div class="mobileTrigger ml-4 h-10 w-10 flex justify-center items-center md:hidden transition-transform duration-600" (click)="triggerMobile()" [class.unactive]="clickedMobile" [class.rotate-90]="clickedMobile"><img src="assets/3-lines.svg" alt="" class="scale-125"></div>
+  <div class="links opacity-0 hidden md:flex justify-center items-center mx-4 w-full md:w-auto sticky top-0 z-50 bg-white transition-all duration-600" [class.aktive]="clickedMobile">
     <a class="header-link p-3 text-xm md:text-lg h-fit transition-all duration-400 md:mx-2 hover:text-redmatik" routerLink="/home" [class.active]="selectedPage==='home'" (click)="onClick('home')" >Home</a>
     <a class="header-link p-3 text-xm md:text-lg h-fit transition-all duration-400 md:mx-2 hover:text-redmatik" routerLink="/categories" [class.active]="selectedPage==='categories'" (click)="onClick('categories')" (mouseenter)="onHover()">Categories</a>
     <a class="header-link p-3 text-xm md:text-lg h-fit transition-all duration-400 md:mx-2 hover:text-redmatik" routerLink="/brands" [class.active]="selectedPage==='brands'" (click)="onClick('brands')">Brands</a>
@@ -20,4 +20,3 @@
 </div>
 
 </div>
-

@@ -7,7 +7,8 @@
 
 }
 .aktive{
-  display:flex!important;
+  display: flex!important;
+  opacity:100%!important;
 }
 .unactive{
   display:none!important;
@@ -16,4 +17,13 @@
   /*box-shadow: 8px 8px 20px #bebebe,
               -8px -8px 20px #ffffff; */
   width: full!important;
+}
+@media (max-width: 768px) {
+  .secondrowMobile.mobile-pushed {
+    transform: translateX(-8px);
+  }
+  
+  .mobileTrigger.rotate-90 {
+    transform: rotate(90deg);
+  }
 }
