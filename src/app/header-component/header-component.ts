@@ -88,6 +88,7 @@ export class HeaderComponent {
     this.dropDownMobileOpen=!this.dropDownMobileOpen;
     this.dropdownOpen=false;
     this.isActive.emit(this.dropdownOpen);
+    
   }
 
   iconHamburgerSource():string{

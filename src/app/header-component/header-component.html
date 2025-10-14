@@ -45,7 +45,7 @@
       </div>
       <div [class]="dropDownClasses()">
         <a class="header-link text-xl px-7 py-2 font-semibold hover:text-bluematik-900 flex justify-start items-center  transition-all duration-300" routerLink="/home" [class.active]="selectedPage==='home'" (click)="onClick('home')" >Home</a>
-        <a class="header-link text-xl px-7 py-2 font-semibold hover:text-bluematik-900 flex justify-start items-center  transition-all duration-300" routerLink="/categories" [class.active]="selectedPage==='categories'" (click)="onClick('categories')" (mouseenter)="onHover()">Categories</a>
+        <a class="header-link text-xl px-7 py-2 font-semibold hover:text-bluematik-900 flex justify-start items-center  transition-all duration-300" routerLink="/categories" [class.active]="selectedPage==='categories'" (click)="onClick('categories')">Categories</a>
         <a class="header-link text-xl px-7 py-2 font-semibold hover:text-bluematik-900 flex justify-start items-center  transition-all duration-300" routerLink="/brands" [class.active]="selectedPage==='brands'" (click)="onClick('brands')">Brands</a>
         <a class="header-link text-xl px-7 py-2  font-semibold hover:text-bluematik-900 flex justify-start items-center  transition-all duration-300" routerLink="/stores" [class.active]="selectedPage==='stores'" (click)="onClick('stores')">Stores</a>
       </div>
