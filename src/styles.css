@@ -2,30 +2,19 @@
 @import 'aos/dist/aos.css';
 
 @theme{
---color-redmatik-50: #fef3f2;
---color-redmatik-100: #fee5e2;
---color-redmatik-200: #fecfca;
---color-redmatik-300: #fdada4;
---color-redmatik-400: #f97e70;
---color-redmatik-500: #f05543;
---color-redmatik-600: #dc3522;
---color-redmatik-700: #ba2b1b;
---color-redmatik-800: #9a271a;
---color-redmatik-900: #80261c;
---color-redmatik-950: #45100a;
---color-redmatik: #dc3522;
---color-darkmatik-50: #f5f5f6;
---color-darkmatik-100: #e6e6e7;
---color-darkmatik-200: #cfd0d2;
---color-darkmatik-300: #adaeb3;
---color-darkmatik-400: #84858c;
---color-darkmatik-500: #696a71;
---color-darkmatik-600: #5a5b60;
---color-darkmatik-700: #4c4d52;
---color-darkmatik-800: #434347;
---color-darkmatik-900: #3b3b3e;
---color-darkmatik-950: #1e1e20;
---color-darkmatik: #1e1e20;
+--color-bluematik-50: #eff5ff;
+--color-bluematik-100: #dce8fd;
+--color-bluematik-200: #c1d7fc;
+--color-bluematik-300: #96befa;
+--color-bluematik-400: #649bf6;
+--color-bluematik-500: #4077f1;
+--color-bluematik-600: #2a58e6;
+--color-bluematik-700: #1f3fc3;
+--color-bluematik-800: #2239ab;
+--color-bluematik-900: #213487;
+--color-bluematik-950: #192252;
+--color-bluematik:#1f3fc3;
+
 }
 body{
   background-color:white;
@@ -44,7 +33,7 @@ body{
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #dc3522; /* Blue scrollbar thumb */
+  background: #1f3fc3; /* Blue scrollbar thumb */
   border-radius: 4px;
   transition: background 0.2s ease;
 }

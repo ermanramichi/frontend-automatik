@@ -46,6 +46,6 @@ export class CategoryIconMain implements OnInit {
     else this.deviceType = 'Desktop';
   }
   get iconClasses(): string {
-    if(this.isMobile) {return `${this.category.iconUrl} text-redmatik fa-2x`;}
-    return `${this.category.iconUrl} text-redmatik fa-3x`;}
+    if(this.isMobile) {return `${this.category.iconUrl} text-bluematik fa-2x`;}
+    return `${this.category.iconUrl} text-bluematik fa-3x`;}
 }
