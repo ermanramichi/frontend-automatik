@@ -1,0 +1,9 @@
+<div class="main-categories h-fit md:h-[500px] w-full flex flex-col justify-start items-start text-bluematik" data-aos="fade-right">
+  <ul class="w-full h-full flex justify-start items-start gap-4 p-4 md:p-0 flex-wrap">
+    @for(category of subCategories; track category.id){
+        @if(category.categoryId === selectedCategoryId){
+        <li class="w-fit h-fit text-xm px-7 py-4  font-regular hover:text-bluematik-900 flex justify-start items-center transition-all duration-300 cursor-pointer">{{category.name}}</li>
+    }}
+  </ul>
+  
+</div>

@@ -1,15 +1,17 @@
 import { Component, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
 import { MainCategoriesComponent } from "../categories/main-categories-component/main-categories-component";
+import { SubCategoriesComponent } from "../categories/main-categories-component/sub-categories-component/sub-categories-component";
 
 @Component({
   selector: 'app-dropdown-component',
-  imports: [MainCategoriesComponent],
+  imports: [MainCategoriesComponent, SubCategoriesComponent],
   templateUrl: './dropdown-component.html',
   styleUrl: './dropdown-component.css'
 })
 export class DropdownComponent implements OnInit{
   @Input() dropDownActive!:boolean;
   @Output() notActive = new EventEmitter<boolean>();
+  selectedCategoryId :number=1;
   screenWidth = 0;
   isMobile = false;
   isTablet = false;
@@ -66,6 +68,9 @@ export class DropdownComponent implements OnInit{
 }
   closeDropdown(){
     this.notActive.emit(false);
+  }
+  onCategorySelected(categoryId:number){
+    this.selectedCategoryId=categoryId;
   }
 }
 
