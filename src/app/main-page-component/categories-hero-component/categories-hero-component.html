@@ -1,5 +1,5 @@
 @if(isMobile){
-  <div class="category-hero w-full h-[150px] pt-2 px-5" data-aos="fade-up">
+  <div class="category-hero w-full h-[150px]  px-2 mb-5" data-aos="fade-up">
 
     <app-slider-with-buttons [type]="type" [cardSize]="cardSize" (categories)="categories">
 
@@ -9,7 +9,7 @@
 }
 
 @if(isDesktop){
-  <div class="category-hero w-full h-[350px] p-10" data-aos="fade-up">
+  <div class="category-hero w-full h-[200px] p-5 mb-10" data-aos="fade-up">
     <div class="category-hero-wrapper flex justify-center items-center gap-10">
       @for(category of categories;track category.id){
         <app-category-icon-main [category]="category"></app-category-icon-main>
@@ -18,9 +18,9 @@
   </div>
 }
 @if(isLargeDesktop){
-  <div class="category-hero w-full h-[350px] p-10 flex justify-center items-center" data-aos="fade-up">
-    <div class="category-hero-wrapper w-full h-[350px] flex justify-center items-center gap-10">
-      <app-categories-hero-function-component class="w-full flex gap-4 justify-center items-center"></app-categories-hero-function-component>
+  <div class="category-hero w-full h-[250px] p-5 mb-10" data-aos="fade-up">
+    <div class="category-hero-wrapper w-full h-full flex justify-center items-center">
+      <app-categories-hero-function-component class="w-full h-full flex gap-4 justify-center items-start"></app-categories-hero-function-component>
     </div>
   </div>
 }

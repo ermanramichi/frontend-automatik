@@ -47,5 +47,5 @@ export class CategoryIconMain implements OnInit {
   }
   get iconClasses(): string {
     if(this.isMobile) {return `${this.category.iconUrl} text-bluematik fa-2x`;}
-    return `${this.category.iconUrl} text-bluematik fa-3x`;}
+    return `${this.category.iconUrl} text-bluematik fa-2x`;}
 }
