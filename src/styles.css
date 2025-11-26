@@ -17,14 +17,22 @@
 
 }
 body{
-  background-color:white;
+  background-color:white !important;
 }
 *{
   font-family: 'Roboto', sans-serif;
-
-
+  forced-color-adjust: none !important ;
+  color-scheme: light !important;
   box-sizing:border-box;
 }
+html {
+  color-scheme: light !important;
+  supported-color-schemes: light !important;
+  forced-color-adjust: none !important ;
+  --samsung-browser-neutral: 1;
+  -webkit-theme-ignore-dark-mode: true;
+}
+
 :root{
   color-scheme: light;
 }
