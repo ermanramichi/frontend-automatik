@@ -1,0 +1,765 @@
+[
+  {
+    "ID": "CA01SC01",
+    "ParentID": "HC01CA01",
+    "CustomSubCategoryNameEN": "Smartphones",
+    "CustomSubCategoryNameMK": "Паметни телефони",
+    "CustomSubCategoryNameAL": "Telefonat inteligjentë"
+  },
+  {
+    "ID": "CA01SC02",
+    "ParentID": "HC01CA01",
+    "CustomSubCategoryNameEN": "Feature Phones",
+    "CustomSubCategoryNameMK": "Функционални телефони",
+    "CustomSubCategoryNameAL": "Telefonat me veçori"
+  },
+  {
+    "ID": "CA01SC03",
+    "ParentID": "HC01CA01",
+    "CustomSubCategoryNameEN": "Phone Cases",
+    "CustomSubCategoryNameMK": "Футроли за телефони",
+    "CustomSubCategoryNameAL": "Kutitë e telefonit"
+  },
+  {
+    "ID": "CA01SC04",
+    "ParentID": "HC01CA01",
+    "CustomSubCategoryNameEN": "Screen Protectors",
+    "CustomSubCategoryNameMK": "Заштитници за екран",
+    "CustomSubCategoryNameAL": "Mbrojtësit e ekranit"
+  },
+  {
+    "ID": "CA01SC05",
+    "ParentID": "HC01CA01",
+    "CustomSubCategoryNameEN": "Chargers & Cables",
+    "CustomSubCategoryNameMK": "Полначи и кабли",
+    "CustomSubCategoryNameAL": "Karikues dhe kabllo"
+  },
+  {
+    "ID": "CA01SC06",
+    "ParentID": "HC01CA01",
+    "CustomSubCategoryNameEN": "Power Banks",
+    "CustomSubCategoryNameMK": "Пауер банки",
+    "CustomSubCategoryNameAL": "Bankat e energjisë"
+  },
+  {
+    "ID": "CA01SC07",
+    "ParentID": "HC01CA01",
+    "CustomSubCategoryNameEN": "Earbuds & Headphones",
+    "CustomSubCategoryNameMK": "Слушалки и слушалки",
+    "CustomSubCategoryNameAL": "Kufje dhe kufje"
+  },
+  {
+    "ID": "CA02SC01",
+    "ParentID": "HC01CA02",
+    "CustomSubCategoryNameEN": "Laptops",
+    "CustomSubCategoryNameMK": "Лаптопи",
+    "CustomSubCategoryNameAL": "Laptopë"
+  },
+  {
+    "ID": "CA02SC02",
+    "ParentID": "HC01CA02",
+    "CustomSubCategoryNameEN": "Desktops",
+    "CustomSubCategoryNameMK": "Десктоп компјутери",
+    "CustomSubCategoryNameAL": "Desktopët"
+  },
+  {
+    "ID": "CA02SC03",
+    "ParentID": "HC01CA02",
+    "CustomSubCategoryNameEN": "PC Components",
+    "CustomSubCategoryNameMK": "PC компоненти",
+    "CustomSubCategoryNameAL": "Komponentët e PC"
+  },
+  {
+    "ID": "CA02SC04",
+    "ParentID": "HC01CA02",
+    "CustomSubCategoryNameEN": "Monitors",
+    "CustomSubCategoryNameMK": "Монитори",
+    "CustomSubCategoryNameAL": "Monitorët"
+  },
+  {
+    "ID": "CA02SC05",
+    "ParentID": "HC01CA02",
+    "CustomSubCategoryNameEN": "Keyboards & Mice",
+    "CustomSubCategoryNameMK": "Клавијатури и глувци",
+    "CustomSubCategoryNameAL": "Tastierat dhe minjtë"
+  },
+  {
+    "ID": "CA02SC06",
+    "ParentID": "HC01CA02",
+    "CustomSubCategoryNameEN": "External Hard Drives / SSD",
+    "CustomSubCategoryNameMK": "Надворешни хард дискови / SSD",
+    "CustomSubCategoryNameAL": "Hard disqe të jashtme / SSD"
+  },
+  {
+    "ID": "CA02SC07",
+    "ParentID": "HC01CA02",
+    "CustomSubCategoryNameEN": "Laptop Accessories",
+    "CustomSubCategoryNameMK": "Додатоци за лаптопи",
+    "CustomSubCategoryNameAL": "Aksesorët e laptopëve"
+  },
+  {
+    "ID": "CA03SC01",
+    "ParentID": "HC01CA03",
+    "CustomSubCategoryNameEN": "Televisions",
+    "CustomSubCategoryNameMK": "Телевизори",
+    "CustomSubCategoryNameAL": "Televizionet"
+  },
+  {
+    "ID": "CA03SC02",
+    "ParentID": "HC01CA03",
+    "CustomSubCategoryNameEN": "Soundbars & Speakers",
+    "CustomSubCategoryNameMK": "Звучни ленти и звучници",
+    "CustomSubCategoryNameAL": "Shiritat e zërit dhe altoparlantët"
+  },
+  {
+    "ID": "CA03SC03",
+    "ParentID": "HC01CA03",
+    "CustomSubCategoryNameEN": "Headphones",
+    "CustomSubCategoryNameMK": "Слушалки",
+    "CustomSubCategoryNameAL": "Kufje"
+  },
+  {
+    "ID": "CA03SC04",
+    "ParentID": "HC01CA03",
+    "CustomSubCategoryNameEN": "Game Consoles",
+    "CustomSubCategoryNameMK": "Конзоли за игри",
+    "CustomSubCategoryNameAL": "Konzolat e lojërave"
+  },
+  {
+    "ID": "CA03SC05",
+    "ParentID": "HC01CA03",
+    "CustomSubCategoryNameEN": "Game Controllers",
+    "CustomSubCategoryNameMK": "Контролери за игри",
+    "CustomSubCategoryNameAL": "Kontrollorët e lojërave"
+  },
+  {
+    "ID": "CA03SC06",
+    "ParentID": "HC01CA03",
+    "CustomSubCategoryNameEN": "VR Headsets",
+    "CustomSubCategoryNameMK": "VR слушалки",
+    "CustomSubCategoryNameAL": "Kufje VR"
+  },
+  {
+    "ID": "CA04SC01",
+    "ParentID": "HC01CA04",
+    "CustomSubCategoryNameEN": "DSLR Cameras",
+    "CustomSubCategoryNameMK": "DSLR камери",
+    "CustomSubCategoryNameAL": "Kamerat DSLR"
+  },
+  {
+    "ID": "CA04SC02",
+    "ParentID": "HC01CA04",
+    "CustomSubCategoryNameEN": "Mirrorless Cameras",
+    "CustomSubCategoryNameMK": "Безогледални камери",
+    "CustomSubCategoryNameAL": "Kamera pa pasqyrë"
+  },
+  {
+    "ID": "CA04SC03",
+    "ParentID": "HC01CA04",
+    "CustomSubCategoryNameEN": "Action Cameras",
+    "CustomSubCategoryNameMK": "Акциони камери",
+    "CustomSubCategoryNameAL": "Kamerat e veprimit"
+  },
+  {
+    "ID": "CA04SC04",
+    "ParentID": "HC01CA04",
+    "CustomSubCategoryNameEN": "Drones",
+    "CustomSubCategoryNameMK": "Дронови",
+    "CustomSubCategoryNameAL": "Dronët"
+  },
+  {
+    "ID": "CA04SC05",
+    "ParentID": "HC01CA04",
+    "CustomSubCategoryNameEN": "Camera Lenses",
+    "CustomSubCategoryNameMK": "Објективи на камери",
+    "CustomSubCategoryNameAL": "Lentet e kamerës"
+  },
+  {
+    "ID": "CA04SC06",
+    "ParentID": "HC01CA04",
+    "CustomSubCategoryNameEN": "Camera Accessories",
+    "CustomSubCategoryNameMK": "Додатоци за камера",
+    "CustomSubCategoryNameAL": "Aksesorët e kamerës"
+  },
+  {
+    "ID": "CA01SC01",
+    "ParentID": "HC02CA01",
+    "CustomSubCategoryNameEN": "Refrigerators",
+    "CustomSubCategoryNameMK": "Фрижидери",
+    "CustomSubCategoryNameAL": "Frigoriferë"
+  },
+  {
+    "ID": "CA01SC02",
+    "ParentID": "HC02CA01",
+    "CustomSubCategoryNameEN": "Washing Machines",
+    "CustomSubCategoryNameMK": "Машини за перење",
+    "CustomSubCategoryNameAL": "Lavatriçe"
+  },
+  {
+    "ID": "CA01SC03",
+    "ParentID": "HC02CA01",
+    "CustomSubCategoryNameEN": "Dishwashers",
+    "CustomSubCategoryNameMK": "Машини за садови",
+    "CustomSubCategoryNameAL": "Pjatalarëse"
+  },
+  {
+    "ID": "CA01SC04",
+    "ParentID": "HC02CA01",
+    "CustomSubCategoryNameEN": "Microwaves",
+    "CustomSubCategoryNameMK": "Микробранови",
+    "CustomSubCategoryNameAL": "Mikrovalë"
+  },
+  {
+    "ID": "CA01SC05",
+    "ParentID": "HC02CA01",
+    "CustomSubCategoryNameEN": "Vacuum Cleaners",
+    "CustomSubCategoryNameMK": "Правосмукалки",
+    "CustomSubCategoryNameAL": "Fshesa me korrent"
+  },
+  {
+    "ID": "CA01SC06",
+    "ParentID": "HC02CA01",
+    "CustomSubCategoryNameEN": "Air Conditioners",
+    "CustomSubCategoryNameMK": "Клима уреди",
+    "CustomSubCategoryNameAL": "Kondicionerët"
+  },
+  {
+    "ID": "CA02SC01",
+    "ParentID": "HC02CA02",
+    "CustomSubCategoryNameEN": "Cookware",
+    "CustomSubCategoryNameMK": "Садови за готвење",
+    "CustomSubCategoryNameAL": "Enë gatimi"
+  },
+  {
+    "ID": "CA02SC02",
+    "ParentID": "HC02CA02",
+    "CustomSubCategoryNameEN": "Storage Containers",
+    "CustomSubCategoryNameMK": "Складишни контејнери",
+    "CustomSubCategoryNameAL": "Kontejnerët e ruajtjes"
+  },
+  {
+    "ID": "CA02SC03",
+    "ParentID": "HC02CA02",
+    "CustomSubCategoryNameEN": "Blenders & Mixers",
+    "CustomSubCategoryNameMK": "Блендери и миксери",
+    "CustomSubCategoryNameAL": "Blenders & Mixers"
+  },
+  {
+    "ID": "CA02SC04",
+    "ParentID": "HC02CA02",
+    "CustomSubCategoryNameEN": "Coffee Machines",
+    "CustomSubCategoryNameMK": "Машини за кафе",
+    "CustomSubCategoryNameAL": "Makina kafeje"
+  },
+  {
+    "ID": "CA02SC05",
+    "ParentID": "HC02CA02",
+    "CustomSubCategoryNameEN": "Cutlery & Utensils",
+    "CustomSubCategoryNameMK": "Прибор за јадење и прибор",
+    "CustomSubCategoryNameAL": "Takëme dhe enë"
+  },
+  {
+    "ID": "CA03SC01",
+    "ParentID": "HC02CA03",
+    "CustomSubCategoryNameEN": "Living Room Furniture",
+    "CustomSubCategoryNameMK": "Мебел во дневната соба",
+    "CustomSubCategoryNameAL": "Mobilje të dhomës së ndenjes"
+  },
+  {
+    "ID": "CA03SC02",
+    "ParentID": "HC02CA03",
+    "CustomSubCategoryNameEN": "Bedroom Furniture",
+    "CustomSubCategoryNameMK": "Мебел за спална соба",
+    "CustomSubCategoryNameAL": "Mobiljet e dhomës së gjumit"
+  },
+  {
+    "ID": "CA03SC03",
+    "ParentID": "HC02CA03",
+    "CustomSubCategoryNameEN": "Office Furniture",
+    "CustomSubCategoryNameMK": "Канцелариски мебел",
+    "CustomSubCategoryNameAL": "Mobilje zyre"
+  },
+  {
+    "ID": "CA03SC04",
+    "ParentID": "HC02CA03",
+    "CustomSubCategoryNameEN": "Outdoor Furniture",
+    "CustomSubCategoryNameMK": "Надворешен мебел",
+    "CustomSubCategoryNameAL": "Mobilje të jashtme"
+  },
+  {
+    "ID": "CA04SC01",
+    "ParentID": "HC02CA04",
+    "CustomSubCategoryNameEN": "Gardening Tools",
+    "CustomSubCategoryNameMK": "Градинарски алатки",
+    "CustomSubCategoryNameAL": "Mjetet e kopshtarisë"
+  },
+  {
+    "ID": "CA04SC02",
+    "ParentID": "HC02CA04",
+    "CustomSubCategoryNameEN": "Barbecues",
+    "CustomSubCategoryNameMK": "Скара",
+    "CustomSubCategoryNameAL": "Barbecue"
+  },
+  {
+    "ID": "CA04SC03",
+    "ParentID": "HC02CA04",
+    "CustomSubCategoryNameEN": "Garden Decor",
+    "CustomSubCategoryNameMK": "Градинарски декор",
+    "CustomSubCategoryNameAL": "Dekori i kopshtit"
+  },
+  {
+    "ID": "CA04SC04",
+    "ParentID": "HC02CA04",
+    "CustomSubCategoryNameEN": "Outdoor Lighting",
+    "CustomSubCategoryNameMK": "Надворешно осветлување",
+    "CustomSubCategoryNameAL": "Ndriçimi i jashtëm"
+  },
+  {
+    "ID": "CA01SC05",
+    "ParentID": "HC03CA01",
+    "CustomSubCategoryNameEN": "Shirts",
+    "CustomSubCategoryNameMK": "Дресови",
+    "CustomSubCategoryNameAL": "Këmisha"
+  },
+  {
+    "ID": "CA01SC06",
+    "ParentID": "HC03CA01",
+    "CustomSubCategoryNameEN": "Pants",
+    "CustomSubCategoryNameMK": "Панталони",
+    "CustomSubCategoryNameAL": "Pantallona"
+  },
+  {
+    "ID": "CA01SC03",
+    "ParentID": "HC03CA01",
+    "CustomSubCategoryNameEN": "Shoes",
+    "CustomSubCategoryNameMK": "Чевли",
+    "CustomSubCategoryNameAL": "Këpucë"
+  },
+  {
+    "ID": "CA01SC04",
+    "ParentID": "HC03CA01",
+    "CustomSubCategoryNameEN": "Jackets",
+    "CustomSubCategoryNameMK": "Јакни",
+    "CustomSubCategoryNameAL": "Xhaketa"
+  },
+  {
+    "ID": "CA01SC05",
+    "ParentID": "HC03CA01",
+    "CustomSubCategoryNameEN": "Underwear",
+    "CustomSubCategoryNameMK": "Долна облека",
+    "CustomSubCategoryNameAL": "Të brendshme"
+  },
+  {
+    "ID": "CA02SC01",
+    "ParentID": "HC03CA02",
+    "CustomSubCategoryNameEN": "Dresses",
+    "CustomSubCategoryNameMK": "Фустани",
+    "CustomSubCategoryNameAL": "Fustanet"
+  },
+  {
+    "ID": "CA02SC02",
+    "ParentID": "HC03CA02",
+    "CustomSubCategoryNameEN": "Tops",
+    "CustomSubCategoryNameMK": "Врвови",
+    "CustomSubCategoryNameAL": "Majat"
+  },
+  {
+    "ID": "CA02SC03",
+    "ParentID": "HC03CA02",
+    "CustomSubCategoryNameEN": "Pants",
+    "CustomSubCategoryNameMK": "Панталони",
+    "CustomSubCategoryNameAL": "Pantallona"
+  },
+  {
+    "ID": "CA02SC04",
+    "ParentID": "HC03CA02",
+    "CustomSubCategoryNameEN": "Shoes",
+    "CustomSubCategoryNameMK": "Чевли",
+    "CustomSubCategoryNameAL": "Këpucë"
+  },
+  {
+    "ID": "CA02SC05",
+    "ParentID": "HC03CA02",
+    "CustomSubCategoryNameEN": "Bags",
+    "CustomSubCategoryNameMK": "Торби",
+    "CustomSubCategoryNameAL": "Çanta"
+  },
+  {
+    "ID": "CA03SC01",
+    "ParentID": "HC03CA03",
+    "CustomSubCategoryNameEN": "Baby Clothing",
+    "CustomSubCategoryNameMK": "Облека за бебиња",
+    "CustomSubCategoryNameAL": "Veshje për fëmijë"
+  },
+  {
+    "ID": "CA03SC02",
+    "ParentID": "HC03CA03",
+    "CustomSubCategoryNameEN": "Boys Clothing",
+    "CustomSubCategoryNameMK": "Облека за момчиња",
+    "CustomSubCategoryNameAL": "Veshje për djem"
+  },
+  {
+    "ID": "CA03SC03",
+    "ParentID": "HC03CA03",
+    "CustomSubCategoryNameEN": "Girls Clothing",
+    "CustomSubCategoryNameMK": "Облека за девојчиња",
+    "CustomSubCategoryNameAL": "Veshje për vajza"
+  },
+  {
+    "ID": "CA03SC04",
+    "ParentID": "HC03CA03",
+    "CustomSubCategoryNameEN": "Kids Shoes",
+    "CustomSubCategoryNameMK": "Детски чевли",
+    "CustomSubCategoryNameAL": "Këpucë për fëmijë"
+  },
+  {
+    "ID": "CA01SC05",
+    "ParentID": "HC04CA01",
+    "CustomSubCategoryNameEN": "Face",
+    "CustomSubCategoryNameMK": "Лице",
+    "CustomSubCategoryNameAL": "Fytyra"
+  },
+  {
+    "ID": "CA01SC06",
+    "ParentID": "HC04CA01",
+    "CustomSubCategoryNameEN": "Eyes",
+    "CustomSubCategoryNameMK": "Очи",
+    "CustomSubCategoryNameAL": "Sytë"
+  },
+  {
+    "ID": "CA01SC03",
+    "ParentID": "HC04CA01",
+    "CustomSubCategoryNameEN": "Lips",
+    "CustomSubCategoryNameMK": "Усни",
+    "CustomSubCategoryNameAL": "Buzët"
+  },
+  {
+    "ID": "CA01SC04",
+    "ParentID": "HC04CA01",
+    "CustomSubCategoryNameEN": "Palettes",
+    "CustomSubCategoryNameMK": "Палети",
+    "CustomSubCategoryNameAL": "Paleta"
+  },
+  {
+    "ID": "CA02SC01",
+    "ParentID": "HC04CA02",
+    "CustomSubCategoryNameEN": "Moisturizers",
+    "CustomSubCategoryNameMK": "Хидратантни креми",
+    "CustomSubCategoryNameAL": "Hidratues"
+  },
+  {
+    "ID": "CA02SC02",
+    "ParentID": "HC04CA02",
+    "CustomSubCategoryNameEN": "Cleansers",
+    "CustomSubCategoryNameMK": "Чистачи",
+    "CustomSubCategoryNameAL": "Pastrues"
+  },
+  {
+    "ID": "CA02SC03",
+    "ParentID": "HC04CA02",
+    "CustomSubCategoryNameEN": "Sunscreen",
+    "CustomSubCategoryNameMK": "Крема за сончање",
+    "CustomSubCategoryNameAL": "Krem kundër diellit"
+  },
+  {
+    "ID": "CA02SC04",
+    "ParentID": "HC04CA02",
+    "CustomSubCategoryNameEN": "Serums",
+    "CustomSubCategoryNameMK": "Серуми",
+    "CustomSubCategoryNameAL": "Serumet"
+  },
+  {
+    "ID": "CA03SC01",
+    "ParentID": "HC04CA03",
+    "CustomSubCategoryNameEN": "Shampoos",
+    "CustomSubCategoryNameMK": "Шампони",
+    "CustomSubCategoryNameAL": "Shampo"
+  },
+  {
+    "ID": "CA03SC02",
+    "ParentID": "HC04CA03",
+    "CustomSubCategoryNameEN": "Conditioners",
+    "CustomSubCategoryNameMK": "Кондиционери",
+    "CustomSubCategoryNameAL": "Kondicionerë"
+  },
+  {
+    "ID": "CA03SC03",
+    "ParentID": "HC04CA03",
+    "CustomSubCategoryNameEN": "Hair Dryers",
+    "CustomSubCategoryNameMK": "Фенови за коса",
+    "CustomSubCategoryNameAL": "Tharëse flokësh"
+  },
+  {
+    "ID": "CA03SC04",
+    "ParentID": "HC04CA03",
+    "CustomSubCategoryNameEN": "Hair Styling Tools",
+    "CustomSubCategoryNameMK": "Алатки за стилизирање коса",
+    "CustomSubCategoryNameAL": "Mjetet e stilimit të flokëve"
+  },
+  {
+    "ID": "CA04SC01",
+    "ParentID": "HC04CA04",
+    "CustomSubCategoryNameEN": "Perfumes",
+    "CustomSubCategoryNameMK": "Парфеми",
+    "CustomSubCategoryNameAL": "Parfume"
+  },
+  {
+    "ID": "CA04SC02",
+    "ParentID": "HC04CA04",
+    "CustomSubCategoryNameEN": "Body Sprays",
+    "CustomSubCategoryNameMK": "Спрејови за тело",
+    "CustomSubCategoryNameAL": "Spërkatje trupi"
+  },
+  {
+    "ID": "CA01SC03",
+    "ParentID": "HC05CA01",
+    "CustomSubCategoryNameEN": "Fitness Equipment",
+    "CustomSubCategoryNameMK": "Фитнес опрема",
+    "CustomSubCategoryNameAL": "Pajisjet e fitnesit"
+  },
+  {
+    "ID": "CA01SC04",
+    "ParentID": "HC05CA01",
+    "CustomSubCategoryNameEN": "Exercise Machines",
+    "CustomSubCategoryNameMK": "Вежбачки машини",
+    "CustomSubCategoryNameAL": "Makinat e ushtrimeve"
+  },
+  {
+    "ID": "CA01SC05",
+    "ParentID": "HC05CA01",
+    "CustomSubCategoryNameEN": "Weights & Dumbbells",
+    "CustomSubCategoryNameMK": "Тегови и тегови",
+    "CustomSubCategoryNameAL": "Pesha dhe shtanga"
+  },
+  {
+    "ID": "CA01SC06",
+    "ParentID": "HC05CA01",
+    "CustomSubCategoryNameEN": "Yoga Mats",
+    "CustomSubCategoryNameMK": "Јога подлоги",
+    "CustomSubCategoryNameAL": "Dyshekët e jogës"
+  },
+  {
+    "ID": "CA02SC01",
+    "ParentID": "HC05CA02",
+    "CustomSubCategoryNameEN": "Tents",
+    "CustomSubCategoryNameMK": "Шатори",
+    "CustomSubCategoryNameAL": "Tendat"
+  },
+  {
+    "ID": "CA02SC02",
+    "ParentID": "HC05CA02",
+    "CustomSubCategoryNameEN": "Backpacks",
+    "CustomSubCategoryNameMK": "Ранци",
+    "CustomSubCategoryNameAL": "Çanta shpine"
+  },
+  {
+    "ID": "CA02SC03",
+    "ParentID": "HC05CA02",
+    "CustomSubCategoryNameEN": "Hiking Shoes",
+    "CustomSubCategoryNameMK": "Планинарски чевли",
+    "CustomSubCategoryNameAL": "Këpucë ecjeje"
+  },
+  {
+    "ID": "CA02SC04",
+    "ParentID": "HC05CA02",
+    "CustomSubCategoryNameEN": "Sleeping Bags",
+    "CustomSubCategoryNameMK": "Вреќи за спиење",
+    "CustomSubCategoryNameAL": "Çanta gjumi"
+  },
+  {
+    "ID": "CA03SC01",
+    "ParentID": "HC05CA03",
+    "CustomSubCategoryNameEN": "Mountain Bikes",
+    "CustomSubCategoryNameMK": "Планински велосипеди",
+    "CustomSubCategoryNameAL": "Biçikleta malore"
+  },
+  {
+    "ID": "CA03SC02",
+    "ParentID": "HC05CA03",
+    "CustomSubCategoryNameEN": "Road Bikes",
+    "CustomSubCategoryNameMK": "Друмски велосипеди",
+    "CustomSubCategoryNameAL": "Biçikleta rrugore"
+  },
+  {
+    "ID": "CA03SC03",
+    "ParentID": "HC05CA03",
+    "CustomSubCategoryNameEN": "Bike Helmets",
+    "CustomSubCategoryNameMK": "Велосипедски кациги",
+    "CustomSubCategoryNameAL": "Helmetat e biçikletave"
+  },
+  {
+    "ID": "CA03SC04",
+    "ParentID": "HC05CA03",
+    "CustomSubCategoryNameEN": "Bike Locks",
+    "CustomSubCategoryNameMK": "Брави за велосипеди",
+    "CustomSubCategoryNameAL": "Bravat e biçikletave"
+  },
+  {
+    "ID": "CA01SC05",
+    "ParentID": "HC06CA01",
+    "CustomSubCategoryNameEN": "Car Chargers",
+    "CustomSubCategoryNameMK": "Полначи за автомобили",
+    "CustomSubCategoryNameAL": "Karikuesit e makinave"
+  },
+  {
+    "ID": "CA01SC06",
+    "ParentID": "HC06CA01",
+    "CustomSubCategoryNameEN": "Seat Covers",
+    "CustomSubCategoryNameMK": "Навлаки за седишта",
+    "CustomSubCategoryNameAL": "Mbulesat e sediljeve"
+  },
+  {
+    "ID": "CA01SC03",
+    "ParentID": "HC06CA01",
+    "CustomSubCategoryNameEN": "Car Cleaning Supplies",
+    "CustomSubCategoryNameMK": "Средства за чистење автомобили",
+    "CustomSubCategoryNameAL": "Pajisjet e pastrimit të makinave"
+  },
+  {
+    "ID": "CA01SC04",
+    "ParentID": "HC06CA01",
+    "CustomSubCategoryNameEN": "Phone Mounts",
+    "CustomSubCategoryNameMK": "Носачи за телефони",
+    "CustomSubCategoryNameAL": "Montimet e telefonit"
+  },
+  {
+    "ID": "CA02SC01",
+    "ParentID": "HC06CA02",
+    "CustomSubCategoryNameEN": "Helmets",
+    "CustomSubCategoryNameMK": "Шлемови",
+    "CustomSubCategoryNameAL": "Helmetat"
+  },
+  {
+    "ID": "CA02SC02",
+    "ParentID": "HC06CA02",
+    "CustomSubCategoryNameEN": "Gloves",
+    "CustomSubCategoryNameMK": "Ракавици",
+    "CustomSubCategoryNameAL": "Doreza"
+  },
+  {
+    "ID": "CA02SC03",
+    "ParentID": "HC06CA02",
+    "CustomSubCategoryNameEN": "Oils & Fluids",
+    "CustomSubCategoryNameMK": "Масла и течности",
+    "CustomSubCategoryNameAL": "Vajra dhe lëngje"
+  },
+  {
+    "ID": "CA03SC01",
+    "ParentID": "HC06CA03",
+    "CustomSubCategoryNameEN": "Batteries",
+    "CustomSubCategoryNameMK": "Батерии",
+    "CustomSubCategoryNameAL": "Bateritë"
+  },
+  {
+    "ID": "CA03SC02",
+    "ParentID": "HC06CA03",
+    "CustomSubCategoryNameEN": "Tires",
+    "CustomSubCategoryNameMK": "Гуми",
+    "CustomSubCategoryNameAL": "Gomat"
+  },
+  {
+    "ID": "CA03SC03",
+    "ParentID": "HC06CA03",
+    "CustomSubCategoryNameEN": "Filters",
+    "CustomSubCategoryNameMK": "Филтри",
+    "CustomSubCategoryNameAL": "Filtrat"
+  },
+  {
+    "ID": "CA01SC04",
+    "ParentID": "HC07CA01",
+    "CustomSubCategoryNameEN": "Strollers",
+    "CustomSubCategoryNameMK": "Колички",
+    "CustomSubCategoryNameAL": "Karroca"
+  },
+  {
+    "ID": "CA01SC05",
+    "ParentID": "HC07CA01",
+    "CustomSubCategoryNameEN": "Car Seats",
+    "CustomSubCategoryNameMK": "Детски седишта",
+    "CustomSubCategoryNameAL": "Sediljet e makinave"
+  },
+  {
+    "ID": "CA01SC06",
+    "ParentID": "HC07CA01",
+    "CustomSubCategoryNameEN": "Baby Carriers",
+    "CustomSubCategoryNameMK": "Носилки за бебиња",
+    "CustomSubCategoryNameAL": "Mbajtëse për fëmijë"
+  },
+  {
+    "ID": "CA02SC01",
+    "ParentID": "HC07CA02",
+    "CustomSubCategoryNameEN": "Educational Toys",
+    "CustomSubCategoryNameMK": "Едукативни играчки",
+    "CustomSubCategoryNameAL": "Lodra edukative"
+  },
+  {
+    "ID": "CA02SC02",
+    "ParentID": "HC07CA02",
+    "CustomSubCategoryNameEN": "Action Figures",
+    "CustomSubCategoryNameMK": "Акциски фигури",
+    "CustomSubCategoryNameAL": "Figurat e veprimit"
+  },
+  {
+    "ID": "CA02SC03",
+    "ParentID": "HC07CA02",
+    "CustomSubCategoryNameEN": "Puzzles",
+    "CustomSubCategoryNameMK": "Загатки",
+    "CustomSubCategoryNameAL": "Enigma"
+  },
+  {
+    "ID": "CA02SC04",
+    "ParentID": "HC07CA02",
+    "CustomSubCategoryNameEN": "Outdoor Toys",
+    "CustomSubCategoryNameMK": "Надворешни играчки",
+    "CustomSubCategoryNameAL": "Lodra në natyrë"
+  },
+  {
+    "ID": "CA01SC05",
+    "ParentID": "HC08CA01",
+    "CustomSubCategoryNameEN": "Dog Food",
+    "CustomSubCategoryNameMK": "Храна за кучиња",
+    "CustomSubCategoryNameAL": "Ushqim për qen"
+  },
+  {
+    "ID": "CA01SC06",
+    "ParentID": "HC08CA01",
+    "CustomSubCategoryNameEN": "Cat Food",
+    "CustomSubCategoryNameMK": "Храна за мачки",
+    "CustomSubCategoryNameAL": "Ushqim për mace"
+  },
+  {
+    "ID": "CA01SC07",
+    "ParentID": "HC08CA01",
+    "CustomSubCategoryNameEN": "Bird Food",
+    "CustomSubCategoryNameMK": "Храна за птици",
+    "CustomSubCategoryNameAL": "Ushqimi i zogjve"
+  },
+  {
+    "ID": "CA02SC01",
+    "ParentID": "HC08CA02",
+    "CustomSubCategoryNameEN": "Leashes",
+    "CustomSubCategoryNameMK": "Ленти",
+    "CustomSubCategoryNameAL": "Zinxhirët"
+  },
+  {
+    "ID": "CA02SC02",
+    "ParentID": "HC08CA02",
+    "CustomSubCategoryNameEN": "Beds",
+    "CustomSubCategoryNameMK": "Кревети",
+    "CustomSubCategoryNameAL": "Shtretërit"
+  },
+  {
+    "ID": "CA02SC03",
+    "ParentID": "HC08CA02",
+    "CustomSubCategoryNameEN": "Toys",
+    "CustomSubCategoryNameMK": "Играчки",
+    "CustomSubCategoryNameAL": "Lodra"
+  },
+  {
+    "ID": "CA02SC04",
+    "ParentID": "HC08CA02",
+    "CustomSubCategoryNameEN": "Litter Boxes",
+    "CustomSubCategoryNameMK": "Кутии за песок",
+    "CustomSubCategoryNameAL": "Kutitë e mbeturinave"
+  }
+]

@@ -1,0 +1,177 @@
+[
+  {
+    "ID": "HC01CA01",
+    "ParentID": "HC01",
+    "CustomCategoryNameEN": "Phones & Accessories",
+    "CustomCategoryNameMK": "Телефони и Аксесоари",
+    "CustomCategoryNameAL": "Telefonat dhe aksesorët"
+  },
+  {
+    "ID": "HC01CA02",
+    "ParentID": "HC01",
+    "CustomCategoryNameEN": "Computers & Laptops",
+    "CustomCategoryNameMK": "Компјутери и Лаптопи",
+    "CustomCategoryNameAL": "Kompjuterë dhe laptopë"
+  },
+  {
+    "ID": "HC01CA03",
+    "ParentID": "HC01",
+    "CustomCategoryNameEN": "TV, Audio & Gaming",
+    "CustomCategoryNameMK": "ТВ, Аудио и Гејминг",
+    "CustomCategoryNameAL": "TV, audio dhe lojëra"
+  },
+  {
+    "ID": "HC01CA04",
+    "ParentID": "HC01",
+    "CustomCategoryNameEN": "Cameras & Drones",
+    "CustomCategoryNameMK": "Камери и Дронови",
+    "CustomCategoryNameAL": "Kamerat dhe dronët"
+  },
+  {
+    "ID": "HC02CA01",
+    "ParentID": "HC02",
+    "CustomCategoryNameEN": "Home Appliances",
+    "CustomCategoryNameMK": "Бела техника",
+    "CustomCategoryNameAL": "Pajisjet shtëpiake"
+  },
+  {
+    "ID": "HC02CA02",
+    "ParentID": "HC02",
+    "CustomCategoryNameEN": "Kitchen & Dining",
+    "CustomCategoryNameMK": "Кујна и Трепезарија",
+    "CustomCategoryNameAL": "Kuzhinë dhe ngrënie"
+  },
+  {
+    "ID": "HC02CA03",
+    "ParentID": "HC02",
+    "CustomCategoryNameEN": "Furniture",
+    "CustomCategoryNameMK": "Мебел",
+    "CustomCategoryNameAL": "Mobilje"
+  },
+  {
+    "ID": "HC02CA04",
+    "ParentID": "HC02",
+    "CustomCategoryNameEN": "Outdoor & Garden",
+    "CustomCategoryNameMK": "Двор и Градина",
+    "CustomCategoryNameAL": "Jashtë dhe kopsht"
+  },
+  {
+    "ID": "HC03CA01",
+    "ParentID": "HC03",
+    "CustomCategoryNameEN": "Men",
+    "CustomCategoryNameMK": "Мажи",
+    "CustomCategoryNameAL": "Burrat"
+  },
+  {
+    "ID": "HC03CA02",
+    "ParentID": "HC03",
+    "CustomCategoryNameEN": "Women",
+    "CustomCategoryNameMK": "Жени",
+    "CustomCategoryNameAL": "Gratë"
+  },
+  {
+    "ID": "HC03CA03",
+    "ParentID": "HC03",
+    "CustomCategoryNameEN": "Kids",
+    "CustomCategoryNameMK": "Деца",
+    "CustomCategoryNameAL": "Fëmijët"
+  },
+  {
+    "ID": "HC04CA01",
+    "ParentID": "HC04",
+    "CustomCategoryNameEN": "Makeup",
+    "CustomCategoryNameMK": "Шминка",
+    "CustomCategoryNameAL": "Grimi"
+  },
+  {
+    "ID": "HC04CA02",
+    "ParentID": "HC04",
+    "CustomCategoryNameEN": "Skincare",
+    "CustomCategoryNameMK": "Нега на кожа",
+    "CustomCategoryNameAL": "Kujdesi për lëkurën"
+  },
+  {
+    "ID": "HC04CA03",
+    "ParentID": "HC04",
+    "CustomCategoryNameEN": "Hair Care",
+    "CustomCategoryNameMK": "Нега на коса",
+    "CustomCategoryNameAL": "Kujdesi për flokët"
+  },
+  {
+    "ID": "HC04CA04",
+    "ParentID": "HC04",
+    "CustomCategoryNameEN": "Fragrances",
+    "CustomCategoryNameMK": "Мириси",
+    "CustomCategoryNameAL": "Parfumet"
+  },
+  {
+    "ID": "HC05CA01",
+    "ParentID": "HC05",
+    "CustomCategoryNameEN": "Sports Equipment",
+    "CustomCategoryNameMK": "Спортска опрема",
+    "CustomCategoryNameAL": "Pajisje sportive"
+  },
+  {
+    "ID": "HC05CA02",
+    "ParentID": "HC05",
+    "CustomCategoryNameEN": "Outdoor Gear",
+    "CustomCategoryNameMK": "Опрема за надвор",
+    "CustomCategoryNameAL": "Pajisje të jashtme"
+  },
+  {
+    "ID": "HC05CA03",
+    "ParentID": "HC05",
+    "CustomCategoryNameEN": "Bicycles & Accessories",
+    "CustomCategoryNameMK": "Велосипеди и опрема за велосипеди",
+    "CustomCategoryNameAL": "Biçikleta dhe aksesorë"
+  },
+  {
+    "ID": "HC06CA01",
+    "ParentID": "HC06",
+    "CustomCategoryNameEN": "Car Accessories",
+    "CustomCategoryNameMK": "Авто аксесоари",
+    "CustomCategoryNameAL": "Aksesorë makinash"
+  },
+  {
+    "ID": "HC06CA02",
+    "ParentID": "HC06",
+    "CustomCategoryNameEN": "Motorcycle",
+    "CustomCategoryNameMK": "Мотоцикли",
+    "CustomCategoryNameAL": "Motoçikletë"
+  },
+  {
+    "ID": "HC06CA03",
+    "ParentID": "HC06",
+    "CustomCategoryNameEN": "Car Parts",
+    "CustomCategoryNameMK": "Авто делови",
+    "CustomCategoryNameAL": "Pjesë makinash"
+  },
+  {
+    "ID": "HC07CA01",
+    "ParentID": "HC07",
+    "CustomCategoryNameEN": "Baby Gear",
+    "CustomCategoryNameMK": "Опрема за бебиња",
+    "CustomCategoryNameAL": "Pajisje për fëmijë"
+  },
+  {
+    "ID": "HC07CA02",
+    "ParentID": "HC07",
+    "CustomCategoryNameEN": "Toys",
+    "CustomCategoryNameMK": "Играчки",
+    "CustomCategoryNameAL": "Lodra"
+  },
+  {
+    "ID": "HC08CA01",
+    "ParentID": "HC08",
+    "CustomCategoryNameEN": "Pet Food",
+    "CustomCategoryNameMK": "Храна за миленчиња",
+    "CustomCategoryNameAL": "Ushqimi për kafshët shtëpiake"
+  },
+  {
+    "ID": "HC08CA02",
+    "ParentID": "HC08",
+    "CustomCategoryNameEN": "Pet Accessories",
+    "CustomCategoryNameMK": "Аксесоари за миленчиња",
+    "CustomCategoryNameAL": "Aksesorë për kafshët shtëpiake"
+  }
+]

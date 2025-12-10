@@ -2,6 +2,30 @@
   <div class="close-button absolute top-5 right-5 z-9999 text-redmatik text-2xl md:text-3xl p-3 cursor-pointer" (click)="closeDropdown()">
     <img src="assets/close.svg" alt="">
   </div>
-  <app-main-categories-component class="w-full md:w-1/4 flex" (categorySelected)="onCategorySelected($event)"></app-main-categories-component>
-  <app-sub-categories-component class="w-full md:w-3/4 md:pr-5 flex" [selectedCategoryId]="selectedCategoryId"></app-sub-categories-component>
+  <ul class="headCategories w-1/4 h-full bg-bluematik-50 rounded-bl-xl">
+    @for(headCategory of headCategories; track headCategory.ID) {
+      <li class="headCategory-item p-4 cursor-pointer text-bluematik font-bold" [class.selected]="headCategory.ID === selectedCategoryId" (click)="onCategorySelected(headCategory.ID)">
+        {{ headCategory.CustomHeadCategoryNameEN }}
+      </li>
+    }
+  </ul>
+  <ul class="categories w-3/4 h-full flex flex-wrap justify-start items-start gap-6 p-6">
+  @for(category of filteredCategories(); track category.ID) {
+    <li class="category-item w-fit px-2 pb-4">
+      <!-- Category Title -->
+
+          <h3 class="text-base font-semibold text-bluematik pb-2">{{ category.CustomCategoryNameEN}}</h3>
+      <!-- Subcategories List -->
+      @if(filteredSubCategories(category.ID).length > 0) {
+        <ul class="subcategories space-y-1">
+          @for(subcategory of filteredSubCategories(category.ID); track subcategory.ID) {
+            <li class="subcategory-item text-sm text-gray-700 hover:text-bluematik cursor-pointer py-1">
+              {{ subcategory.CustomSubCategoryNameEN }}
+            </li>
+          }
+        </ul>
+      }
+    </li>
+  }
+</ul>
 </div>
