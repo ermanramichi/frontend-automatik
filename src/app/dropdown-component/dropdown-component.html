@@ -1,90 +1,136 @@
 @if(isDesktop){
-<div [class]="desktopClasses">
-  <div class="close-button absolute top-5 right-5 z-9999 text-redmatik text-2xl md:text-3xl p-3 cursor-pointer" (click)="closeDropdown()">
-    <img src="assets/close.svg" alt="">
-  </div>
-  <ul class="headCategories w-1/4 h-full bg-bluematik-50 rounded-bl-xl">
-    @for(headCategory of headCategories; track headCategory.ID) {
-      <li class="headCategory-item p-4 cursor-pointer text-bluematik font-bold" [class.selected]="headCategory.ID === selectedCategoryId" (click)="onCategorySelected(headCategory.ID)">
-        {{ headCategory.CustomHeadCategoryNameEN }}
-      </li>
-    }
-  </ul>
-  <ul class="categories w-3/4 h-full flex flex-wrap justify-start items-start gap-6 p-6">
-  @for(category of filteredCategories(); track category.ID) {
-    <li class="category-item w-fit px-2 pb-4">
-      <!-- Category Title -->
-
-          <h3 class="text-base font-semibold text-bluematik pb-2">{{ category.CustomCategoryNameEN}}</h3>
-      <!-- Subcategories List -->
-      @if(filteredSubCategories(category.ID).length > 0) {
-        <ul class="subcategories space-y-1">
-          @for(subcategory of filteredSubCategories(category.ID); track subcategory.ID) {
-            <li class="subcategory-item text-sm text-gray-700 hover:text-bluematik cursor-pointer py-1">
-              {{ subcategory.CustomSubCategoryNameEN }}
-            </li>
-          }
-        </ul>
+  <div [class]="desktopClasses">
+    <div class="close-button absolute top-5 right-5 z-9999 text-redmatik text-2xl md:text-3xl p-3 cursor-pointer" (click)="closeDropdown()">
+      <img src="assets/close.svg" alt="">
+    </div>
+    <ul class="headCategories w-1/4 h-full bg-bluematik-50 rounded-bl-xl">
+      @for(headCategory of headCategories; track headCategory.ID) {
+        <li class="headCategory-item p-4 cursor-pointer text-bluematik font-bold"
+            [class.selected]="headCategory.ID === selectedCategoryId"
+            (click)="onCategorySelected(headCategory.ID)">
+          {{ headCategory.CustomHeadCategoryNameEN }}
+        </li>
       }
-    </li>
-  }
-</ul>
-</div>
-}
-@if(!isDesktop || isMobile){
-<div [class]="mobileClasses">
-  @if(mobileLevel===0){
-  <div class="links py-4 w-full flex flex-col justify-start items-start "
-  @slideAnimation
-  [@slideAnimation]="{
-      value: '',
-      params: animationDirection === 'forward'
-        ? { enterTransform: 'translate3d(100%,0,0)', leaveTransform: 'translate3d(-100%,0,0)' }
-        : { enterTransform: 'translate3d(-100%,0,0)', leaveTransform: 'translate3d(100%,0,0)' }
-    }"
-  >
-
-    <a  class="header-link text-base py-4 px-4 text-bluematik font-bold  border-b-2 border-bluematik-100 w-full"  (click)="openCategoriesMobile(1)">Categories</a>
-    <a  class="header-link text-base py-4 px-4 text-bluematik font-bold  border-b-2 border-bluematik-100 w-full" routerLink="/brands">Brands</a>
-    <a  class="header-link text-base py-4 px-4 text-bluematik font-bold  border-b-2 border-bluematik-100 w-full" routerLink="/stores" (click)="closeDropdown()">Stores</a>
+    </ul>
+    <ul class="categories w-3/4 h-full flex flex-wrap justify-start items-start gap-6 p-6">
+      @for(category of filteredCategories(); track category.ID) {
+        <li class="category-item w-fit px-2 pb-4">
+          <h3 class="text-base font-semibold text-bluematik pb-2">{{ category.CustomCategoryNameEN}}</h3>
+          @if(filteredSubCategories(category.ID).length > 0) {
+            <ul class="subcategories space-y-1">
+              @for(subcategory of filteredSubCategories(category.ID); track subcategory.ID) {
+                <li class="subcategory-item text-sm text-gray-700 hover:text-bluematik cursor-pointer py-1">
+                  {{ subcategory.CustomSubCategoryNameEN }}
+                </li>
+              }
+            </ul>
+          }
+        </li>
+      }
+    </ul>
   </div>
 }
 
-@if(mobileLevel===1){
-  <div  class="head-categories py-4 w-full flex flex-col justify-start items-start  ease-in-out"
-  @slideAnimation [@slideAnimation]="{ value: '', params: animationDirection === 'forward'
-    ? { enterTransform: 'translate3d(100%,0,0)', leaveTransform: 'translate3d(-100%,0,0)' }
-    : { enterTransform: 'translate3d(-100%,0,0)', leaveTransform: 'translate3d(100%,0,0)' } }"
-  >
-    @for(headCategory of headCategories; track headCategory.ID) {
-      <div @slideAnimation class="headcategory-item text-base py-4 px-4 text-bluematik font-bold border-b-2 border-bluematik-100 w-full" (click)="onMobileHeadCategorySelected(headCategory.ID);openCategoriesMobile(2)">{{ headCategory.CustomHeadCategoryNameEN }}</div>
+@if(!isDesktop || isMobile){
+  <div [class]="mobileClasses"
+       (touchstart)="onTouchStart($event)"
+       (touchend)="onTouchEnd($event)">
+       
+    <!-- Level 0: Main Links -->
+    @if(mobileLevel === 0){
+      <div 
+           
+           class="links py-4 w-full flex flex-col justify-start items-start">
+        <a @slideAnimation
+        [@slideAnimation]="{
+             value: '',
+             params: animationDirection === 'forward'
+               ? { enterTransform: 'translate3d(100%,0,0)', leaveTransform: 'translate3d(-100%,0,0)' }
+               : { enterTransform: 'translate3d(-100%,0,0)', leaveTransform: 'translate3d(100%,0,0)' }
+           }"
+        class="header-link text-base py-4 px-4 text-bluematik font-bold border-b-2 border-bluematik-100 w-full" 
+           (click)="openCategoriesMobile(1)">Categories</a>
+        <a @slideAnimation
+        [@slideAnimation]="{
+             value: '',
+             params: animationDirection === 'forward'
+               ? { enterTransform: 'translate3d(100%,0,0)', leaveTransform: 'translate3d(-100%,0,0)' }
+               : { enterTransform: 'translate3d(-100%,0,0)', leaveTransform: 'translate3d(100%,0,0)' }
+           }"
+        class="header-link text-base py-4 px-4 text-bluematik font-bold border-b-2 border-bluematik-100 w-full" routerLink="/brands">Brands</a>
+        <a @slideAnimation
+        [@slideAnimation]="{
+             value: '',
+             params: animationDirection === 'forward'
+               ? { enterTransform: 'translate3d(100%,0,0)', leaveTransform: 'translate3d(-100%,0,0)' }
+               : { enterTransform: 'translate3d(-100%,0,0)', leaveTransform: 'translate3d(100%,0,0)' }
+           }"
+        class="header-link text-base py-4 px-4 text-bluematik font-bold border-b-2 border-bluematik-100 w-full" routerLink="/stores" (click)="closeDropdown()">Stores</a>
+      </div>
     }
-    <div class="seeAll text-bluematik underline py-4 text-base px-4">See all</div>
-    
-</div>
-}
-@if(mobileLevel===2){
-  <div  class="categories py-4 w-full flex flex-col justify-start items-start ease-in-out"
-  @slideAnimation [@slideAnimation]="{ value: '', params: animationDirection === 'forward'
-    ? { enterTransform: 'translate3d(100%,0,0)', leaveTransform: 'translate3d(-100%,0,0)' }
-    : { enterTransform: 'translate3d(-100%,0,0)', leaveTransform: 'translate3d(100%,0,0)' } }"
-  >
-    @for(category of filteredMobileCategories(); track category.ID) {
-      <div @slideAnimation class="category-item text-base py-4 px-4 text-bluematik font-bold border-b-2 border-bluematik-100 w-full ease-in-out" (click)="onMobileCategorySelected(category.ID);openCategoriesMobile(3)">{{ category.CustomCategoryNameEN }}</div>
-    }
-</div>
-}
-@if(mobileLevel===3){
-  <div  class="sub-categories py-4 w-full flex flex-col justify-start items-start "
-  @slideAnimation [@slideAnimation]="{ value: '', params: animationDirection === 'forward'
-    ? { enterTransform: 'translate3d(100%,0,0)', leaveTransform: 'translate3d(-100%,0,0)' }
-    : { enterTransform: 'translate3d(-100%,0,0)', leaveTransform: 'translate3d(100%,0,0)' } }"
 
-  >
-    @for(subcategory of filteredMobileSubCategories(); track subcategory.ID) {
-      <div  class="subcategory-item text-base py-4 px-4 text-bluematik font-bold border-b-2 border-bluematik-100 w-full">{{ subcategory.CustomSubCategoryNameEN }}</div>
+    <!-- Level 1: Head Categories -->
+    @if(mobileLevel === 1){
+      <div 
+           
+           class="head-categories py-4 w-full flex flex-col justify-start items-start">
+        @for(headCategory of headCategories; track headCategory.ID) {
+          <div class="headcategory-item text-base py-4 px-4 text-bluematik font-bold border-b-2 border-bluematik-100 w-full"
+               (click)="onMobileHeadCategorySelected(headCategory.ID); openCategoriesMobile(2)" @slideAnimation
+               [@slideAnimation]="{
+             value: '',
+             params: animationDirection === 'forward'
+               ? { enterTransform: 'translate3d(100%,0,0)', leaveTransform: 'translate3d(-100%,0,0)' }
+               : { enterTransform: 'translate3d(-100%,0,0)', leaveTransform: 'translate3d(100%,0,0)' }
+           }"
+               >
+            {{ headCategory.CustomHeadCategoryNameEN }}
+          </div>
+        }
+      </div>
     }
-</div>
-}
-</div>
+
+    <!-- Level 2: Categories -->
+    @if(mobileLevel === 2){
+      <div 
+           
+           class="categories py-4 w-full flex flex-col justify-start items-start">
+        @for(category of filteredMobileCategories(); track category.ID) {
+          <div @slideAnimation
+          [@slideAnimation]="{
+             value: '',
+             params: animationDirection === 'forward'
+               ? { enterTransform: 'translate3d(100%,0,0)', leaveTransform: 'translate3d(-100%,0,0)' }
+               : { enterTransform: 'translate3d(-100%,0,0)', leaveTransform: 'translate3d(100%,0,0)' }
+           }"
+          
+          class="category-item text-base py-4 px-4 text-bluematik font-bold border-b-2 border-bluematik-100 w-full"
+               (click)="onMobileCategorySelected(category.ID); openCategoriesMobile(3)">
+            {{ category.CustomCategoryNameEN }}
+          </div>
+        }
+      </div>
+    }
+
+    <!-- Level 3: Subcategories -->
+    @if(mobileLevel === 3){
+      <div 
+           
+           class="sub-categories py-4 w-full flex flex-col justify-start items-start">
+        @for(subcategory of filteredMobileSubCategories(); track subcategory.ID) {
+          <div @slideAnimation 
+          [@slideAnimation]="{
+             value: '',
+             params: animationDirection === 'forward'
+               ? { enterTransform: 'translate3d(100%,0,0)', leaveTransform: 'translate3d(-100%,0,0)' }
+               : { enterTransform: 'translate3d(-100%,0,0)', leaveTransform: 'translate3d(100%,0,0)' }
+           }"
+          class="subcategory-item text-base py-4 px-4 text-bluematik font-bold border-b-2 border-bluematik-100 w-full">
+            {{ subcategory.CustomSubCategoryNameEN }}
+          </div>
+        }
+      </div>
+    }
+
+  </div>
 }
