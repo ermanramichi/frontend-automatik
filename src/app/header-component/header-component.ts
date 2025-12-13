@@ -77,22 +77,15 @@ export class HeaderComponent {
       return 'searchbar h-10 w-10 flex justify-center items-center text-xm text-bluematik p-1 hover:p-3 mx-4 transition-all duration-300 hover:w-72 focus-within:w-full  hover:shadow-lg  hover:border-b-2 border-bluematik';
     }
   }
-  dropDownClasses():string{
-    const baseClasses = 'drop-down w-full h-fit bg-white fixed top-32 p-4 left-0 flex flex-col items-start justify-start shadow-xl transition-all duration-300 ease-in-out';
-    if(this.dropDownMobileOpen){
-      return `${baseClasses} z-[9999] opacity-100 translate-y-0`;
-    }
-    return `${baseClasses} z-[9998] opacity-0 translate-y-4 pointer-events-none`;
-  }
+
   onHamburgerClick(){
-    this.dropDownMobileOpen=!this.dropDownMobileOpen;
-    this.dropdownOpen=false;
+
+    this.dropdownOpen=!this.dropdownOpen;
     this.isActive.emit(this.dropdownOpen);
-    
   }
 
   iconHamburgerSource():string{
-    if(this.dropDownMobileOpen){
+    if(this.dropdownOpen){
       return 'assets/close.svg';
     }
     return 'assets/3-lines.svg';

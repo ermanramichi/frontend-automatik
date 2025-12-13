@@ -29,26 +29,21 @@
           src="assets/3-lines.svg"
           alt="menu"
           class="absolute inset-0 w-full h-full transition-all duration-300 ease-in-out"
-          [class.opacity-0]="dropDownMobileOpen"
-          [class.scale-0]="dropDownMobileOpen"
+          [class.opacity-0]="dropdownOpen"
+          [class.scale-0]="dropdownOpen"
           />
         <img
           src="assets/close.svg"
           alt="close"
           class="absolute inset-0 w-full h-full transition-all duration-300 ease-in-out"
-          [class.opacity-100]="dropDownMobileOpen"
-          [class.scale-100]="dropDownMobileOpen"
-          [class.rotate-90]="dropDownMobileOpen"
-          [class.opacity-0]="!dropDownMobileOpen"
-          [class.scale-0]="!dropDownMobileOpen"
+          [class.opacity-100]="dropdownOpen"
+          [class.scale-100]="dropdownOpen"
+          [class.rotate-90]="dropdownOpen"
+          [class.opacity-0]="!dropdownOpen"
+          [class.scale-0]="!dropdownOpen"
   />
       </div>
-      <div [class]="dropDownClasses()">
-        <a class="header-link text-xl px-7 py-2 font-semibold hover:text-bluematik-900 flex justify-start items-center  transition-all duration-300" routerLink="/home" [class.active]="selectedPage==='home'" (click)="onClick('home')" >Home</a>
-        <a class="header-link text-xl px-7 py-2 font-semibold hover:text-bluematik-900 flex justify-start items-center  transition-all duration-300" routerLink="/categories" [class.active]="selectedPage==='categories'" (click)="onClick('categories')">Categories</a>
-        <a class="header-link text-xl px-7 py-2 font-semibold hover:text-bluematik-900 flex justify-start items-center  transition-all duration-300" routerLink="/brands" [class.active]="selectedPage==='brands'" (click)="onClick('brands')">Brands</a>
-        <a class="header-link text-xl px-7 py-2  font-semibold hover:text-bluematik-900 flex justify-start items-center  transition-all duration-300" routerLink="/stores" [class.active]="selectedPage==='stores'" (click)="onClick('stores')">Stores</a>
-      </div>
+
     <div [class]="searchClasses()">
       <img src="assets/search.svg" alt="" class="searchicon flex justify-center items-center h-full object-contain" (click)="onSearchClick()" [class.searchActive]="clickedSearch">
       <input type="text" placeholder="Search for products, brands and more" class="searchinput h-full w-full outline-none border-none px-2 text-sm md:text-md">

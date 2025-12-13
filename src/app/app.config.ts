@@ -1,3 +1,4 @@
+import { provideAnimations } from '@angular/platform-browser/animations';
 import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection } from '@angular/core';
 import { provideRouter, withInMemoryScrolling } from '@angular/router';
 
@@ -12,9 +13,10 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes,
       withInMemoryScrolling
       ({anchorScrolling:'enabled',scrollPositionRestoration:'enabled'})
-    ), 
+    ),
     provideClientHydration(withEventReplay()),
     provideHttpClient(withFetch()),
-    
+    provideAnimations(),
+
   ]
 };
