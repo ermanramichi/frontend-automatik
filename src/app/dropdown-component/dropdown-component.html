@@ -33,37 +33,57 @@
 }
 @if(!isDesktop || isMobile){
 <div [class]="mobileClasses">
-  @if(!mobileHeadCategoriesOpen && !mobileCategoriesOpen && !mobileSubCategoriesOpen){
-  <div class="links py-4 w-full flex flex-col justify-start items-start ">
+  @if(mobileLevel===0){
+  <div class="links py-4 w-full flex flex-col justify-start items-start "
+  @slideAnimation
+  [@slideAnimation]="{
+      value: '',
+      params: animationDirection === 'forward'
+        ? { enterTransform: 'translate3d(100%,0,0)', leaveTransform: 'translate3d(-100%,0,0)' }
+        : { enterTransform: 'translate3d(-100%,0,0)', leaveTransform: 'translate3d(100%,0,0)' }
+    }"
+  >
 
-    <a @slideAnimation class="header-link text-base py-4 px-4 text-bluematik font-bold  border-b-2 border-bluematik-100 w-full"  (click)="openCategoriesMobile(1)">Categories</a>
-    <a @slideAnimation class="header-link text-base py-4 px-4 text-bluematik font-bold  border-b-2 border-bluematik-100 w-full" routerLink="/brands">Brands</a>
-    <a @slideAnimation class="header-link text-base py-4 px-4 text-bluematik font-bold  border-b-2 border-bluematik-100 w-full" routerLink="/stores" (click)="closeDropdown()">Stores</a>
+    <a  class="header-link text-base py-4 px-4 text-bluematik font-bold  border-b-2 border-bluematik-100 w-full"  (click)="openCategoriesMobile(1)">Categories</a>
+    <a  class="header-link text-base py-4 px-4 text-bluematik font-bold  border-b-2 border-bluematik-100 w-full" routerLink="/brands">Brands</a>
+    <a  class="header-link text-base py-4 px-4 text-bluematik font-bold  border-b-2 border-bluematik-100 w-full" routerLink="/stores" (click)="closeDropdown()">Stores</a>
   </div>
 }
-@if(mobileHeadCategoriesOpen){
-  <div  class="head-categories py-4 w-full flex flex-col justify-start items-start  ease-in-out">
+
+@if(mobileLevel===1){
+  <div  class="head-categories py-4 w-full flex flex-col justify-start items-start  ease-in-out"
+  @slideAnimation [@slideAnimation]="{ value: '', params: animationDirection === 'forward'
+    ? { enterTransform: 'translate3d(100%,0,0)', leaveTransform: 'translate3d(-100%,0,0)' }
+    : { enterTransform: 'translate3d(-100%,0,0)', leaveTransform: 'translate3d(100%,0,0)' } }"
+  >
     @for(headCategory of headCategories; track headCategory.ID) {
       <div @slideAnimation class="headcategory-item text-base py-4 px-4 text-bluematik font-bold border-b-2 border-bluematik-100 w-full" (click)="onMobileHeadCategorySelected(headCategory.ID);openCategoriesMobile(2)">{{ headCategory.CustomHeadCategoryNameEN }}</div>
     }
     <div class="seeAll text-bluematik underline py-4 text-base px-4">See all</div>
-    <div class="goBack text-bluematik underline py-4 text-base px-4 fixed top-[75%] left-0 w-full text-center" (click)="openCategoriesMobile(0)">Go back</div>
+    
 </div>
 }
-@if(mobileCategoriesOpen){
-  <div  class="categories py-4 w-full flex flex-col justify-start items-start ease-in-out">
+@if(mobileLevel===2){
+  <div  class="categories py-4 w-full flex flex-col justify-start items-start ease-in-out"
+  @slideAnimation [@slideAnimation]="{ value: '', params: animationDirection === 'forward'
+    ? { enterTransform: 'translate3d(100%,0,0)', leaveTransform: 'translate3d(-100%,0,0)' }
+    : { enterTransform: 'translate3d(-100%,0,0)', leaveTransform: 'translate3d(100%,0,0)' } }"
+  >
     @for(category of filteredMobileCategories(); track category.ID) {
       <div @slideAnimation class="category-item text-base py-4 px-4 text-bluematik font-bold border-b-2 border-bluematik-100 w-full ease-in-out" (click)="onMobileCategorySelected(category.ID);openCategoriesMobile(3)">{{ category.CustomCategoryNameEN }}</div>
     }
-    <div class="goBack text-bluematik underline py-4 text-base px-4 fixed top-[75%] left-0 w-full text-center" (click)="openCategoriesMobile(1)">Go back</div>
 </div>
 }
-@if(mobileSubCategoriesOpen){
-  <div  class="sub-categories py-4 w-full flex flex-col justify-start items-start ">
+@if(mobileLevel===3){
+  <div  class="sub-categories py-4 w-full flex flex-col justify-start items-start "
+  @slideAnimation [@slideAnimation]="{ value: '', params: animationDirection === 'forward'
+    ? { enterTransform: 'translate3d(100%,0,0)', leaveTransform: 'translate3d(-100%,0,0)' }
+    : { enterTransform: 'translate3d(-100%,0,0)', leaveTransform: 'translate3d(100%,0,0)' } }"
+
+  >
     @for(subcategory of filteredMobileSubCategories(); track subcategory.ID) {
-      <div @slideAnimation class="subcategory-item text-base py-4 px-4 text-bluematik font-bold border-b-2 border-bluematik-100 w-full">{{ subcategory.CustomSubCategoryNameEN }}</div>
+      <div  class="subcategory-item text-base py-4 px-4 text-bluematik font-bold border-b-2 border-bluematik-100 w-full">{{ subcategory.CustomSubCategoryNameEN }}</div>
     }
-    <div class="goBack text-bluematik underline py-4 text-base px-4 fixed top-[75%] left-0 w-full text-center" (click)="openCategoriesMobile(2)">Go back</div>
 </div>
 }
 </div>

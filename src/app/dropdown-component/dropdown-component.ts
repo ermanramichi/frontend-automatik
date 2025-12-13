@@ -1,10 +1,11 @@
 import { HeadCategory, HeadCategoryService } from './../services/head-category-service/head-category-service';
-import { Component, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, HostListener, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
 import { Category, CategoryService } from '../services/category-service/category-service';
 import { SubCategoriesService, SubCategory } from '../services/sub-categories-service/sub-categories-service';
 import { RouterLink } from '@angular/router';
 
+type MobileLevel = 0 | 1 | 2 | 3;
 
 @Component({
   selector: 'app-dropdown-component',
@@ -12,23 +13,34 @@ import { RouterLink } from '@angular/router';
   templateUrl: './dropdown-component.html',
   styleUrl: './dropdown-component.css',
   animations: [
-    trigger('slideAnimation', [
-  transition(':enter', [
-    style({ opacity: 0, transform: 'translate3d(100%, 0, 0)' }),
-    animate('300ms ease-out',
-      style({ opacity: 1, transform: 'translate3d(0, 0, 0)' })
-    )
-  ]),
-  transition(':leave', [
-    animate('300ms ease-in',
-      style({ opacity: 0, transform: 'translate3d(-100%, 0, 0)' })
-    )
+  trigger('slideAnimation', [
+    transition(':enter', [
+      style({
+        transform: '{{ enterTransform }}',
+        opacity: 0
+      }),
+      animate('300ms ease-out',
+        style({
+          transform: 'translate3d(0,0,0)',
+          opacity: 1
+        })
+      )
+    ], { params: { enterTransform: 'translate3d(100%,0,0)' } }),
+
+    transition(':leave', [
+      animate('300ms ease-in',
+        style({
+          transform: '{{ leaveTransform }}',
+          opacity: 0
+        })
+      )
+    ], { params: { leaveTransform: 'translate3d(-100%,0,0)' } })
   ])
-])]
+]
 })
 
 
-export class DropdownComponent implements OnInit {
+export class DropdownComponent implements OnInit, OnChanges {
 
 
   constructor(
@@ -45,12 +57,52 @@ export class DropdownComponent implements OnInit {
   isDesktop = false;
   isMobile = false;
   screenwidth = 0;
-  mobileHeadCategoriesOpen=false;
-  mobileCategoriesOpen=false;
-  mobileSubCategoriesOpen=false;
+  mobileLevel:MobileLevel=0;
   mobileHeadCategoryID:string='';
   mobileCategoryID:string='';
   mobileSubCategoryID:string='';
+  level:number=0;
+  animationDirection: 'forward' | 'backward' = 'forward';
+  touchStartX: number = 0;
+  touchEndX: number = 0
+  goToLevel(level:MobileLevel){
+    this.animationDirection = level > this.mobileLevel ? 'forward' : 'backward';
+    this.mobileLevel = level;
+  }
+  onTouchStart(event: TouchEvent) {
+  this.touchStartX = event.changedTouches[0].screenX;
+}
+
+onTouchEnd(event: TouchEvent) {
+  this.touchEndX = event.changedTouches[0].screenX;
+  this.handleSwipe();
+}
+
+handleSwipe() {
+  const diff = this.touchEndX - this.touchStartX;
+
+  // swipe right → go back
+  if (diff > 50 && this.mobileLevel > 0) {
+    this.goToLevel((this.mobileLevel - 1) as MobileLevel);
+  }
+
+  // swipe left → go deeper
+  if (diff < -50 && this.mobileLevel < 3) {
+    this.goToLevel((this.mobileLevel + 1) as MobileLevel);
+  }
+}
+  private resetMobileLevels(): void {
+  this.mobileLevel = 0;
+
+  this.mobileHeadCategoryID = '';
+  this.mobileCategoryID = '';
+  this.mobileSubCategoryID = '';
+}
+  ngOnChanges(changes: SimpleChanges): void {
+  if (changes['dropDownActive'] && changes['dropDownActive'].currentValue === false) {
+    this.resetMobileLevels();
+  }
+}
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.updateScreenSize();
@@ -104,27 +156,8 @@ export class DropdownComponent implements OnInit {
   filteredSubCategories(categoryId: string): SubCategory[] {
     return this.subCategories.filter(sub => sub.ParentID === categoryId);
   }
-  openCategoriesMobile(level:number){
-    if(level==0){
-      this.mobileHeadCategoriesOpen=false;
-      this.mobileCategoriesOpen=false;
-      this.mobileSubCategoriesOpen=false;
-    }
-    if(level==1){
-      this.mobileHeadCategoriesOpen=true;
-      this.mobileCategoriesOpen=false;
-      this.mobileSubCategoriesOpen=false;
-    }
-    if(level==2){
-      this.mobileCategoriesOpen=!this.mobileCategoriesOpen;
-      this.mobileHeadCategoriesOpen=false;
-      this.mobileSubCategoriesOpen=false;
-    }
-    if(level==3){
-      this.mobileSubCategoriesOpen=!this.mobileSubCategoriesOpen;
-      this.mobileCategoriesOpen=false;
-      this.mobileHeadCategoriesOpen=false;
-    }
+  openCategoriesMobile(level:MobileLevel){
+    this.goToLevel(level);
   }
   onMobileHeadCategorySelected(headCategoryId:string){
     this.mobileHeadCategoryID=headCategoryId;
@@ -140,6 +173,9 @@ export class DropdownComponent implements OnInit {
   }
   filteredMobileSubCategories():SubCategory[]{
     return this.subCategories.filter(sub=>sub.ParentID===this.mobileCategoryID);
+  }
+  get panelEnabled(): boolean {
+    return this.dropDownActive;
   }
 
 }
