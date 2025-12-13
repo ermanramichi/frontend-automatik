@@ -15,11 +15,11 @@ type MobileLevel = 0 | 1 | 2 | 3;
   animations: [
     trigger('slideAnimation', [
       transition(':enter', [
-        style({ transform: '{{ enterTransform }}', opacity: 0 }),
-        animate('300ms ease-out', style({ transform: 'translate3d(0,0,0)', opacity: 1 }))
+        style({ transform: '{{ enterTransform }}', opacity: 0.4 }),
+        animate('420ms cubic-bezier(0.22, 1, 0.36, 1)', style({ transform: 'translate3d(0,0,0)', opacity: 1 }))
       ], { params: { enterTransform: 'translate3d(100%,0,0)' } }),
       transition(':leave', [
-        animate('300ms ease-in', style({ transform: '{{ leaveTransform }}', opacity: 0 }))
+        animate('420ms cubic-bezier(0.22, 1, 0.36, 1)', style({ transform: '{{ leaveTransform }}', opacity: 0 }))
       ], { params: { leaveTransform: 'translate3d(-100%,0,0)' } })
     ])
   ]

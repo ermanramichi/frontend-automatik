@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter, HostListener } from '@angular/core';
+import { Component, Output, EventEmitter, HostListener, OnChanges, SimpleChange, SimpleChanges, input, Input } from '@angular/core';
 import { DropdownComponent } from "../dropdown-component/dropdown-component";
 import {  } from 'stream';
 import { RouterLink } from '@angular/router';
@@ -10,7 +10,11 @@ import { RouterLink } from '@angular/router';
   templateUrl: './header-component.html',
   styleUrl: './header-component.css'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnChanges {
+  @Input() dropDownActive!:boolean;
+  ngOnChanges(changes:SimpleChanges): void {
+    this.dropdownOpen=changes['dropDownActive'].currentValue;
+  }
   clickedMobile=false;
   clickedSearch=false;
   selectedPage='home';
@@ -20,6 +24,7 @@ export class HeaderComponent {
   clicked=false;
   dropdownOpen = false;
   dropDownMobileOpen=false;
+  
   @Output() isActive = new EventEmitter<boolean>();
   private mouseOutTimeout: any;
    ngOnInit() {

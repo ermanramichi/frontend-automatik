@@ -1,4 +1,4 @@
-<app-header-component (isActive)="onIsActive($event)"></app-header-component>
+<app-header-component (isActive)="onIsActive($event)" [dropDownActive]="isActive"></app-header-component>
 <app-dropdown-component [dropDownActive]="isActive" class="transition-all duration-300 ease-in-out h-full" (notActive)="onIsNotActive()"> </app-dropdown-component>
 @if(isActive) {
 <div class="fixed inset-0  backdrop-blur-sm z-40 transition-opacity duration-300"(click)="onIsNotActive()"></div>
