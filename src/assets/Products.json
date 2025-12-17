@@ -1,0 +1,511 @@
+[
+  {
+    "ID": "PR01",
+    "Name": "iPhone 15 Pro 128GB",
+    "Brand": "Apple",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA01",
+    "SubCategoryID": "CA01SC01",
+    "ImageUrl": "https://images.unsplash.com/photo-1695048133142-1a2046a4b9c4",
+    "Description": "Apple iPhone 15 Pro with A17 chip"
+  },
+  {
+    "ID": "PR02",
+    "Name": "Samsung Galaxy S24 Ultra",
+    "Brand": "Samsung",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA01",
+    "SubCategoryID": "CA01SC01",
+    "ImageUrl": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf",
+    "Description": "Samsung flagship smartphone with S-Pen"
+  },
+  {
+    "ID": "PR03",
+    "Name": "Xiaomi Redmi Note 13",
+    "Brand": "Xiaomi",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA01",
+    "SubCategoryID": "CA01SC01",
+    "ImageUrl": "https://images.unsplash.com/photo-1616348436168-de43ad0db179",
+    "Description": "Affordable smartphone with AMOLED display"
+  },
+  {
+    "ID": "PR04",
+    "Name": "Google Pixel 8",
+    "Brand": "Google",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA01",
+    "SubCategoryID": "CA01SC01",
+    "ImageUrl": "https://images.unsplash.com/photo-1696531291099-90c2c3bff989",
+    "Description": "Google Pixel phone with AI camera"
+  },
+  {
+    "ID": "PR05",
+    "Name": "OnePlus 12",
+    "Brand": "OnePlus",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA01",
+    "SubCategoryID": "CA01SC01",
+    "ImageUrl": "https://images.unsplash.com/photo-1603898037225-1c6b6f0f43d1",
+    "Description": "Fast Android smartphone with premium design"
+  },
+
+  {
+    "ID": "PR06",
+    "Name": "MacBook Air M3",
+    "Brand": "Apple",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA02",
+    "SubCategoryID": "CA02SC01",
+    "ImageUrl": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+    "Description": "Apple MacBook Air with M3 chip"
+  },
+  {
+    "ID": "PR07",
+    "Name": "MacBook Pro 14 M3",
+    "Brand": "Apple",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA02",
+    "SubCategoryID": "CA02SC01",
+    "ImageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475",
+    "Description": "Professional laptop with Liquid Retina XDR"
+  },
+  {
+    "ID": "PR08",
+    "Name": "Dell XPS 15",
+    "Brand": "Dell",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA02",
+    "SubCategoryID": "CA02SC01",
+    "ImageUrl": "https://images.unsplash.com/photo-1527430253228-e93688616381",
+    "Description": "Premium Windows laptop"
+  },
+  {
+    "ID": "PR09",
+    "Name": "HP Spectre x360",
+    "Brand": "HP",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA02",
+    "SubCategoryID": "CA02SC01",
+    "ImageUrl": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef",
+    "Description": "Convertible touchscreen laptop"
+  },
+  {
+    "ID": "PR10",
+    "Name": "Lenovo ThinkPad X1",
+    "Brand": "Lenovo",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA02",
+    "SubCategoryID": "CA02SC01",
+    "ImageUrl": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed",
+    "Description": "Business-class ultrabook"
+  },
+
+  {
+    "ID": "PR11",
+    "Name": "Sony WH-1000XM5",
+    "Brand": "Sony",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA01",
+    "SubCategoryID": "CA01SC07",
+    "ImageUrl": "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb",
+    "Description": "Noise cancelling headphones"
+  },
+  {
+    "ID": "PR12",
+    "Name": "Apple AirPods Pro 2",
+    "Brand": "Apple",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA01",
+    "SubCategoryID": "CA01SC07",
+    "ImageUrl": "https://images.unsplash.com/photo-1603354350317-6f7aaa5911c5",
+    "Description": "Wireless earbuds with ANC"
+  },
+  {
+    "ID": "PR13",
+    "Name": "Bose QuietComfort Ultra",
+    "Brand": "Bose",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA01",
+    "SubCategoryID": "CA01SC07",
+    "ImageUrl": "https://images.unsplash.com/photo-1585386959984-a4155224a1ad",
+    "Description": "Premium sound and comfort"
+  },
+  {
+    "ID": "PR14",
+    "Name": "JBL Tune 770NC",
+    "Brand": "JBL",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA01",
+    "SubCategoryID": "CA01SC07",
+    "ImageUrl": "https://images.unsplash.com/photo-1599669454699-248893623440",
+    "Description": "Wireless headphones with ANC"
+  },
+  {
+    "ID": "PR15",
+    "Name": "Beats Studio Pro",
+    "Brand": "Beats",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA01",
+    "SubCategoryID": "CA01SC07",
+    "ImageUrl": "https://images.unsplash.com/photo-1613040809024-b4ef7ba99bc3",
+    "Description": "Studio-quality wireless headphones"
+  },
+
+  {
+    "ID": "PR16",
+    "Name": "LG OLED C3 55\"",
+    "Brand": "LG",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA03",
+    "SubCategoryID": "CA03SC01",
+    "ImageUrl": "https://images.unsplash.com/photo-1593784991095-a205069470b6",
+    "Description": "4K OLED Smart TV"
+  },
+  {
+    "ID": "PR17",
+    "Name": "Samsung QLED Q80C",
+    "Brand": "Samsung",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA03",
+    "SubCategoryID": "CA03SC01",
+    "ImageUrl": "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1",
+    "Description": "Bright QLED TV"
+  },
+  {
+    "ID": "PR18",
+    "Name": "Sony Bravia XR",
+    "Brand": "Sony",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA03",
+    "SubCategoryID": "CA03SC01",
+    "ImageUrl": "https://images.unsplash.com/photo-1584905066893-7d5c142ba4e1",
+    "Description": "Cognitive processor TV"
+  },
+  {
+    "ID": "PR19",
+    "Name": "TCL 6-Series",
+    "Brand": "TCL",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA03",
+    "SubCategoryID": "CA03SC01",
+    "ImageUrl": "https://images.unsplash.com/photo-1601944177325-fc8b6d6d2c28",
+    "Description": "Affordable Mini-LED TV"
+  },
+  {
+    "ID": "PR20",
+    "Name": "Hisense U8K",
+    "Brand": "Hisense",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA03",
+    "SubCategoryID": "CA03SC01",
+    "ImageUrl": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db",
+    "Description": "High brightness 4K TV"
+  },
+
+  {
+    "ID": "PR21",
+    "Name": "PlayStation 5",
+    "Brand": "Sony",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA03",
+    "SubCategoryID": "CA03SC04",
+    "ImageUrl": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db",
+    "Description": "Next-gen gaming console"
+  },
+  {
+    "ID": "PR22",
+    "Name": "Xbox Series X",
+    "Brand": "Microsoft",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA03",
+    "SubCategoryID": "CA03SC04",
+    "ImageUrl": "https://images.unsplash.com/photo-1605902711622-cfb43c4437d1",
+    "Description": "Powerful gaming console"
+  },
+  {
+    "ID": "PR23",
+    "Name": "Nintendo Switch OLED",
+    "Brand": "Nintendo",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA03",
+    "SubCategoryID": "CA03SC04",
+    "ImageUrl": "https://images.unsplash.com/photo-1608889175123-8ee362201f81",
+    "Description": "Hybrid gaming console"
+  },
+  {
+    "ID": "PR24",
+    "Name": "PlayStation Portal",
+    "Brand": "Sony",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA03",
+    "SubCategoryID": "CA03SC04",
+    "ImageUrl": "https://images.unsplash.com/photo-1593305841991-05c297ba4575",
+    "Description": "Remote Play device"
+  },
+  {
+    "ID": "PR25",
+    "Name": "Steam Deck OLED",
+    "Brand": "Valve",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA03",
+    "SubCategoryID": "CA03SC04",
+    "ImageUrl": "https://images.unsplash.com/photo-1640622308910-6d55f43e6c87",
+    "Description": "Portable PC gaming console"
+  },
+
+  {
+    "ID": "PR26",
+    "Name": "Apple Watch Series 9",
+    "Brand": "Apple",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA01",
+    "SubCategoryID": "CA01SC05",
+    "ImageUrl": "https://images.unsplash.com/photo-1546868871-7041f2a55e12",
+    "Description": "Advanced smartwatch"
+  },
+  {
+    "ID": "PR27",
+    "Name": "Samsung Galaxy Watch 6",
+    "Brand": "Samsung",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA01",
+    "SubCategoryID": "CA01SC05",
+    "ImageUrl": "https://images.unsplash.com/photo-1510017803434-a899398421b3",
+    "Description": "Android smartwatch"
+  },
+  {
+    "ID": "PR28",
+    "Name": "Garmin Fenix 7",
+    "Brand": "Garmin",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA01",
+    "SubCategoryID": "CA01SC05",
+    "ImageUrl": "https://images.unsplash.com/photo-1556408754-5e7c3fd5c9b3",
+    "Description": "Outdoor multisport watch"
+  },
+  {
+    "ID": "PR29",
+    "Name": "Fitbit Sense 2",
+    "Brand": "Fitbit",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA01",
+    "SubCategoryID": "CA01SC05",
+    "ImageUrl": "https://images.unsplash.com/photo-1617042375876-a13e36762bda",
+    "Description": "Health tracking smartwatch"
+  },
+  {
+    "ID": "PR30",
+    "Name": "Amazfit GTR 4",
+    "Brand": "Amazfit",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA01",
+    "SubCategoryID": "CA01SC05",
+    "ImageUrl": "https://images.unsplash.com/photo-1598970434795-0c54fe7c0642",
+    "Description": "Affordable smartwatch"
+  },
+
+  {
+    "ID": "PR31",
+    "Name": "Canon EOS R6",
+    "Brand": "Canon",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA04",
+    "SubCategoryID": "CA04SC01",
+    "ImageUrl": "https://images.unsplash.com/photo-1519183071298-a2962eadcdb2",
+    "Description": "Mirrorless full-frame camera"
+  },
+  {
+    "ID": "PR32",
+    "Name": "Sony A7 IV",
+    "Brand": "Sony",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA04",
+    "SubCategoryID": "CA04SC01",
+    "ImageUrl": "https://images.unsplash.com/photo-1516724562728-afc824a36e84",
+    "Description": "Professional mirrorless camera"
+  },
+  {
+    "ID": "PR33",
+    "Name": "Nikon Z6 II",
+    "Brand": "Nikon",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA04",
+    "SubCategoryID": "CA04SC01",
+    "ImageUrl": "https://images.unsplash.com/photo-1502920514313-52581002a659",
+    "Description": "High-performance camera"
+  },
+  {
+    "ID": "PR34",
+    "Name": "Fujifilm X-T5",
+    "Brand": "Fujifilm",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA04",
+    "SubCategoryID": "CA04SC01",
+    "ImageUrl": "https://images.unsplash.com/photo-1535909339361-9b62e7b03a82",
+    "Description": "APS-C mirrorless camera"
+  },
+  {
+    "ID": "PR35",
+    "Name": "GoPro Hero 12",
+    "Brand": "GoPro",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA04",
+    "SubCategoryID": "CA04SC02",
+    "ImageUrl": "https://images.unsplash.com/photo-1519181245277-cffeb31da2fb",
+    "Description": "Action camera"
+  },
+
+  {
+    "ID": "PR36",
+    "Name": "DJI Mini 4 Pro",
+    "Brand": "DJI",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA05",
+    "SubCategoryID": "CA05SC01",
+    "ImageUrl": "https://images.unsplash.com/photo-1508614589041-895b88991e3e",
+    "Description": "Compact camera drone"
+  },
+  {
+    "ID": "PR37",
+    "Name": "DJI Air 3",
+    "Brand": "DJI",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA05",
+    "SubCategoryID": "CA05SC01",
+    "ImageUrl": "https://images.unsplash.com/photo-1473968512647-3e447244af8f",
+    "Description": "Advanced drone with dual cameras"
+  },
+  {
+    "ID": "PR38",
+    "Name": "DJI Avata",
+    "Brand": "DJI",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA05",
+    "SubCategoryID": "CA05SC01",
+    "ImageUrl": "https://images.unsplash.com/photo-1521401830884-6c03c1c87ebb",
+    "Description": "FPV drone"
+  },
+  {
+    "ID": "PR39",
+    "Name": "Autel Evo Nano",
+    "Brand": "Autel",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA05",
+    "SubCategoryID": "CA05SC01",
+    "ImageUrl": "https://images.unsplash.com/photo-1487887235947-a955ef187fcc",
+    "Description": "Portable drone"
+  },
+  {
+    "ID": "PR40",
+    "Name": "Ryze Tello",
+    "Brand": "DJI",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA05",
+    "SubCategoryID": "CA05SC01",
+    "ImageUrl": "https://images.unsplash.com/photo-1520975922323-cc0e4c6a6a9d",
+    "Description": "Beginner drone"
+  },
+
+  {
+    "ID": "PR41",
+    "Name": "Logitech MX Master 3S",
+    "Brand": "Logitech",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA06",
+    "SubCategoryID": "CA06SC01",
+    "ImageUrl": "https://images.unsplash.com/photo-1587829741301-dc798b83add3",
+    "Description": "Advanced wireless mouse"
+  },
+  {
+    "ID": "PR42",
+    "Name": "Keychron K Pro",
+    "Brand": "Keychron",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA06",
+    "SubCategoryID": "CA06SC02",
+    "ImageUrl": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+    "Description": "Mechanical keyboard"
+  },
+  {
+    "ID": "PR43",
+    "Name": "Razer DeathAdder V3",
+    "Brand": "Razer",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA06",
+    "SubCategoryID": "CA06SC01",
+    "ImageUrl": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7",
+    "Description": "Gaming mouse"
+  },
+  {
+    "ID": "PR44",
+    "Name": "SteelSeries Apex Pro",
+    "Brand": "SteelSeries",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA06",
+    "SubCategoryID": "CA06SC02",
+    "ImageUrl": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7",
+    "Description": "Gaming keyboard"
+  },
+  {
+    "ID": "PR45",
+    "Name": "Corsair K70 RGB",
+    "Brand": "Corsair",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA06",
+    "SubCategoryID": "CA06SC02",
+    "ImageUrl": "https://images.unsplash.com/photo-1541140532154-b024d705b90a",
+    "Description": "Mechanical RGB keyboard"
+  },
+
+  {
+    "ID": "PR46",
+    "Name": "Samsung T7 SSD 1TB",
+    "Brand": "Samsung",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA07",
+    "SubCategoryID": "CA07SC01",
+    "ImageUrl": "https://images.unsplash.com/photo-1628557118391-56cd62c9f2cb",
+    "Description": "Portable SSD storage"
+  },
+  {
+    "ID": "PR47",
+    "Name": "SanDisk Extreme Pro",
+    "Brand": "SanDisk",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA07",
+    "SubCategoryID": "CA07SC01",
+    "ImageUrl": "https://images.unsplash.com/photo-1584438784894-089d6a62b8fa",
+    "Description": "High-speed external SSD"
+  },
+  {
+    "ID": "PR48",
+    "Name": "WD My Passport 2TB",
+    "Brand": "Western Digital",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA07",
+    "SubCategoryID": "CA07SC02",
+    "ImageUrl": "https://images.unsplash.com/photo-1603816245457-fe9c80b740ff",
+    "Description": "Portable HDD"
+  },
+  {
+    "ID": "PR49",
+    "Name": "Seagate Expansion 4TB",
+    "Brand": "Seagate",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA07",
+    "SubCategoryID": "CA07SC02",
+    "ImageUrl": "https://images.unsplash.com/photo-1602526432604-029a709e131c",
+    "Description": "High capacity external drive"
+  },
+  {
+    "ID": "PR50",
+    "Name": "Crucial X10 Pro",
+    "Brand": "Crucial",
+    "HeadCategoryID": "HC01",
+    "CategoryID": "CA07",
+    "SubCategoryID": "CA07SC01",
+    "ImageUrl": "https://images.unsplash.com/photo-1628557044797-35e21e09c4e7",
+    "Description": "Fast portable SSD"
+  }
+]

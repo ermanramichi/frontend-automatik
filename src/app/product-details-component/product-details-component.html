@@ -1,0 +1,9 @@
+<h1 class="text-5xl text-bluematik">{{ product?.Name }}</h1>
+@for(price of prices; track price.ID){
+<div class="price-item border-b-2 border-bluematik-100 w-full py-4 flex justify-between items-center">
+  <div class="store-info flex flex-col justify-start items-start">
+    <p class="store-name text-bluematik font-bold text-lg">{{ price.StoreName }}</p>
+    <p class="store-price">{{ price.Price }}</p>
+  </div>
+  </div>
+}

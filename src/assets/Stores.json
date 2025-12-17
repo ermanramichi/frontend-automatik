@@ -1,0 +1,20 @@
+[
+  {
+    "ID": "ST01",
+    "Name": "Tech Store",
+    "LogoUrl": "https://images.unsplash.com/photo-1585386959984-a4155224a1ad",
+    "Website": "https://techstore.example"
+  },
+  {
+    "ID": "ST02",
+    "Name": "Electro World",
+    "LogoUrl": "https://images.unsplash.com/photo-1607082349566-187342175e2f",
+    "Website": "https://electroworld.example"
+  },
+  {
+    "ID": "ST03",
+    "Name": "Gadget Hub",
+    "LogoUrl": "https://images.unsplash.com/photo-1515165562835-c3b8e0c1d1d8",
+    "Website": "https://gadgethub.example"
+  }
+]

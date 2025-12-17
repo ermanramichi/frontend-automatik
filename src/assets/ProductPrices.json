@@ -1,0 +1,76 @@
+[
+  { "ID": "PP01", "ProductID": "PR01", "StoreID": "ST01", "Price": 1199, "Currency": "EUR", "ProductUrl": "https://techstore.example/pr01" },
+  { "ID": "PP02", "ProductID": "PR01", "StoreID": "ST02", "Price": 1179, "Currency": "EUR", "ProductUrl": "https://electroworld.example/pr01" },
+
+  { "ID": "PP03", "ProductID": "PR02", "StoreID": "ST01", "Price": 1299, "Currency": "EUR", "ProductUrl": "https://techstore.example/pr02" },
+  { "ID": "PP04", "ProductID": "PR02", "StoreID": "ST03", "Price": 1275, "Currency": "EUR", "ProductUrl": "https://gadgethub.example/pr02" },
+
+  { "ID": "PP05", "ProductID": "PR03", "StoreID": "ST01", "Price": 349, "Currency": "EUR", "ProductUrl": "https://techstore.example/pr03" },
+  { "ID": "PP06", "ProductID": "PR03", "StoreID": "ST02", "Price": 329, "Currency": "EUR", "ProductUrl": "https://electroworld.example/pr03" },
+
+  { "ID": "PP07", "ProductID": "PR04", "StoreID": "ST01", "Price": 899, "Currency": "EUR", "ProductUrl": "https://techstore.example/pr04" },
+  { "ID": "PP08", "ProductID": "PR04", "StoreID": "ST03", "Price": 879, "Currency": "EUR", "ProductUrl": "https://gadgethub.example/pr04" },
+
+  { "ID": "PP09", "ProductID": "PR05", "StoreID": "ST02", "Price": 799, "Currency": "EUR", "ProductUrl": "https://electroworld.example/pr05" },
+  { "ID": "PP10", "ProductID": "PR05", "StoreID": "ST03", "Price": 769, "Currency": "EUR", "ProductUrl": "https://gadgethub.example/pr05" },
+
+  { "ID": "PP11", "ProductID": "PR06", "StoreID": "ST01", "Price": 1299, "Currency": "EUR" },
+  { "ID": "PP12", "ProductID": "PR06", "StoreID": "ST02", "Price": 1279, "Currency": "EUR" },
+
+  { "ID": "PP13", "ProductID": "PR07", "StoreID": "ST01", "Price": 1999, "Currency": "EUR" },
+  { "ID": "PP14", "ProductID": "PR07", "StoreID": "ST03", "Price": 1959, "Currency": "EUR" },
+
+  { "ID": "PP15", "ProductID": "PR08", "StoreID": "ST01", "Price": 1799, "Currency": "EUR" },
+  { "ID": "PP16", "ProductID": "PR08", "StoreID": "ST02", "Price": 1749, "Currency": "EUR" },
+
+  { "ID": "PP17", "ProductID": "PR09", "StoreID": "ST02", "Price": 1599, "Currency": "EUR" },
+  { "ID": "PP18", "ProductID": "PR09", "StoreID": "ST03", "Price": 1559, "Currency": "EUR" },
+
+  { "ID": "PP19", "ProductID": "PR10", "StoreID": "ST01", "Price": 1699, "Currency": "EUR" },
+  { "ID": "PP20", "ProductID": "PR10", "StoreID": "ST02", "Price": 1659, "Currency": "EUR" },
+
+  { "ID": "PP21", "ProductID": "PR11", "StoreID": "ST01", "Price": 399, "Currency": "EUR" },
+  { "ID": "PP22", "ProductID": "PR11", "StoreID": "ST03", "Price": 379, "Currency": "EUR" },
+
+  { "ID": "PP23", "ProductID": "PR12", "StoreID": "ST01", "Price": 279, "Currency": "EUR" },
+  { "ID": "PP24", "ProductID": "PR12", "StoreID": "ST02", "Price": 259, "Currency": "EUR" },
+
+  { "ID": "PP25", "ProductID": "PR13", "StoreID": "ST02", "Price": 449, "Currency": "EUR" },
+  { "ID": "PP26", "ProductID": "PR13", "StoreID": "ST03", "Price": 429, "Currency": "EUR" },
+
+  { "ID": "PP27", "ProductID": "PR14", "StoreID": "ST01", "Price": 199, "Currency": "EUR" },
+  { "ID": "PP28", "ProductID": "PR14", "StoreID": "ST02", "Price": 189, "Currency": "EUR" },
+
+  { "ID": "PP29", "ProductID": "PR15", "StoreID": "ST01", "Price": 349, "Currency": "EUR" },
+  { "ID": "PP30", "ProductID": "PR15", "StoreID": "ST03", "Price": 329, "Currency": "EUR" },
+
+  { "ID": "PP31", "ProductID": "PR16", "StoreID": "ST01", "Price": 1499, "Currency": "EUR" },
+  { "ID": "PP32", "ProductID": "PR16", "StoreID": "ST02", "Price": 1459, "Currency": "EUR" },
+
+  { "ID": "PP33", "ProductID": "PR17", "StoreID": "ST01", "Price": 1399, "Currency": "EUR" },
+  { "ID": "PP34", "ProductID": "PR17", "StoreID": "ST03", "Price": 1369, "Currency": "EUR" },
+
+  { "ID": "PP35", "ProductID": "PR18", "StoreID": "ST02", "Price": 1599, "Currency": "EUR" },
+  { "ID": "PP36", "ProductID": "PR18", "StoreID": "ST03", "Price": 1559, "Currency": "EUR" },
+
+  { "ID": "PP37", "ProductID": "PR19", "StoreID": "ST01", "Price": 899, "Currency": "EUR" },
+  { "ID": "PP38", "ProductID": "PR19", "StoreID": "ST02", "Price": 869, "Currency": "EUR" },
+
+  { "ID": "PP39", "ProductID": "PR20", "StoreID": "ST01", "Price": 999, "Currency": "EUR" },
+  { "ID": "PP40", "ProductID": "PR20", "StoreID": "ST03", "Price": 969, "Currency": "EUR" },
+
+  { "ID": "PP41", "ProductID": "PR21", "StoreID": "ST01", "Price": 549, "Currency": "EUR" },
+  { "ID": "PP42", "ProductID": "PR21", "StoreID": "ST02", "Price": 529, "Currency": "EUR" },
+
+  { "ID": "PP43", "ProductID": "PR22", "StoreID": "ST01", "Price": 559, "Currency": "EUR" },
+  { "ID": "PP44", "ProductID": "PR22", "StoreID": "ST03", "Price": 539, "Currency": "EUR" },
+
+  { "ID": "PP45", "ProductID": "PR23", "StoreID": "ST02", "Price": 349, "Currency": "EUR" },
+  { "ID": "PP46", "ProductID": "PR23", "StoreID": "ST03", "Price": 329, "Currency": "EUR" },
+
+  { "ID": "PP47", "ProductID": "PR24", "StoreID": "ST01", "Price": 219, "Currency": "EUR" },
+  { "ID": "PP48", "ProductID": "PR24", "StoreID": "ST02", "Price": 199, "Currency": "EUR" },
+
+  { "ID": "PP49", "ProductID": "PR25", "StoreID": "ST01", "Price": 679, "Currency": "EUR" },
+  { "ID": "PP50", "ProductID": "PR25", "StoreID": "ST03", "Price": 649, "Currency": "EUR" }
+]
