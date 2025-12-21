@@ -1,14 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 import { Button } from "../../ui-kits/button/button";
-interface Product {
-  id: number;
-  name: string;
-  description: string;
-  price: number;
-  imageUrl: string;
-  discountedPrice: number;
-}
+
 @Component({
   selector: 'app-product-card-component',
   imports: [Button],
@@ -17,7 +10,7 @@ interface Product {
 })
 export class ProductCardComponent {
 
-  @Input() product!: Product;
+  @Input() product!: any;
 
   getPercentageDiscount(originalPrice: number, discountedPriceedPrice: number):number{
     const percentage= ((originalPrice - discountedPriceedPrice) / originalPrice) * 100;

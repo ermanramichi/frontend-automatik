@@ -133,7 +133,7 @@ export class DropdownComponent implements OnInit, OnChanges {
   // Desktop helpers
   // --------------------
   get desktopClasses(): string {
-    const base = 'drop-down w-[1400px] min-h-[300px] h-fit bg-white fixed top-24 left-1/2 -translate-x-1/2 flex items-start justify-start shadow-xl transition-all duration-300 ease-in-out rounded-b-xl';
+    const base = 'drop-down w-full max-w-[1400px] min-h-[300px] h-fit bg-white fixed top-24 left-1/2 -translate-x-1/2 flex items-start justify-start shadow-xl transition-all duration-300 ease-in-out rounded-b-xl';
     return this.dropDownActive ? `${base} z-[9998] opacity-100 translate-y-0` : `${base} z-[9998] opacity-0 translate-y-4 pointer-events-none`;
   }
 

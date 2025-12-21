@@ -1,52 +1,120 @@
-import { Description } from './../../../../node_modules/jackspeak/dist/esm/index.d';
-import { Head } from './../../../../node_modules/rxjs/src/internal/types';
-import { Name } from './../../../../node_modules/ajv/lib/compile/codegen/code';
-import { Component, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs';
-export interface Product{
-  ID:string;
-  Name:string;
-  Brand:string;
-  HeadCategoryID:string;
-  CategoryID:string;
-  SubCategoryID:string;
-  ImageUrl:string;
-  Description:string;
+import { Observable, of } from 'rxjs';
+import { map, catchError, shareReplay } from 'rxjs/operators';
+
+export interface Product {
+  ID: string;
+  Name: string;
+  Brand: string;
+  HeadCategoryID: string;
+  CategoryID: string;
+  SubCategoryID: string;
+  ImageUrl: string;
+  Description: string;
 }
-@Component({
-  selector: 'app-product-service',
-  imports: [],
-  templateUrl: './product-service.html',
-  styleUrl: './product-service.css',
-})
+
+export interface PaginatedResponse {
+  products: Product[];
+  totalItems: number;
+  currentPage: number;
+  totalPages: number;
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
   private jsonUrl: string = 'assets/Products.json';
-  constructor(private http: HttpClient) {} 
-  getProducts() {
-    return this.http.get<Product[]>(this.jsonUrl);
-  } 
-  getProductsById(id:string) {
-    return this.http.get<Product[]>(this.jsonUrl).pipe(
+  private productsCache$: Observable<Product[]> | null = null;
+
+  constructor(private http: HttpClient) {}
+
+  // Cache products to avoid multiple HTTP requests
+  private getCachedProducts(): Observable<Product[]> {
+    if (!this.productsCache$) {
+      this.productsCache$ = this.http.get<Product[]>(this.jsonUrl).pipe(
+        shareReplay(1),
+        catchError(error => {
+          console.error('Error loading products:', error);
+          return of([]);
+        })
+      );
+    }
+    return this.productsCache$;
+  }
+
+  getProducts(): Observable<Product[]> {
+    return this.getCachedProducts();
+  }
+
+  getProductsById(id: string): Observable<Product[]> {
+    return this.getCachedProducts().pipe(
       map(products => products.filter(product => product.ID === id))
     );
   }
-  getProductsByCategory(categoryID:string) {
-    return this.http.get<Product[]>(this.jsonUrl).pipe(
+
+  getProductsByCategory(categoryID: string): Observable<Product[]> {
+    return this.getCachedProducts().pipe(
       map(products => products.filter(product => product.CategoryID === categoryID))
     );
   }
-  getProductsBySubCategory(subCategoryID:string) {
-    return this.http.get<Product[]>(this.jsonUrl).pipe(
+
+  getProductsBySubCategory(subCategoryID: string): Observable<Product[]> {
+    return this.getCachedProducts().pipe(
       map(products => products.filter(product => product.SubCategoryID === subCategoryID))
     );
   }
-  getProductsByHeadCategory(headCategoryID:string) {
-    return this.http.get<Product[]>(this.jsonUrl).pipe(
+
+  getProductsByHeadCategory(headCategoryID: string): Observable<Product[]> {
+    return this.getCachedProducts().pipe(
       map(products => products.filter(product => product.HeadCategoryID === headCategoryID))
     );
+  }
+
+  // Fixed pagination with metadata
+  getProductsByPage(pageNumber: number, pageSize: number): Observable<PaginatedResponse> {
+    return this.getCachedProducts().pipe(
+      map(products => {
+        const startIndex = (pageNumber - 1) * pageSize;
+        const endIndex = startIndex + pageSize;
+        const paginatedProducts = products.slice(startIndex, endIndex);
+
+        return {
+          products: paginatedProducts,
+          totalItems: products.length,
+          currentPage: pageNumber,
+          totalPages: Math.ceil(products.length / pageSize)
+        };
+      })
+    );
+  }
+
+  // Bonus: Paginate filtered products by category
+  getProductsByCategoryPaginated(
+    categoryID: string, 
+    pageNumber: number, 
+    pageSize: number
+  ): Observable<PaginatedResponse> {
+    return this.getCachedProducts().pipe(
+      map(products => {
+        const filtered = products.filter(product => product.CategoryID === categoryID);
+        const startIndex = (pageNumber - 1) * pageSize;
+        const endIndex = startIndex + pageSize;
+        const paginatedProducts = filtered.slice(startIndex, endIndex);
+
+        return {
+          products: paginatedProducts,
+          totalItems: filtered.length,
+          currentPage: pageNumber,
+          totalPages: Math.ceil(filtered.length / pageSize)
+        };
+      })
+    );
+  }
+
+  // Clear cache if needed (e.g., after data updates)
+  clearCache(): void {
+    this.productsCache$ = null;
   }
 }

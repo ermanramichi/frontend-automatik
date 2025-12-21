@@ -25,4 +25,7 @@ export class ProductPriceService {
       map(prices => prices.filter(price => price.ProductID === productId))
     );
   }
+  getAllPrices(){
+    return this.http.get<ProductPrice[]>(this.jsonUrl);
+  }
 }

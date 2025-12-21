@@ -1,0 +1,88 @@
+<!-- pagination-component.html -->
+@if (totalPages > 1) {
+  <nav class="flex flex-col items-center gap-4 my-8">
+    <div class="flex items-center gap-2 flex-wrap justify-center">
+      <!-- First Page Button -->
+      <button 
+        (click)="goToFirstPage()" 
+        [disabled]="!hasPrevious"
+        class="min-w-10 h-10 px-3 border border-gray-300 bg-white text-gray-700 rounded-lg hover:bg-blue-50 hover:border-bluematik hover:text-bluematik disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center"
+        title="First page">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="11 17 6 12 11 7"></polyline>
+          <polyline points="18 17 13 12 18 7"></polyline>
+        </svg>
+      </button>
+
+      <!-- Previous Button -->
+      <button 
+        (click)="goToPrevious()" 
+        [disabled]="!hasPrevious"
+        class="min-w-10 h-10 px-3 border border-gray-300 bg-white text-gray-700 rounded-lg hover:bg-blue-50 hover:border-bluematik hover:text-bluematik disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center"
+        title="Previous page">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+
+      <!-- First page number if not visible in range -->
+      @if (showFirstPage) {
+        <button 
+          (click)="goToPage(1)"
+          class="min-w-10 h-10 px-3 border border-gray-300 bg-white text-gray-700 rounded-lg hover:bg-blue-50 hover:border-bluematik hover:text-bluematik transition-all duration-200 font-medium">
+          1
+        </button>
+        <span class="px-2 text-gray-500 font-semibold select-none">...</span>
+      }
+
+      <!-- Page Numbers -->
+      @for (page of pages; track page) {
+        <button 
+          (click)="goToPage(page)"
+          [class]="isCurrentPage(page) 
+            ? 'min-w-10 h-10 px-3 border border-bluematik bg-bluematik text-white rounded-lg font-semibold cursor-default' 
+            : 'min-w-10 h-10 px-3 border border-gray-300 bg-white text-gray-700 rounded-lg hover:bg-blue-50 hover:border-bluematik hover:text-bluematik hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200 font-medium'">
+          {{ page }}
+        </button>
+      }
+
+      <!-- Last page number if not visible in range -->
+      @if (showLastPage) {
+        <span class="px-2 text-gray-500 font-semibold select-none">...</span>
+        <button 
+          (click)="goToLastPage()"
+          class="min-w-10 h-10 px-3 border border-gray-300 bg-white text-gray-700 rounded-lg hover:bg-blue-50 hover:border-bluematik hover:text-bluematik transition-all duration-200 font-medium">
+          {{ totalPages }}
+        </button>
+      }
+
+      <!-- Next Button -->
+      <button 
+        (click)="goToNext()" 
+        [disabled]="!hasNext"
+        class="min-w-10 h-10 px-3 border border-gray-300 bg-white text-gray-700 rounded-lg hover:bg-blue-50 hover:border-bluematik hover:text-bluematik disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center"
+        title="Next page">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+
+      <!-- Last Page Button -->
+      <button 
+        (click)="goToLastPage()" 
+        [disabled]="!hasNext"
+        class="min-w-10 h-10 px-3 border border-gray-300 bg-white text-gray-700 rounded-lg hover:bg-blue-50 hover:border-bluematik hover:text-bluematik disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center"
+        title="Last page">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="13 17 18 12 13 7"></polyline>
+          <polyline points="6 17 11 12 6 7"></polyline>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Page Info -->
+    <div class="text-sm text-gray-600 text-center">
+      Showing {{ (currentPage - 1) * pageSize + 1 }} - {{ currentPage * pageSize > totalItems ? totalItems : currentPage * pageSize }} of {{ totalItems }} items
+    </div>
+  </nav>
+}
