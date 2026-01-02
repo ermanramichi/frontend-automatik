@@ -1,22 +1,17 @@
-<div class="product block min-w-[200px] w-[200px] lg:w-[300px] h-[370px] lg:h-[470px]  flex-shrink-0 hover:shadow-lg transition-shadow duration-300 rounded-xl overflow-hidden p-2 bg-white shadow-lg md:shadow-[0px] snap-start group" data-aos="fade-right" >
-  <div class="imagewrapper relative h-[250px] lg:h-[300px] w-full">
-    <div class="ec top-2 right-2 absolute bg-bluematik text-white text-[14px] md:text-[18px] p-2 rounded z-50">NEW</div>
-    <img [src]="product.imageUrl" alt="{{ product.name }}" class="productimg w-auto h-full object-cover rounded-t-md justify-self-center">
-  </div>
-  <div class="product-info h-[50px] md:h-[80px] w-full overflow-hidden px-2 md:px-4">
-    <h1 class="text-[16px] md:text-[18px] text-bluematik overflow-hidden w-full text-nowrap group-hover:text-bluematik-950">{{product.name}}</h1>
-    <p class="text-[12px] md:text-[14px] text-bluematik-100 font-light text-nowrap overflow-hidden">{{product.description}}</p>
-  </div>
-  <div class="call-for-action h-[50px] md:h-[70px] w-full flex flex-col justify-center items-center px-2 md:px-4 bg-white ">
-    <div class="prices flex justify-center items-center gap-1 w-full ">
-      <span class="original-price text-[12px] md:text-[18px] text-bluematik line-through font-normal w-1/2 text-left text-nowrap">{{product.price}} ден</span>
-      <span class="discounted-price text-[16px] md:text-[24px] font-bold text-bluematik w-1/2 text-right text-nowrap">{{product.discountedPrice}} ден</span>
+<a href="" class="product-card" [routerLink]="['/product',product.ID]">
+  <div class="product-card min-w-48 w-48 h-[270px] md:min-w-72 md:w-72 md:h-[400px] bg-white rounded-xl hover:shadow-lg shrink-0 snap-start">
+    <div class="productImageWrapper relative h-[75%] w-full overflow-hidden flex justify-center items-start">
+      <div class="ec top-2 right-2 z-50 absolute text-[14px] md:text-[18px] bg-bluematik text-white py-2 px-4 rounded-xl">NEW</div>
+      <img src="assets/iphone.jpg" alt="{{ product.Name }}" class="w-full h-auto">
     </div>
-    <div class="buttonwrapper w-full ">
-
-    <app-button theme='dark'>View more..</app-button>
-
+    <div class="productInfoWrapper h-[25%] w-full p-2 flex flex-col justify-center items-start gap-1 bg-bluematik-50 rounded-b-xl">
+    <h1 class="text-[15px] md:text-[18px] text-bluematik font-semibold overflow-hidden w-full text-nowrap">{{product.Name}}</h1>
+    @if (product.MinimumPrice !== null) {
+      <div class="productPricesWrapper flex justify-start gap-2 items-center w-full h-fit">
+        <p class="text-xs md:text-base text-gray-600">Почнувајќи од: </p>
+        <div class="ProductPrice text-base md:text-xl text-bluematik font-semibold "> {{product.MinimumPrice}} ден</div>
+      </div>
+    }
     </div>
-
   </div>
-</div>
+</a>

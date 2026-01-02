@@ -1,33 +1,26 @@
-<div class="fullScreen w-full h-full min-h-screen  flex flex-col justify-start items-center">
-  <div class="wrapper w-full h-fit  flex flex-col justify-center items-center py-8 gap-8">
-    <div class="heroBannerWrapper w-full max-w-[97%] h-full max-h-[400px] rounded-xl overflow-hidden flex justify-center items-center">
+<div class="fullScreen w-full h-full min-h-screen  flex flex-col justify-start items-start">
+  <div class="wrapper w-full h-fit  flex flex-col justify-start items-start py-4 gap-8">
+    <div class="heroBannerWrapper w-full p-4 md:max-w-[97%] h-full max-h-[400px] rounded-xl overflow-hidden flex justify-center items-center">
       <img src="assets/herobanner.png" alt="Hero Banner" class="w-full h-auto object-cover rounded-xl flex justify-center items-center"/>
     </div>
     <div class="mainWrapperProductsComponent w-full h-fit flex flex-col gap-4 md:flex-row justify-start items-start md:p-8">
      <div class="filterWrapper md:w-[20%]"> <app-product-filter [headcategories]="headcategories"></app-product-filter></div>
-          
-      
-      <div class="mainContainer w-full md:p-4 bg-white min-h-12 h-full rounded-xl md:shadow-lg">
-        
-        <div class="productsGrid w-full flex justify-center items-center flex-1/2 flex-wrap gap-2 md:gap-4 p-2">
-          @for(product of products; track product.ID) {
-            <a class="product-card w-[200px] h-[250px] md:w-[320px] md:h-[360px]  block p-2 md:p-4 shadow-lg rounded-xl hover:scale-102" [routerLink]="['/product',product.ID]">
-              <div class="imageWrapper w-full h-[180px] md:h-[240px] flex justify-center items-center">
-                <img src="assets/iphone.jpg" alt="" class="h-full w-auto">
-              </div>
-              <h1 class="text-sm md:text-base p-2 text-bluematik">{{product.Name}}</h1>
-              <div class="prices text-xs md:text-base px-2 text-right">starting from:{{filterPriceByID(product.ID)}}$</div>
 
-            </a>
-          } 
+
+      <div class="mainContainer w-full md:p-4 bg-white min-h-12 h-full rounded-xl">
+
+        <div class="productsGrid w-full flex justify-center items-start md:justify-center flex-wrap gap-2 md:p-2">
+          @for(product of products; track product.ID) {
+            <app-product-card-component [product]="product"></app-product-card-component>
+          }
       </div>
       <app-pagination
-  [currentPage]="currentPage"
-  [totalItems]="totalProducts"
-  [pageSize]="12"
-  [maxPagesToShow]="5"
-  (pageChange)="onPageChange($event)">
-</app-pagination>
+        [currentPage]="currentPage"
+        [totalItems]="totalProducts"
+        [pageSize]="12"
+        [maxPagesToShow]="5"
+        (pageChange)="onPageChange($event)">
+      </app-pagination>
   </div>
 </div>
 </div>

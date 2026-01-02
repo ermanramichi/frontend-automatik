@@ -1,20 +1,22 @@
 import { HeadCategory, HeadCategoryService } from './../services/head-category-service/head-category-service';
-import { ChangeDetectorRef, Component, Output } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, Output } from '@angular/core';
 import { Product, ProductService } from '../services/product-service/product-service';
 import { FormsModule } from '@angular/forms';
 import { PaginationComponent } from "../pagination-component/pagination-component";
 import { FilterForProductsComponent } from "../filter-for-products/filter-for-products";
 import { ProductPrice, ProductPriceService } from '../services/product-price-service/product-price-service';
 import { RouterLink } from "@angular/router";
+import { Button } from "../ui-kits/button/button";
+import { ProductCardComponent } from "../main-page-component/product-card-component/product-card-component";
 
 
 @Component({
   selector: 'app-products-component',
-  imports: [FormsModule, PaginationComponent, FilterForProductsComponent, RouterLink],
+  imports: [FormsModule, PaginationComponent, FilterForProductsComponent, RouterLink, ProductCardComponent],
   templateUrl: './products-component.html',
   styleUrl: './products-component.css',
 })
-export class ProductsComponent {
+export class ProductsComponent implements OnInit {
   products: Product[] = [];
   headcategories: HeadCategory[]= [];
   min = 0;
@@ -28,7 +30,7 @@ export class ProductsComponent {
   totalProducts=0;
   productID:string='PR01'
   prices:ProductPrice[]=[];
-  
+
   onMinChange(){
     this.minValue=Math.min(this.minValue,this.maxValue - this.gap);
   }
@@ -45,6 +47,7 @@ export class ProductsComponent {
     return this.rightPercent - this.leftPercent;
   }
 
+
   constructor(
     private HeadCategoryService: HeadCategoryService,
     private productService: ProductService,
@@ -56,6 +59,7 @@ export class ProductsComponent {
     this.loadProducts();
     this.loadHeadCategories();
     this.loadPrices();
+
   }
   onPageChange(page:number):void{
     this.currentPage=page;
@@ -83,15 +87,5 @@ export class ProductsComponent {
       this.cdr.detectChanges();
     })
     }
-    filterPriceByID(productID:string){
-      const tempPrices=this.prices.filter(price => price.ProductID === productID);
-      console.log(tempPrices);
-      let minimumPrice=tempPrices[0].Price;
-      for(let i=1; i<tempPrices.length;i++){
-        if(minimumPrice>=tempPrices[i].Price){
-          minimumPrice=tempPrices[i].Price;
-        }
-      }
-      return minimumPrice;
-    }
+
 }

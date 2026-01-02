@@ -1,7 +1,7 @@
 <!-- product-filter.component.html -->
 
 <!-- Mobile Filter Button (visible only on mobile) -->
-<button 
+<button
   (click)="toggleFilter()"
   class="md:hidden fixed bottom-15 right-4 z-40 bg-bluematik text-white px-6 py-3 rounded-full shadow-2xl flex items-center gap-2 hover:bg-bluematik-600 transition-all duration-200">
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -20,21 +20,21 @@
 
 <!-- Overlay (mobile only) -->
 @if (isFilterOpen) {
-  <div 
+  <div
     (click)="closeFilter()"
     class="md:hidden fixed inset-0 blur-2xl z-40 transition-opacity duration-300">
   </div>
 }
 
 <!-- Filter Panel -->
-<div 
-  [class]="isFilterOpen 
+<div
+  [class]="isFilterOpen
     ? 'filterWrapper fixed bottom-10 left-0 right-0 z-9996 bg-white rounded-t-3xl shadow-2xl transition-transform duration-300 transform translate-y-0 max-h-[80vh] overflow-y-auto md:sticky md:top-4 md:translate-y-0 md:w-w-full md:h-fit md:max-h-[calc(100vh-2rem)] md:bg-gray-100 md:rounded-xl p-4'
-    : 'filterWrapper fixed bottom-10 left-0 right-0 z-9996 bg-white rounded-t-3xl shadow-2xl transition-transform duration-300 transform translate-y-full md:sticky md:top-4 md:translate-y-0 md:w-full md:h-fit md:max-h-[calc(100vh-2rem)] md:bg-gray-100 md:rounded-xl p-4'">
+    : 'filterWrapper fixed bottom-10 left-0 right-0 z-9996 bg-white rounded-t-3xl shadow-2xl transition-transform duration-300 transform translate-y-full md:sticky md:top-4 md:translate-y-0 md:w-full md:h-fit md:max-h-[calc(100vh-2rem)] md:bg-white md:rounded-xl p-4'">
   <!-- Mobile Header -->
   <div class="md:hidden flex items-center justify-between mb-4 pb-4 border-b">
     <h2 class="text-xl font-bold text-bluematik">Filter Products</h2>
-    <button 
+    <button
       (click)="closeFilter()"
       class="p-2 hover:bg-gray-100 rounded-lg transition-colors">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -52,7 +52,7 @@
   <div class="max-h-48 overflow-y-auto">
     @for(cat of headcategories; track cat.ID) {
       <label class="flex items-center gap-2 p-2 text-sm hover:bg-gray-50 rounded cursor-pointer">
-        <input type="checkbox" class="form-checkbox h-5 w-5 text-bluematik rounded">
+        <input type="checkbox" class="form-checkbox h-5 w-5 accent-bluematik rounded">
         <span class="text-gray-700">{{ cat.CustomHeadCategoryNameEN }}</span>
       </label>
     }
@@ -107,7 +107,7 @@
 
   <!-- Mobile Apply Button -->
   <div class="md:hidden mt-6 pt-4 border-t">
-    <button 
+    <button
       (click)="applyFilters()"
       class="w-full bg-bluematik text-white py-3 rounded-lg font-semibold hover:bg-bluematik-600 transition-colors">
       Apply Filters
@@ -116,4 +116,3 @@
 </div>
 
 
-  
