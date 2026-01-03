@@ -24,7 +24,7 @@ export class HeaderComponent implements OnChanges {
   clicked=false;
   dropdownOpen = false;
   dropDownMobileOpen=false;
-  
+
   @Output() isActive = new EventEmitter<boolean>();
   private mouseOutTimeout: any;
    ngOnInit() {
@@ -76,10 +76,10 @@ export class HeaderComponent implements OnChanges {
   }
   searchClasses():string{
     if(this.clickedSearch){
-      return 'searchbar h-10 w-full flex justify-center items-center text-xm text-bluematik p-1 hover:p-3 mx-4 transition-all duration-300 hover:w-72 focus-within:w-full  hover:shadow-lg  hover:border-b-2 border-bluematik';
+      return 'searchbar h-10 w-full flex justify-start items-start text-xs text-bluematik hover:p-1 mx-4 transition-all duration-300 hover:w-72 focus-within:w-full  hover:shadow-lg  hover:border-b-2 border-bluematik';
     }
     else{
-      return 'searchbar h-10 w-10 flex justify-center items-center text-xm text-bluematik p-1 hover:p-3 mx-4 transition-all duration-300 hover:w-72 focus-within:w-full  hover:shadow-lg  hover:border-b-2 border-bluematik';
+      return 'searchbar h-10 w-10 flex justify-center items-center text-xs text-bluematik  hover:p-1 mx-4 transition-all duration-300 hover:w-72 focus-within:w-full  hover:shadow-lg  hover:border-b-2 border-bluematik';
     }
   }
 
@@ -91,8 +91,8 @@ export class HeaderComponent implements OnChanges {
 
   iconHamburgerSource():string{
     if(this.dropdownOpen){
-      return 'assets/close.svg';
+      return 'assets/close.png';
     }
-    return 'assets/3-lines.svg';
+    return 'assets/menu.png';
   }
 }

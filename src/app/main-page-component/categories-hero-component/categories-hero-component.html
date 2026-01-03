@@ -1,7 +1,7 @@
 @if(isMobile){
   <div class="category-hero w-full h-[150px]  px-2 mb-5" data-aos="fade-up">
 
-    <app-slider-with-buttons [type]="type" [cardSize]="cardSize" (categories)="categories">
+    <app-slider-with-buttons [type]="type" [cardSize]="cardSize" (categories)="headcategories">
 
     </app-slider-with-buttons>
 
@@ -10,17 +10,11 @@
 
 @if(isDesktop){
   <div class="category-hero w-full h-[200px] p-5 mb-10" data-aos="fade-up">
-    <div class="category-hero-wrapper flex justify-center items-center gap-10">
-      @for(category of categories;track category.id){
+    <div class="category-hero-wrapper flex justify-center items-start gap-10">
+      @for(category of headcategories;track category.ID){
         <app-category-icon-main [category]="category"></app-category-icon-main>
       }
     </div>
   </div>
 }
-@if(isLargeDesktop){
-  <div class="category-hero w-full h-[250px] p-5 mb-10" data-aos="fade-up">
-    <div class="category-hero-wrapper w-full h-full flex justify-center items-center">
-      <app-categories-hero-function-component class="w-full h-full flex gap-4 justify-center items-start"></app-categories-hero-function-component>
-    </div>
-  </div>
-}
+

@@ -5,6 +5,7 @@ export interface HeadCategory {
   CustomHeadCategoryNameEN: string;
   CustomHeadCategoryNameMK: string;
   CustomHeadCategoryNameAL: string;
+  imageUrl: string;
 }
 
 @Component({

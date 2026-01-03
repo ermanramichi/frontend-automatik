@@ -1,5 +1,5 @@
-<div class="fullScreen w-full h-full min-h-screen  flex flex-col justify-start items-start">
-  <div class="wrapper w-full h-fit  flex flex-col justify-start items-start py-4 gap-8">
+<div class="fullScreen w-full h-full min-h-screen  flex flex-col justify-center items-center">
+  <div class="wrapper w-full h-fit  flex flex-col justify-center items-center py-4 gap-8">
     <div class="heroBannerWrapper w-full p-4 md:max-w-[97%] h-full max-h-[400px] rounded-xl overflow-hidden flex justify-center items-center">
       <img src="assets/herobanner.png" alt="Hero Banner" class="w-full h-auto object-cover rounded-xl flex justify-center items-center"/>
     </div>
@@ -13,7 +13,7 @@
           @for(product of products; track product.ID) {
             <app-product-card-component [product]="product"></app-product-card-component>
           }
-      </div>
+        </div>
       <app-pagination
         [currentPage]="currentPage"
         [totalItems]="totalProducts"
@@ -22,5 +22,6 @@
         (pageChange)="onPageChange($event)">
       </app-pagination>
   </div>
+</div>
 </div>
 </div>

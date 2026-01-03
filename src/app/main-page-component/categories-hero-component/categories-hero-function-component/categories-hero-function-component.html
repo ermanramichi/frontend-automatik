@@ -1,3 +1,5 @@
-@for(category of categories;track category.id){
-        <app-category-icon-main [category]="category"></app-category-icon-main>
-      }
+@for(category of headcategories; track category.ID){
+  <div class="category-icon-main-wrapper px-2">
+    <app-category-icon-main [category]="category"></app-category-icon-main>
+  </div>
+}

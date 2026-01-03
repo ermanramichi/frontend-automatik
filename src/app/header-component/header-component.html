@@ -10,8 +10,8 @@
     <a class="header-link p-3 text-xm md:text-lg h-fit transition-all duration-400 md:mx-2 text-bluematik hover:text-bluematik-900 hover:font-bold" routerLink="/brands" [class.active]="selectedPage==='brands'" (click)="onClick('brands')">Brands</a>
     <a class="header-link p-3 text-xm md:text-lg h-fit transition-all duration-400 md:mx-2 text-bluematik hover:text-bluematik-900 hover:font-bold" routerLink="/stores" [class.active]="selectedPage==='stores'" (click)="onClick('stores')">Stores</a>
   </div>
-  <div class="searchbar h-10 w-full md:w-10 flex justify-center items-center text-xm text-bluematik md:text-lg p-1 hover:p-3 mx-4 md:mx-0 md:ml-4 transition-all duration-300 hover:w-72 focus-within:w-full md:focus-within:w-74 hover:shadow-lg  hover:border-b-2 border-bluematik">
-    <img src="assets/search.svg" alt="" class="searchicon  h-full object-contain" (click)="onSearchClick()" [class.searchActive]="clickedSearch">
+  <div class="searchbar h-10 w-10 flex justify-center items-center text-xm text-bluematik md:text-lg p-2 hover:p-2 mx-4 md:mx-0 md:ml-4 transition-all duration-300 hover:w-74 focus-within:w-full md:focus-within:w-74 hover:shadow-lg  hover:border-b-2 border-bluematik">
+    <img src="assets/search.png" alt="" class="searchicon h-full w-auto hover:h-full object-contain" (click)="onSearchClick()" [class.searchActive]="clickedSearch">
     <input type="text" placeholder="Search for products, brands and more" class="searchinput h-full w-full outline-none border-none px-2 text-sm md:text-md">
 </div>
 </div>
@@ -23,19 +23,19 @@
     <div class="imagewrapper h-2/3 w-full cursor-pointer p-2">
       <img src="assets/automatik.png" alt="" class="headerlogo h-full  justify-self-center self-center object-contain mx-auto" routerLink="/home" (click)="onClick('home')">
     </div>
-    <div class="navigationbar h-1/3 w-full flex justify-start items-center px-4 py-4">
-      <div class="hamburger-wrapper relative h-10 w-10 flex justify-center items-center cursor-pointer transition-all duration-400" (click)="onHamburgerClick()">
+    <div class="navigationbar h-14 w-full flex justify-start items-end px-2 py-4">
+      <div class="hamburger-wrapper relative mx-2 h-10 w-10 p-1 flex justify-center items-center cursor-pointer transition-all duration-400" (click)="onHamburgerClick()">
         <img
-          src="assets/3-lines.svg"
+          src="assets/menu.png"
           alt="menu"
-          class="absolute inset-0 w-full h-full transition-all duration-300 ease-in-out"
+          class="absolute inset-0 w-auto p-1 h-auto transition-all duration-300 ease-in-out"
           [class.opacity-0]="dropdownOpen"
           [class.scale-0]="dropdownOpen"
           />
         <img
-          src="assets/close.svg"
+          src="assets/close.png"
           alt="close"
-          class="absolute inset-0 w-full h-full transition-all duration-300 ease-in-out"
+          class="absolute inset-0 w-auto p-1 h-auto transition-all duration-300 ease-in-out"
           [class.opacity-100]="dropdownOpen"
           [class.scale-100]="dropdownOpen"
           [class.rotate-90]="dropdownOpen"
@@ -45,7 +45,7 @@
       </div>
 
     <div [class]="searchClasses()">
-      <img src="assets/search.svg" alt="" class="searchicon flex justify-center items-center h-full object-contain" (click)="onSearchClick()" [class.searchActive]="clickedSearch">
+      <img src="assets/search.png" alt="" class="searchicon flex justify-center items-center p-1 h-full object-contain" (click)="onSearchClick()" [class.searchActive]="clickedSearch">
       <input type="text" placeholder="Search for products, brands and more" class="searchinput h-full w-full outline-none border-none px-2 text-sm md:text-md">
     </div>
     </div>

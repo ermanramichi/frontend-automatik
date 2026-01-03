@@ -3,48 +3,56 @@
     "ID": "HC01",
     "CustomHeadCategoryNameEN": "Electronics",
     "CustomHeadCategoryNameMK": "Електроника",
-    "CustomHeadCategoryNameAL": "Elektronikë"
+    "CustomHeadCategoryNameAL": "Elektronikë",
+    "imageUrl": "assets/electronics.png"
   },
   {
     "ID": "HC02",
     "CustomHeadCategoryNameEN": "Home & Outdoor",
     "CustomHeadCategoryNameMK": "Дом и Надворешност",
-    "CustomHeadCategoryNameAL": "Shtëpi dhe jashtë"
+    "CustomHeadCategoryNameAL": "Shtëpi dhe jashtë",
+    "imageUrl": "assets/home-outdoor.png"
   },
   {
     "ID": "HC03",
     "CustomHeadCategoryNameEN": "Clothing",
     "CustomHeadCategoryNameMK": "Облека",
-    "CustomHeadCategoryNameAL": "Veshje"
+    "CustomHeadCategoryNameAL": "Veshje",
+    "imageUrl": "assets/clothing.png"
   },
   {
     "ID": "HC04",
     "CustomHeadCategoryNameEN": "Beauty & Personal Care",
     "CustomHeadCategoryNameMK": "Увабина и лична нега",
-    "CustomHeadCategoryNameAL": "Bukuria dhe kujdesi personal"
+    "CustomHeadCategoryNameAL": "Bukuria dhe kujdesi personal",
+    "imageUrl": "assets/beauty-personal-care.png"
   },
   {
     "ID": "HC05",
     "CustomHeadCategoryNameEN": "Sports & Outdoors",
     "CustomHeadCategoryNameMK": "Спорт и Надворешност",
-    "CustomHeadCategoryNameAL": "Sportet dhe jashtë"
+    "CustomHeadCategoryNameAL": "Sportet dhe jashtë",
+    "imageUrl": "assets/sports-outdoors.png"
   },
   {
     "ID": "HC06",
     "CustomHeadCategoryNameEN": "Automotive",
     "CustomHeadCategoryNameMK": "Автомобили",
-    "CustomHeadCategoryNameAL": "Automobila"
+    "CustomHeadCategoryNameAL": "Automobila",
+    "imageUrl": "assets/automotive.png"
   },
   {
     "ID": "HC07",
     "CustomHeadCategoryNameEN": "Baby & Kids",
     "CustomHeadCategoryNameMK": "Бебиња и деца",
-    "CustomHeadCategoryNameAL": "Bebe & Fëmijë"
+    "CustomHeadCategoryNameAL": "Bebe & Fëmijë",
+    "imageUrl": "assets/baby-kids.png"
   },
   {
     "ID": "HC08",
     "CustomHeadCategoryNameEN": "Pets",
     "CustomHeadCategoryNameMK": "Миленчиња",
-    "CustomHeadCategoryNameAL": "Kafshët shtëpiake"
+    "CustomHeadCategoryNameAL": "Kafshët shtëpiake",
+    "imageUrl": "assets/pets.png"
   }
 ]

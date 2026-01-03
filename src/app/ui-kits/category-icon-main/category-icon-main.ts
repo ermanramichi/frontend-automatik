@@ -1,9 +1,7 @@
 import { Component, HostListener, Input, OnInit } from '@angular/core';
-interface Category{
-  id:number;
-  name:string;
-  iconUrl:string;
-}
+import { Head } from 'rxjs';
+import { HeadCategory } from '../../services/head-category-service/head-category-service';
+
 @Component({
   selector: 'app-category-icon-main',
   imports: [],
@@ -11,7 +9,7 @@ interface Category{
   styleUrl: './category-icon-main.css'
 })
 export class CategoryIconMain implements OnInit {
-  @Input() category !:Category;
+  @Input() category !:HeadCategory;
   screenWidth = 0;
   isMobile = false;
   isTablet = false;
@@ -46,6 +44,6 @@ export class CategoryIconMain implements OnInit {
     else this.deviceType = 'Desktop';
   }
   get iconClasses(): string {
-    if(this.isMobile) {return `${this.category.iconUrl} text-bluematik fa-2x`;}
-    return `${this.category.iconUrl} text-bluematik fa-2x`;}
+    if(this.isMobile) {return `${this.category.imageUrl}`;}
+    return `${this.category.imageUrl}`;}
 }
