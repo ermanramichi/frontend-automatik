@@ -5,14 +5,13 @@ import { FormsModule } from '@angular/forms';
 import { PaginationComponent } from "../pagination-component/pagination-component";
 import { FilterForProductsComponent } from "../filter-for-products/filter-for-products";
 import { ProductPrice, ProductPriceService } from '../services/product-price-service/product-price-service';
-import { RouterLink } from "@angular/router";
-import { Button } from "../ui-kits/button/button";
+
 import { ProductCardComponent } from "../main-page-component/product-card-component/product-card-component";
 
 
 @Component({
   selector: 'app-products-component',
-  imports: [FormsModule, PaginationComponent, FilterForProductsComponent, RouterLink, ProductCardComponent],
+  imports: [FormsModule, PaginationComponent, FilterForProductsComponent, ProductCardComponent],
   templateUrl: './products-component.html',
   styleUrl: './products-component.css',
 })

@@ -43,7 +43,7 @@ export class CategoryIconMain implements OnInit {
     else if (this.isTablet) this.deviceType = 'Tablet';
     else this.deviceType = 'Desktop';
   }
-  get iconClasses(): string {
-    if(this.isMobile) {return `${this.category.imageUrl}`;}
-    return `${this.category.imageUrl}`;}
+  get imageUrl(): string {
+    return this.category?.imageUrl || 'assets/default-category.png';
+  }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 import { CategoryIconMain } from "../../../ui-kits/category-icon-main/category-icon-main";
 import { HeadCategory, HeadCategoryService } from '../../../services/head-category-service/head-category-service';
 
@@ -8,15 +8,12 @@ import { HeadCategory, HeadCategoryService } from '../../../services/head-catego
   templateUrl: './categories-hero-function-component.html',
   styleUrl: './categories-hero-function-component.css'
 })
-export class CategoriesHeroFunctionComponent implements OnInit {
-  headcategories:HeadCategory[]=[];
-   constructor(
-    private headCategoryService: HeadCategoryService
-   ) {}
+export class CategoriesHeroFunctionComponent {
+  @Input() headCategories: HeadCategory[] = [];
 
-   ngOnInit(): void {
-     this.headCategoryService.getHeadCategories().subscribe((categories) => {
-      this.headcategories = categories;
-    });
-   }
+  ngOnChanges(changes: SimpleChanges) {
+    console.log('=== CHILD ngOnChanges ===');
+    console.log('Received headCategories:', this.headCategories);
+    console.log('Length:', this.headCategories.length);
+  }
 }

@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
+import { Observable, shareReplay } from 'rxjs';
+
 export interface HeadCategory {
   ID: string;
   CustomHeadCategoryNameEN: string;
@@ -8,20 +10,21 @@ export interface HeadCategory {
   imageUrl: string;
 }
 
-@Component({
-  selector: 'app-head-category-service',
-  imports: [],
-  templateUrl: './head-category-service.html',
-  styleUrl: './head-category-service.css'
-})
-  @Injectable({
+@Injectable({
   providedIn: 'root'
 })
 export class HeadCategoryService {
   private jsonUrl: string = 'assets/HeadCategories.json';
-  constructor(private http: HttpClient) { }
+  private headCategories$: Observable<HeadCategory[]>;
 
-  getHeadCategories() {
-    return this.http.get<HeadCategory[]>(this.jsonUrl);
+  constructor(private http: HttpClient) {
+    // Create cached observable that shares the same HTTP request
+    this.headCategories$ = this.http.get<HeadCategory[]>(this.jsonUrl).pipe(
+      shareReplay(1) // Cache the last result
+    );
+  }
+
+  getHeadCategories(): Observable<HeadCategory[]> {
+    return this.headCategories$;
   }
 }

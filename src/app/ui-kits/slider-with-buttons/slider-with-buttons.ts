@@ -6,16 +6,8 @@ import { GoRightButton } from "../go-right-button/go-right-button";
 import { GoLeftButton } from "../go-left-button/go-left-button";
 import { CategoryIconMain } from "../category-icon-main/category-icon-main";
 import { CategoriesHeroFunctionComponent } from "../../main-page-component/categories-hero-component/categories-hero-function-component/categories-hero-function-component";
-interface Promotion {
-  id: number;
-  title: string;
-  imageUrl: string;
-}
-interface Category{
-  id:number;
-  name:string;
-  iconUrl:string;
-}
+import { HeadCategory } from '../../services/head-category-service/head-category-service';
+
 @Component({
   selector: 'app-slider-with-buttons',
   imports: [PromotionsMainpageFunctionComponent, RecommendedProductsFunctionComponent, GoRightButton, GoLeftButton, CategoriesHeroFunctionComponent],
@@ -23,10 +15,11 @@ interface Category{
   styleUrl: './slider-with-buttons.css'
 })
 export class SliderWithButtons {
-  @Input() promotions!:Promotion[];
+
   @Input() cardSize !:number;
-  @Input() type !:string
-  @Input() categories!:Category[]
+  @Input() type !:string;
+  @Input() headCategories!: HeadCategory[];
+
 
 
 scrollRight(slider: HTMLElement): void {

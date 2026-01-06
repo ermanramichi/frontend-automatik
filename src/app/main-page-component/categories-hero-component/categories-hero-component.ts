@@ -1,33 +1,40 @@
-import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { CategoryIconMain } from "../../ui-kits/category-icon-main/category-icon-main";
 import { SliderWithButtons } from "../../ui-kits/slider-with-buttons/slider-with-buttons";
 import { CategoriesHeroFunctionComponent } from "./categories-hero-function-component/categories-hero-function-component";
 import { HeadCategory, HeadCategoryService } from '../../services/head-category-service/head-category-service';
-import { Head } from 'rxjs';
+import { After } from 'v8';
+
 
 @Component({
   selector: 'app-categories-hero-component',
-  imports: [CategoryIconMain, SliderWithButtons, CategoriesHeroFunctionComponent],
+  imports: [SliderWithButtons, CategoriesHeroFunctionComponent],
   templateUrl: './categories-hero-component.html',
   styleUrl: './categories-hero-component.css'
 })
-export class CategoriesHeroComponent implements OnInit{
+export class CategoriesHeroComponent implements OnInit,AfterViewInit {
 
-  screenWidth = 0;
-  isMobile = false;
-  isTablet = false;
-  isDesktop = false;
-  isLargeDesktop=false;
-  deviceType = '';
-  type='category'
-  cardSize=100;
-  headcategories:HeadCategory[]=[];
+  screenWidth = window.innerWidth;
+  isMobile = window.innerWidth <= 768;
+  isDesktop = window.innerWidth > 768;
+  type = 'category';
+  cardSize = 100;
+  headCategories: HeadCategory[] = [];
 
-  constructor(private headCategoryService: HeadCategoryService) {}
+  constructor(
+    private headCategoryService: HeadCategoryService,
+    private cdr: ChangeDetectorRef
+  ) {}
+
   ngOnInit() {
     this.updateScreenSize();
-    this.headCategoryService.getHeadCategories().subscribe((categories) => {
-      this.headcategories = categories;
+  }
+
+  ngAfterViewInit() {
+    this.headCategoryService.getHeadCategories().subscribe(data => {
+      this.headCategories = data;
+      console.log('Data loaded:', data);
+      this.cdr.detectChanges(); // Force change detection after view init
     });
   }
 
@@ -38,18 +45,7 @@ export class CategoriesHeroComponent implements OnInit{
 
   private updateScreenSize() {
     this.screenWidth = window.innerWidth;
-
-    // Define breakpoints
-    this.isMobile = this.screenWidth < 768;
-    this.isTablet = this.screenWidth >= 768 && this.screenWidth < 1024;
-    this.isDesktop = this.screenWidth >= 1024 && this.screenWidth<1920;
-    this.isLargeDesktop=this.screenWidth>=1920;
-
-    // Set device type for debugging
-    if (this.isMobile) this.deviceType = 'Mobile';
-    else if (this.isTablet) this.deviceType = 'Tablet';
-    else this.deviceType = 'Desktop';
+    this.isMobile = this.screenWidth <= 768;
+    this.isDesktop = this.screenWidth > 768;
   }
-
-
 }
