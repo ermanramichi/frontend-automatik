@@ -72,26 +72,28 @@ export class ProductService {
      ======================= */
 
   getProductsWithMinimumPrice(): Observable<Product[]> {
-    return combineLatest([
-      this.getCachedProducts(),
-      this.getCachedPrices()
-    ]).pipe(
-      map(([products, prices]) =>
-        products.map(product => {
-          const productPrices = prices
-            .filter(p => p.ProductID === product.ID)
-            .map(p => p.Price);
+  return combineLatest([
+    this.getCachedProducts(),
+    this.getCachedPrices()
+  ]).pipe(
+    map(([products, prices]) =>
+      products.map(product => {
+        const productPrices = prices
+          .filter(p => p.ProductID === product.ID)
+          .map(p => p.Price)
+          .filter(price => price !== null && price !== 0) // Filter out null and 0
+          .sort((a, b) => a - b);
 
-          return {
-            ...product,
-            MinimumPrice: productPrices.length
-              ? Math.min(...productPrices)
-              : null
-          };
-        })
-      )
-    );
-  }
+        console.log(`Product ${product.ID} (filtered):`, productPrices);
+
+        return {
+          ...product,
+          MinimumPrice: productPrices.length > 0 ? productPrices[0] : null
+        };
+      })
+    )
+  );
+}
 
   /* =======================
      BASIC GETTERS
