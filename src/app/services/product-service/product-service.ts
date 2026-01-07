@@ -29,8 +29,8 @@ export interface PaginatedResponse {
 })
 export class ProductService {
 
-  private productsUrl = 'assets/Products.json';
-  private pricesUrl   = 'assets/ProductPrices.json';
+  private productsUrl = 'assets/generated_Products.json';
+  private pricesUrl   = 'assets/generated_ProductPrices.json';
 
   private productsCache$: Observable<Product[]> | null = null;
   private pricesCache$: Observable<ProductPrice[]> | null = null;

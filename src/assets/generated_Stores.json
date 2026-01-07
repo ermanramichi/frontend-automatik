@@ -1,0 +1,26 @@
+[
+  {
+    "ID": "ST01",
+    "Name": "Anhoch",
+    "LogoUrl": "",
+    "Website": "https://anhoch.com"
+  },
+  {
+    "ID": "ST02",
+    "Name": "eKupi",
+    "LogoUrl": "",
+    "Website": "https://ekupi.mk"
+  },
+  {
+    "ID": "ST03",
+    "Name": "Neptun",
+    "LogoUrl": "",
+    "Website": "https://neptun.mk"
+  },
+  {
+    "ID": "ST04",
+    "Name": "Setec",
+    "LogoUrl": "",
+    "Website": "https://setec.mk"
+  }
+]

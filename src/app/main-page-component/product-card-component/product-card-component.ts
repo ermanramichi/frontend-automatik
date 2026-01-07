@@ -16,6 +16,9 @@ export class ProductCardComponent {
     const percentage= ((originalPrice - discountedPriceedPrice) / originalPrice) * 100;
     return Math.round(percentage);
   }
+  get imageUrl(): string {
+    return this.product?.imageUrl;
+  }
 
 
 }

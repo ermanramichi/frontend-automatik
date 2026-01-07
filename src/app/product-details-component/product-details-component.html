@@ -7,7 +7,7 @@
 
       <div class="imageGallery w-full h-fit flex flex-col md:flex-row gap-4 p-2">
       <div class="imageWrapper w-full h-[200px] md:w-3/4 md:h-[400px] flex justify-center items-center rounded-lg md:mt-4 ">
-        <img src="assets/iphone.jpg" alt="{{ product?.Name }}" class="max-h-full max-w-full object-contain">
+        <img [src]="product?.ImageUrl" alt="{{ product?.Name }}" class="max-h-full max-w-full object-contain">
       </div>
       <div class="imageCol w-full md:w-1/4 flex justify-center items-center flex-row md:flex-col gap-2 p-2">
         <div class="galleryWrapper w-16 h-16 md:w-25 md:h-25 rounded-lg flex justify-center items-center border-1 border-gray-200">
@@ -31,9 +31,10 @@
       @for(price of prices; track price.StoreID) {
         <div class="priceItem flex justify-between items-center px-2 py-1">
           <div class="priceStoreImageWrapper p-2">
-          <img src="assets/automatik.png" alt="" class="w-1/4">
+          <img src="" alt="{{price.StoreID}}" class="w-full">
           </div>
           <div class="storePrice text-bluematik font-bold text-nowrap">{{ price.Price }} ден</div>
+          <a [href]="price.ProductUrl" class="link">Link</a>
         </div>
     }
   </div>

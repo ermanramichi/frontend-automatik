@@ -1,15 +1,20 @@
 <a href="" class="product-card" [routerLink]="['/product',product.ID]">
-  <div class="product-card min-w-48 w-48 h-[270px] md:min-w-72 md:w-72 md:h-[400px] bg-white rounded-xl hover:shadow-lg shrink-0 snap-start">
-    <div class="productImageWrapper relative h-[75%] w-full overflow-hidden flex justify-center items-start">
-      <div class="ec top-2 right-2 z-50 absolute text-[14px] md:text-[18px] bg-bluematik text-white py-2 px-4 rounded-xl">NEW</div>
-      <img src="assets/iphone.jpg" alt="{{ product.Name }}" class="w-full h-auto">
+  <div class="product-card min-w-48 w-48 h-[270px] md:min-w-72 md:w-72 md:h-[400px] bg-white rounded-xl hover:shadow-lg shrink-0 snap-start border-2 border-gray-200 ">
+    <div class="productImageWrapper relative h-[55%] w-full overflow-hidden flex justify-center items-center">
+      <div class="ec top-0 right-0 z-20 absolute text-[14px] md:text-[18px] bg-green-500 text-white md:py-2 md:px-4 p-2 rounded-xl font-bold">-30%</div>
+      <img [src]="product?.ImageUrl" alt="{{ product.Name }}" class="w-auto h-9/12 object-contain">
     </div>
-    <div class="productInfoWrapper h-[25%] w-full p-2 flex flex-col justify-center items-start gap-1 bg-bluematik-50 rounded-b-xl">
-    <h1 class="text-[15px] md:text-[18px] text-bluematik font-semibold overflow-hidden w-full text-nowrap">{{product.Name}}</h1>
+    <div class="productInfoWrapper h-[45%] w-full px-2 md:px-4  overflow-hidden rounded-b-xl">
+    <h1 class="text-xs md:text-base text-bluematik h-full max-h-8 md:max-h-12 font-semibold overflow-hidden w-full text-wrap">{{product.Name}}</h1>
+    <div class="productDesc relative text-gray-600 max-h-12 md:text-xs text-[10px] overflow-hidden w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni aliquam accusamus impedit odio tenetur assumenda deleniti at, harum possimus iusto.
+        <div
+          class="pointer-events-none absolute bottom-0 right-0 w-2/3 h-2/3 bg-gradient-to-br from-transparent to-white">
+        </div>
+    </div>
     @if (product.MinimumPrice !== null) {
-      <div class="productPricesWrapper flex justify-start gap-2 items-center w-full h-fit">
-        <p class="text-xs md:text-base text-gray-600">Почнувајќи од: </p>
-        <div class="ProductPrice text-base md:text-xl text-bluematik font-semibold "> {{product.MinimumPrice}} ден</div>
+      <div class="productPricesWrapper md:my-2 items-center w-full">
+        <p class="md:text-xs text-[10px] text-gray-700">Почнувајќи од: </p>
+        <div class="ProductPrice text-base md:text-2xl text-bluematik font-bold ">MKD {{product?.MinimumPrice}}</div>
       </div>
     }
     </div>

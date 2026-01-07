@@ -25,7 +25,7 @@ export class ProductsComponent implements OnInit {
   minValue=0;
   maxValue=2000;
   currentPage=1;
-  pageSize=12;
+  pageSize=15;
   totalProducts=0;
   productID:string='PR01'
   prices:ProductPrice[]=[];

@@ -18,7 +18,7 @@ export interface ProductPrice{
   providedIn: 'root'
 })
 export class ProductPriceService {
- private jsonUrl: string = 'assets/ProductPrices.json';
+ private jsonUrl: string = 'assets/generated_ProductPrices.json';
  constructor(private http: HttpClient) {}
  getByProductId(productId: string) {
     return this.http.get<ProductPrice[]>(this.jsonUrl).pipe(
